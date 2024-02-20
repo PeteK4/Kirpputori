@@ -1,0 +1,168 @@
+body {
+  background-color: #284a7c;
+  user-select: none;
+}
+
+body::before {
+  display: block;
+  content: "";
+  height: 80px;
+}
+
+.ylaPalkki {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(105, 126, 194);
+  z-index: 999;
+}
+
+.ylaPalkki_Teksti {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#tai {
+  display: block;
+}
+
+.otsikko {
+  color: white;
+  font-size: 4em;
+  text-align: center;
+}
+
+.lomake {
+  display: none;
+  position: fixed;
+  left: 50%;
+  width: 700px;
+  transform: translate(-50%, -50%);
+  padding: 40px 50px 20px 20px;
+  background-image: url("../kuvat/paperi.webp");
+  background-size: 100%;
+  box-shadow: 15px 15px 15px #1d375e;
+  font-weight: bold;
+}
+
+.kentta {
+    display: flex;
+    align-items: baseline;
+  }
+  
+.kentta label {
+  width: 120px;
+  text-align: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+  
+.kentta1 {
+  width: 180px;
+}
+
+.kentta2 {
+  width: 300px;
+}
+
+#nappiLuoUusiTunnus,
+#nappiPeruuta {
+  display: block;
+  margin: 20px 30px 20px 130px;
+  height: 30px;
+  border-radius: 5px;
+  border: solid 1px;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: .04s;
+  cursor: pointer;
+}
+
+#kirjaudu,
+#luoTunnus,
+#kirjauduUlos {
+  margin: 3px 5px 0px 8px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(254, 242, 255);
+  cursor: pointer;
+  transition: .05s;
+}
+
+#nappiLuoUusiTunnus:hover,
+#nappiPeruuta:hover,
+#kirjaudu:hover,
+#luoTunnus:hover,
+#kirjauduUlos {
+  transform: scale(1.04);
+}
+
+h1 {
+  margin-bottom: 10px;
+  margin-left: 0px;
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 60px; 
+}
+
+.huomautus-vari::placeholder {
+  color: red;
+}
+
+.kentta {
+    display: flex;
+    align-items: baseline;
+  }
+  
+.kentta label {
+  width: 120px;
+  text-align: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+  
+.kentta1 {
+  width: 180px;
+}
+
+.kentta2 {
+  width: 300px;
+}
+
+.huomautus-vari::placeholder {
+  color: red;
+}
+
+@media only screen and (max-width: 920px) {
+  .lomake {
+    top: 0%;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .kentta label {
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    margin-right: 0px;
+  }
+  
+  .kentta1,
+  .kentta2 {
+    width: 100%;
+  }
+  
+  #nappiLuo,
+  #nappiPeruuta {
+    margin: 20px auto;
+  }
+}
