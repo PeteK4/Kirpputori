@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/stl.css">
+        <title>Nettikirppis MoniTori</title>
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kirpputori</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="tyylit.css">
-  <link rel="stylesheet" href="lomake.css">
+    <body>
 
-</head>
+      <div class="ylaPalkki">
+      <h3 class="ylaPalkki_Teksti">Tervetuloa nettikirppikseen!
+      <button id="kirjaudu">Kirjaudu sisään</button><span id="taiOnOff">tai</span><button id="luoTunnus">Luo käyttäjätunnus</button></h3>
+      </div>
 
-<header>
-  
-</header>
+      <h1 class="otsikko">NETTIKIRPPIS MoniTori</h1>
 
-<body>
-  <main>
-    <h1><b>Kirpputori</b></h1>
+      <div class="lomake">
+          <h1>Luo käyttäjätunnus MoniToriin</h1>
+          
+          <form>
+            <div class="kentta">
+              <label for="id">Käyttäjätunnus:</label>
+              <input class="kentta1" type="text" id="id" placeholder="Anna vähintään 6 merkkiä">
+            </div>
+      
+            <div class="kentta">
+              <label for="salasana">Salasana:</label>
+              <input class="kentta1" type="text" id="salasana">
+            </div>
+          
+            <div class="kentta">
+              <label for="nimi">Nimi:</label>
+              <input class="kentta2" type="text" id="nimi">
+            </div>
 
-    <a href="lomake.html">Siirry Lomake-sivulle</a>
+            <div class="kentta">
+              <label for="sahkoposti">Sähköposti:</label>
+              <input class="kentta2" type="text" id="sahkoposti" placeholder="nimi@email.fi">
+            </div>
 
-  </main>
-  
-  <footer>
+            <div class="kentta">
+              <button type="button" id="nappiLuoUusiTunnus">Luo tunnus</button>
+              <button style="margin: 0px; width: 100px;"
+                      type="button"
+                      id="nappiPeruuta">Peruuta
+              </button>
+            </div>
+          </form>          
+        </div>
 
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-    <script src="kuva.js"></script>
-    <script src="sovellus.js"></script>
-    <script src="lomake.js"></script>
+        <script src="./javascript/animaatiot.js" id="ylhaalta>alas"></script>
+        <script src="./javascript/tarkistin.js"></script>
     </body>
 </html>
-
