@@ -1,8 +1,24 @@
 // Animaatiot kirjautumisruutuun
-document.getElementById("luoTunnus").addEventListener("click", function() {
+document.getElementById("nappiLuoTunnus").addEventListener("click", function() {
   const elementti = document.querySelector(".lomake");
-  const animaatioSuunta = document.querySelector('script[src="./javascript/animaatiot.js"]').getAttribute("id");
+  const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
+  const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
 
+// Yläpalkin feidaukset
+  ylaPalkkiTeksti1.style.opacity = "1";
+  ylaPalkkiTeksti1.style.transition = "opacity .8s";
+  setTimeout(() => {
+    ylaPalkkiTeksti1.style.opacity = "0";
+  }, 100);
+
+  ylaPalkkiTeksti2.style.opacity = "0";
+  ylaPalkkiTeksti2.style.display = "block";
+  setTimeout(() => {
+    ylaPalkkiTeksti2.style.transition = "opacity .8s";
+    ylaPalkkiTeksti2.style.opacity = "1";
+    ylaPalkkiTeksti1.style.display = "none";
+  }, 100);
+  
 // Näytön leveyden tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
   if (window.innerWidth < 1000) {
     loppupiste = 110;
@@ -18,6 +34,13 @@ document.getElementById("luoTunnus").addEventListener("click", function() {
 // Elementti ylös
 document.getElementById("nappiPeruuta").addEventListener("click", function() {
   const elementti = document.querySelector(".lomake");
+  ylaPalkkiTeksti1.style.opacity = "0";
+  ylaPalkkiTeksti1.style.display = "block";
+  setTimeout(() => {
+    ylaPalkkiTeksti1.style.transition = "opacity .3s";
+    ylaPalkkiTeksti1.style.opacity = "1";
+  }, 100);
+  ylaPalkkiTeksti2.style.display = "none";
   alhaaltaYlos(elementti);
 });
 

@@ -25,7 +25,6 @@ nappiLuoUusiTunnus.addEventListener("click", function(event) {
   } 
 });
 
-
 function tarkistaSalasana(salasana) {
   const isoKirjain = /[A-Z]/;
   const numero = /[0-9]/;

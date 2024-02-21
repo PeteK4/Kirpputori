@@ -10,34 +10,36 @@
     <body>
 
       <div class="ylaPalkki">
-      <h3 class="ylaPalkkiTeksti">Tervetuloa nettikirppikseen!
-      <button id="kirjaudu">Kirjaudu sisään</button>tai<button id="luoTunnus">Luo käyttäjätunnus</button></h3>
+        <h3 id="ylaPalkkiTeksti1">Tervetuloa nettikirppikseen!
+        <button id="nappiKirjaudu">Kirjaudu sisään</button>
+        <button id="nappiLuoTunnus">Luo uusi käyttäjätunnus</button></h3>
+        <h3 id="ylaPalkkiTeksti2">Hei, tervetuloa MoniTorin asiakkaaksi!</h3>
       </div>
 
       <h1 class="otsikko">NETTIKIRPPIS MoniTori</h1>
 
       <div class="lomake">
-          <h1>Luo käyttäjätunnus MoniToriin</h1>
+          <div class="lomakeOtsikko">Luo uusi käyttäjätunnus</div>
           
           <form>
             <div class="kentta">
               <label for="id">Käyttäjätunnus:</label>
-              <input class="kenttaPit" type="text" id="id" placeholder="Vähintään 5 merkkiä">
+              <input class="kenttaLayout" type="text" id="id" placeholder="Vähintään 5 merkkiä">
             </div>
       
             <div class="kentta">
               <label for="salasana">Salasana:</label>
-              <input class="kenttaPit" type="password" id="salasana" placeholder="Vähintään 5 merkkiä, 1 iso kirjain, 1 numero, 1 erikoismerkki">
+              <input class="kenttaLayout" type="password" id="salasana" placeholder="Vähintään 5 merkkiä, 1 iso kirjain, 1 numero, 1 erikoismerkki">
             </div>
           
             <div class="kentta">
               <label for="nimi">Nimi:</label>
-              <input class="kenttaPit" type="text" id="nimi" placeholder="Etunimi, sukunimi">
+              <input class="kenttaLayout" type="text" id="nimi" placeholder="Etunimi, sukunimi">
             </div>
 
             <div class="kentta">
               <label for="sahkoposti">Sähköposti:</label>
-              <input class="kenttaPit" type="text" id="sahkoposti" placeholder="nimi@email.fi">
+              <input class="kenttaLayout" type="text" id="sahkoposti" placeholder="nimi@email.fi">
             </div>
 
             <div class="kentta">
