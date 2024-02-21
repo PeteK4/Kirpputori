@@ -19,14 +19,10 @@ body::before {
   z-index: 999;
 }
 
-.ylaPalkki_Teksti {
+.ylaPalkkiTeksti {
   color: white;
   font-size: 1.5em;
   text-align: center;
-}
-
-#tai {
-  display: block;
 }
 
 .otsikko {
@@ -60,12 +56,8 @@ body::before {
   margin-right: 10px;
 }
   
-.kentta1 {
-  width: 180px;
-}
-
-.kentta2 {
-  width: 300px;
+.kenttaPit {
+  width: 55%;
 }
 
 #nappiLuoUusiTunnus,
@@ -117,31 +109,12 @@ p {
   color: red;
 }
 
-.kentta {
-    display: flex;
-    align-items: baseline;
-  }
-  
-.kentta label {
-  width: 120px;
-  text-align: right;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-  
-.kentta1 {
-  width: 180px;
-}
-
-.kentta2 {
-  width: 300px;
-}
-
-.huomautus-vari::placeholder {
-  color: red;
-}
-
 @media only screen and (max-width: 920px) {
+
+  .ylaPalkki {
+    height: 100px
+
+  }
   .lomake {
     top: 0%;
     width: 80%;
@@ -156,9 +129,8 @@ p {
     margin-right: 0px;
   }
   
-  .kentta1,
-  .kentta2 {
-    width: 100%;
+  .kenttaPit {
+    width: 200%;
   }
   
   #nappiLuo,

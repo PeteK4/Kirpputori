@@ -1,14 +1,13 @@
+// Animaatio kirjautumisruutuun
 document.getElementById("luoTunnus").addEventListener("click", function() {
   const elementti = document.querySelector(".lomake");
   const animaatioSuunta = document.querySelector('script[src="./javascript/animaatiot.js"]').getAttribute("id");
 
-  console.log(animaatioSuunta)
-  // Näytön leveyden tarkistus
-  let loppupiste;
+  // Näytön leveyden tarkistus, jonka mukaan määritetään elementin loppusijainti ruudulla
   if (window.innerWidth < 1000) {
-    loppupiste = 90;
+    loppupiste = 110;
   } else {
-    loppupiste = 250;
+    loppupiste = 260;
   }
 
   // Valitaan animaation suunta
@@ -40,12 +39,11 @@ function ylhaaltaAlas(elementti, loppupiste) {
 // Siirrä elementti alhaalta ylös
 function alhaaltaYlos(elementti) {
   const loppupiste = -elementti.offsetHeight;
-  const alkupiste = window.innerHeight;
+  const alkupiste = window.innerHeight / 1.5;
   elementti.style.top = `${alkupiste}px`;
-
-  // Asetetaan siirtymä ja animaatio
   elementti.style.transition = "top 0.4s";
+
   setTimeout(() => {
-    elementti.style.top = `${loppupiste}px`;  // Siirretään elementti ylös ruudun yläpuolelle
+    elementti.style.top = `${loppupiste}px`;
   }, 100);
 }
