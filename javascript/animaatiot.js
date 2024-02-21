@@ -1,25 +1,21 @@
-// Animaatio kirjautumisruutuun
+// Animaatiot kirjautumisruutuun
 document.getElementById("luoTunnus").addEventListener("click", function() {
   const elementti = document.querySelector(".lomake");
   const animaatioSuunta = document.querySelector('script[src="./javascript/animaatiot.js"]').getAttribute("id");
 
-  // Näytön leveyden tarkistus, jonka mukaan määritetään elementin loppusijainti ruudulla
+// Näytön leveyden tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
   if (window.innerWidth < 1000) {
     loppupiste = 110;
   } else {
     loppupiste = 260;
   }
 
-  // Valitaan animaation suunta
-  if (animaatioSuunta == "ylhaalta>alas") {
+// Elementti alas
     elementti.style.display = "block";
     ylhaaltaAlas(elementti, loppupiste);
-  } else if (animaatioSuunta == "alhaalta>ylos") {
-    elementti.style.display = "block";
-    alhaaltaYlos(elementti);
-  }
 });
 
+// Elementti ylös
 document.getElementById("nappiPeruuta").addEventListener("click", function() {
   const elementti = document.querySelector(".lomake");
   alhaaltaYlos(elementti);
