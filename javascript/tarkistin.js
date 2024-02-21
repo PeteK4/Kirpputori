@@ -17,8 +17,6 @@ nappiLuoUusiTunnus.addEventListener("click", function(event) {
     }
   });
 
-  // Lähetä viesti ----------------------------------------------------------------------------------------
-
   if (kaikkiOk == 4) {
     window.location.href = "./kirppis.html";
     } 
