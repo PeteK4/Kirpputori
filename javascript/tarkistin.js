@@ -46,3 +46,4 @@ const aktiivinen = (syottoKentta) => {
 [id, salasana, nimi, sahkoposti].forEach((syottoKentta) => {
   syottoKentta.addEventListener("focus", () => aktiivinen(syottoKentta));
 });
+
