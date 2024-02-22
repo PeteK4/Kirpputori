@@ -1,3 +1,45 @@
+document.getElementById("nappiKirjaudu").addEventListener("click", function() {
+  const elementti = document.querySelector(".lomake");
+  const lomakeOtsikko = document.querySelector(".lomakeOtsikko");
+  const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
+  const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
+
+  // Vaihda lomakkeen otsikko
+  lomakeOtsikko.textContent = "Kirjaudu MoniToriin";
+  nappiLuoUusiTunnus.textContent ="Kirjaudu";
+
+  // Yläpalkin feidaukset
+  ylaPalkkiTeksti1.style.opacity = "1";
+  ylaPalkkiTeksti1.style.transition = "opacity .8s";
+  setTimeout(() => {
+      ylaPalkkiTeksti1.style.opacity = "0";
+  }, 100);
+
+  ylaPalkkiTeksti2.style.opacity = "0";
+  ylaPalkkiTeksti2.style.display = "block";
+  setTimeout(() => {
+      ylaPalkkiTeksti2.style.transition = "opacity .8s";
+      ylaPalkkiTeksti2.style.opacity = "1";
+      ylaPalkkiTeksti1.style.display = "none";
+  }, 100);
+
+  // Näytön leveyden tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
+  let loppupiste;
+  if (window.innerWidth < 1000) {
+      loppupiste = 110;
+  } else {
+      loppupiste = 260;
+  }
+
+  // Elementti alas
+  elementti.style.display = "block";
+  ylhaaltaAlas(elementti, loppupiste);
+
+  // Tässä vaiheessa voit suorittaa kirjautumistoimet
+  //window.location.href = "./kirppis.html";
+});
+
+
 nappiLuoUusiTunnus.addEventListener("click", function(event) {
   event.preventDefault();
   const kaikkiKentat = [id, salasana, nimi, sahkoposti];
@@ -8,7 +50,7 @@ nappiLuoUusiTunnus.addEventListener("click", function(event) {
   lomakeOtsikko.textContent = "Luo uusi käyttäjätunnus";
   nappiLuoUusiTunnus.textContent ="Luo tunnus";
 
-  
+
   // Tarkista kentät 
   kaikkiKentat.forEach((syottoKentta) => {
     if (syottoKentta.value == "") {
@@ -65,43 +107,3 @@ const aktiivinen = (syottoKentta) => {
   syottoKentta.addEventListener("focus", () => aktiivinen(syottoKentta));
 });
 
-document.getElementById("nappiKirjaudu").addEventListener("click", function() {
-  const elementti = document.querySelector(".lomake");
-  const lomakeOtsikko = document.querySelector(".lomakeOtsikko");
-  const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
-  const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
-
-  // Vaihda lomakkeen otsikko
-  lomakeOtsikko.textContent = "Kirjaudu MoniToriin";
-  nappiLuoUusiTunnus.textContent ="Kirjaudu";
-
-  // Yläpalkin feidaukset
-  ylaPalkkiTeksti1.style.opacity = "1";
-  ylaPalkkiTeksti1.style.transition = "opacity .8s";
-  setTimeout(() => {
-      ylaPalkkiTeksti1.style.opacity = "0";
-  }, 100);
-
-  ylaPalkkiTeksti2.style.opacity = "0";
-  ylaPalkkiTeksti2.style.display = "block";
-  setTimeout(() => {
-      ylaPalkkiTeksti2.style.transition = "opacity .8s";
-      ylaPalkkiTeksti2.style.opacity = "1";
-      ylaPalkkiTeksti1.style.display = "none";
-  }, 100);
-
-  // Näytön leveyden tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
-  let loppupiste;
-  if (window.innerWidth < 1000) {
-      loppupiste = 110;
-  } else {
-      loppupiste = 260;
-  }
-
-  // Elementti alas
-  elementti.style.display = "block";
-  ylhaaltaAlas(elementti, loppupiste);
-
-  // Tässä vaiheessa voit suorittaa kirjautumistoimet
-  //window.location.href = "./kirppis.html";
-});
