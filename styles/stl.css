@@ -90,6 +90,10 @@ body::before {
   background-color: #ffffff;
 }
 
+::placeholder {
+  color: rgb(121, 134, 155);
+}
+
 #nappiLuoUusiTunnus,
 #nappiKirjauduKirppis,
 #nappiPeruuta,
@@ -131,10 +135,6 @@ p {
   font-weight: bold;
   margin-bottom: 10px;
   margin-left: 60px; 
-}
-
-.huomautus-vari::placeholder {
-  color: rgb(190, 0, 127);
 }
 
 @media only screen and (max-width: 920px) {

@@ -3,12 +3,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const elementti = document.querySelector(".lomake");
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
-
+    
+    const vihjeTekstit = [
+      "Anna vähintään 5 merkkiä", 
+      "Anna vähintään 5 merkkiä (1 iso kirjain, 1 numero, 1 erikoismerkki)",
+      "Etunimi Sukunimi", 
+      "nimi@email.fi"
+    ];
+    
+    for (let i = 1; i <= 4; i++) {
+      const kentat = document.getElementById(`kentta${i}`).querySelector("input");
+      kentat.setAttribute("placeholder", vihjeTekstit[i - 1]);
+    }
+    
     ylaPalkkiTeksti2.innerText = "Hei, tervetuloa MoniTorin asiakkaaksi!"
-    document.getElementById("kentta1").querySelector("input").setAttribute("placeholder", "Anna vähintään 5 merkkiä");
-    document.getElementById("kentta2").querySelector("input").setAttribute("placeholder", "Anna vähintään 5 merkkiä, 1 iso kirjain, 1 numero, 1 erikoismerkki");
-    document.getElementById("kentta3").querySelector("input").setAttribute("placeholder", "Etunimi Sukunimi");
-    document.getElementById("kentta4").querySelector("input").setAttribute("placeholder", "nimi@email.fi");
     document.getElementById("lomakeOtsikko").innerText = "Luo uusi käyttäjätunnus"
     document.getElementById("kentta3").style.display ="flex";
     document.getElementById("kentta4").style.display ="flex";

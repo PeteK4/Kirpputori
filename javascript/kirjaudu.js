@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
   function naytaHuomautus(syottoKentta, teksti) {
     syottoKentta.value = "";
     syottoKentta.placeholder = teksti;
-    syottoKentta.classList.add("huomautus-vari");
   }
 
   // Poista huomautus
