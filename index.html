@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/stl.css">
+        <link rel="stylesheet" href="./styles/kuvat.css">
         <title>Nettikirppis MoniTori</title>
     </head>
 
@@ -55,8 +56,23 @@
           </form>          
         </div>
 
+        <h1 class="otsikko1">Kirppistuotteiden tiedot</h1>
+
+        <form id="product-form">
+          <input type="file" class="image-upload" accept="image/*">
+          <input type="text" class="product-name" placeholder="Tuotteen nimi">
+          <input type="text" class="product-description" placeholder="Kuvaus">
+          <input type="number" class="product-price" placeholder="Hinta €">
+          <button type="submit">Lataa kuva ja tallenna tiedot</button>
+        </form>
+        
+        <div id="product-previews">
+        </div>
+
         <script src="./javascript/animaatiot.js"></script>
         <script src="./javascript/luoTunnus.js"></script>
         <script src="./javascript/kirjaudu.js"></script>
+        <script src="./javascript/kuva.js"></script>
+
     </body>
 </html>

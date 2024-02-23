@@ -1,0 +1,46 @@
+/* tuokuvat ja tekstit*/
+.product-preview-item {
+    padding: 10px;
+    max-width: 1200px;
+    margin:auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
+  }
+  
+  .product-preview-item img {
+    max-width: 1200px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
+  }
+  
+  #product-form {
+    max-width: 1200px;
+    margin:auto;
+    background-color: aquamarine;
+    padding: 10px;
+  }
+  
+  .otsikko1 {
+    max-width: 1200px;
+    margin:auto;
+    background-color: white;
+    padding: 10px;
+  }
+  
+  .product-name {
+    padding-left: 20px;
+  }
+  
+  .delete-button {
+    padding-left: 50 px;
+    color:rgb(118, 13, 238);
+    font-weight: bolder;
+    width: 100px;
+    height: 50px;
+  }
