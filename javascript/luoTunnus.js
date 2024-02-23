@@ -53,6 +53,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+// Funktio, joka tarkistaa salasanan vaatimukset
+    function tarkistaSalasana(salasana) {
+    // Salasanan tulee olla vähintään 5 merkkiä pitkä ja sisältää vähintään yhden iso kirjaimen
+    const salasanaRegex = /^(?=.*[A-Z]).{5,}$/;
+    return salasanaRegex.test(salasana);
+    }
+
+// Funktio, joka tarkistaa sähköpostiosoitteen muodon
+  function tarkistaSposti(sposti) {
+    // Tarkistetaan, että sähköpostiosoite vastaa yleistä sähköpostimuotoa
+    const spostiRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return spostiRegex.test(sposti);
+  }
+
   // Näytä huomautus syöttökentässä, jos kenttä on tyhjä tai virheellisesti täytetty
   function naytaHuomautus(syottoKentta, teksti) {
     syottoKentta.value = "";

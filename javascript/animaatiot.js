@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
 
+    ylaPalkkiTeksti2.innerText = "Hei, tervetuloa MoniTorin asiakkaaksi!"
+    document.getElementById("kentta1").querySelector("input").setAttribute("placeholder", "Anna vähintään 5 merkkiä");
+    document.getElementById("kentta2").querySelector("input").setAttribute("placeholder", "Anna vähintään 5 merkkiä, 1 iso kirjain, 1 numero, 1 erikoismerkki");
+    document.getElementById("kentta3").querySelector("input").setAttribute("placeholder", "Etunimi Sukunimi");
+    document.getElementById("kentta4").querySelector("input").setAttribute("placeholder", "nimi@email.fi");
     document.getElementById("lomakeOtsikko").innerText = "Luo uusi käyttäjätunnus"
     document.getElementById("kentta3").style.display ="flex";
     document.getElementById("kentta4").style.display ="flex";
@@ -43,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const elementti = document.querySelector(".lomake");
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
+    ylaPalkkiTeksti2.innerText = "Hei, tervetuloa MoniToriin!"
 
     document.getElementById("lomakeOtsikko").innerText = "Kirjaudu kirppikselle"
     document.getElementById("kentta3").style.display ="none";
@@ -84,8 +90,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function peruuta() {
     const kaikkiKentat = [document.getElementById("id"), document.getElementById("salasana"), document.getElementById("nimi"), document.getElementById("sahkoposti")];
-    document.getElementById("kentta3").style.display = "flex";
-    document.getElementById("kentta4").style.display = "flex";
     kaikkiKentat.forEach((syottoKentta) => {
       syottoKentta.placeholder = "";
       syottoKentta.value = "";

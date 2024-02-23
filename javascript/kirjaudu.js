@@ -21,15 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Tarkista tunnukset
     if (kaikkiOk == 2) {
-      // Tarkistetaan, onko käyttäjätunnus jo tallennettu
       const tallennettuKayttaja = localStorage.getItem(id.value);
 
       if (!tallennettuKayttaja) {
-        naytaHuomautus(id, "Käyttäjätunnusta ei löydy.");
+        naytaHuomautus(id, "Antamaasi käyttäjätunnusta ei löydy.");
       } else {
         const tallennettuSalasana = JSON.parse(tallennettuKayttaja).salasana;
         if (tallennettuSalasana !== salasana.value) {
-          naytaHuomautus(salasana, "Tuntematon salasana");
+          naytaHuomautus(salasana, "Salasana ei täsmää käyttäjätunnuksen kanssa.");
         } else {
           // Ohjataan käyttäjä eteenpäin
           window.location.href = "./kirppis.html";
