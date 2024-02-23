@@ -57,18 +57,26 @@ body::before {
   color: #333;
 }
 
-.lomakeOtsikko {
+#lomakeOtsikko {
   margin: 40px auto 10px auto;
   margin-left: 0px;
   font-size: 2.5em;
 }
 
-.kentta {
+#kentta1,
+#kentta2,
+#kentta3,
+#kentta4,
+#kentta5,
+#kentta6 {
     display: flex;
     align-items: baseline;
-  }
-  
-.kentta label {
+}
+
+#kentta1 label,
+#kentta2 label,
+#kentta3 label,
+#kentta4 label {
   width: 120px;
   text-align: right;
   margin-top: 10px;
@@ -76,14 +84,16 @@ body::before {
 }
   
 .kenttaLayout {
-  width: 55%;
+  width: 58%;
   height: 18px;
   border: solid 1px;
   background-color: #ffffff;
 }
 
 #nappiLuoUusiTunnus,
-#nappiPeruuta {
+#nappiKirjauduKirppis,
+#nappiPeruuta,
+#nappiPeruutaKirjautuminen {
   display: block;
   margin: 20px 30px 20px 130px;
   height: 30px;
@@ -110,7 +120,9 @@ body::before {
 #nappiPeruuta:hover,
 #nappiKirjaudu:hover,
 #nappiLuoTunnus:hover,
-#kirjauduUlos {
+#nappiKirjauduKirppis:hover,
+#nappiPeruutaKirjautuminen:hover,
+#nappikirjauduUlos:hover {
   transform: scale(1.04);
 }
 
@@ -122,7 +134,7 @@ p {
 }
 
 .huomautus-vari::placeholder {
-  color: red;
+  color: rgb(190, 0, 127);
 }
 
 @media only screen and (max-width: 920px) {
@@ -138,7 +150,10 @@ p {
     transform: translateX(-50%);
   }
   
-  .kentta label {
+  #kentta1 label,
+  #kentta2 label,
+  #kentta3 label,
+  #kentta4 label {
     width: 100%;
     text-align: left;
     margin-top: 5px;

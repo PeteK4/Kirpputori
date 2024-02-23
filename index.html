@@ -19,40 +19,44 @@
       <h1 class="otsikko">NETTIKIRPPIS MoniTori</h1>
 
       <div class="lomake">
-          <div class="lomakeOtsikko">Luo uusi käyttäjätunnus</div>
+          <div id="lomakeOtsikko"></div>
           
           <form>
-            <div class="kentta">
+            <div id="kentta1">
               <label for="id">Käyttäjätunnus:</label>
               <input class="kenttaLayout" type="text" id="id" placeholder="Vähintään 5 merkkiä">
             </div>
       
-            <div class="kentta">
+            <div id="kentta2">
               <label for="salasana">Salasana:</label>
               <input class="kenttaLayout" type="password" id="salasana" placeholder="Vähintään 5 merkkiä, 1 iso kirjain, 1 numero, 1 erikoismerkki">
             </div>
           
-            <div class="kentta">
+            <div id="kentta3">
               <label for="nimi">Nimi:</label>
-              <input class="kenttaLayout" type="text" id="nimi" placeholder="Etunimi, sukunimi">
+              <input class="kenttaLayout" type="text" id="nimi" placeholder="Etunimi Sukunimi">
             </div>
 
-            <div class="kentta">
+            <div id="kentta4">
               <label for="sahkoposti">Sähköposti:</label>
               <input class="kenttaLayout" type="text" id="sahkoposti" placeholder="nimi@email.fi">
             </div>
 
-            <div class="kentta">
+            <div id="kentta5">
               <button type="button" id="nappiLuoUusiTunnus">Luo tunnus</button>
-              <button style="margin: 0px; width: 100px;"
-                      type="button"
-                      id="nappiPeruuta">Peruuta
+              <button type="button" id="nappiPeruuta" style="margin: 0px;">Peruuta</button>
+            </div>
+
+            <div id="kentta6">
+              <button type="button" id="nappiKirjauduKirppis">Kirjaudu</button>
+              <button type="button" id="nappiPeruutaKirjautuminen" style="margin: 0px;">Peruuta
               </button>
             </div>
           </form>          
         </div>
 
-        <script src="./javascript/animaatiot.js" id="ylhaalta>alas"></script>
-        <script src="./javascript/tarkistin.js"></script>
+        <script src="./javascript/animaatiot.js"></script>
+        <script src="./javascript/luoTunnus.js"></script>
+        <script src="./javascript/kirjaudu.js"></script>
     </body>
 </html>
