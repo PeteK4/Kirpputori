@@ -56,15 +56,16 @@
           </form>          
         </div>
 
-        <h1 class="otsikko1">Kirppistuotteiden tiedot</h1>
-
-        <form id="product-form">
-          <input type="file" class="image-upload" accept="image/*">
-          <input type="text" class="product-name" placeholder="Tuotteen nimi">
-          <input type="text" class="product-description" placeholder="Kuvaus">
-          <input type="number" class="product-price" placeholder="Hinta €">
-          <button type="submit">Lataa kuva ja tallenna tiedot</button>
-        </form>
+        <div style="display: none" id="lisaaTuotteet">
+          <h1 class="otsikko1">Kirppistuotteiden tiedot</h1>
+          <form id="product-form">
+            <input type="file" class="image-upload" accept="image/*">
+            <input type="text" class="product-name" placeholder="Tuotteen nimi">
+            <input type="text" class="product-description" placeholder="Kuvaus">
+            <input type="number" class="product-price" placeholder="Hinta €">
+            <button type="submit">Lataa kuva ja tallenna tiedot</button>
+          </form>
+        </div>
         
         <div id="product-previews">
         </div>

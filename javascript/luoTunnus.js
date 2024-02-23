@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const kaikkiKentat = [id, salasana, nimi, sahkoposti];
     let kaikkiOk = 4;
 
-    document.getElementById("kentta5").style.display = "flex";
-    document.getElementById("kentta6").style.display = "none";
-
     // Tarkista kentät 
     kaikkiKentat.forEach((syottoKentta) => {
       if (syottoKentta.value == "") {

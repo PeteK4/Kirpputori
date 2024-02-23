@@ -4,12 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const kaikkiKentat = [id, salasana];
     let kaikkiOk = 2;
 
-    document.getElementById("kentta3").style.display ="none";
-    document.getElementById("kentta4").style.display ="none";
-    document.getElementById("kentta5").style.display ="none";
-    document.getElementById("kentta6").style.display ="flex";
-    document.getElementById("lomakeOtsikko").innerText = "Kirjaudu kirppikseen"
-
     // Tarkista kentät 
     kaikkiKentat.forEach((syottoKentta) => {
       if (syottoKentta.value == "") {
@@ -52,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Poista huomautus
-  const aktiivinen2 = (syottoKentta) => {
+  const aktiivinen = (syottoKentta) => {
     if (syottoKentta.placeholder != "") {
       syottoKentta.placeholder = "";
     }
@@ -60,6 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Aseta syöttökenttä aktiiviseksi
   [id, salasana].forEach((syottoKentta) => {
-    syottoKentta.addEventListener("focus", () => aktiivinen2(syottoKentta));
+    syottoKentta.addEventListener("focus", () => aktiivinen(syottoKentta));
   });
 });

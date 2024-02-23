@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
 
     document.getElementById("lomakeOtsikko").innerText = "Luo uusi käyttäjätunnus"
+    document.getElementById("kentta3").style.display ="flex";
+    document.getElementById("kentta4").style.display ="flex";
+    document.getElementById("kentta5").style.display ="flex";
+    document.getElementById("kentta6").style.display ="none";
 
     // Yläpalkin feidaukset
     ylaPalkkiTeksti1.style.opacity = "1";
@@ -39,6 +43,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const elementti = document.querySelector(".lomake");
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
+
+    document.getElementById("lomakeOtsikko").innerText = "Kirjaudu kirppikselle"
+    document.getElementById("kentta3").style.display ="none";
+    document.getElementById("kentta4").style.display ="none";
+    document.getElementById("kentta5").style.display ="none";
+    document.getElementById("kentta6").style.display ="flex";
 
     // Yläpalkin feidaukset
     ylaPalkkiTeksti1.style.opacity = "1";
