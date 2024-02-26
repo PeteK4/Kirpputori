@@ -57,7 +57,7 @@ body::before {
   display: none;
   position: fixed;
   left: 50%;
-  width: 700px;
+  width: 800px;
   transform: translate(-50%, -50%);
   padding: 40px 50px 20px 20px;
   background-image: url("../kuvat/paperi2.webp");
@@ -222,7 +222,7 @@ p {
   margin: 1vw;
   padding: 5px 15px;
   border-radius: 15px;
-  background-color: rgb(254, 242, 255);
+  background-color: #6eda8e;
   cursor: pointer;
   transition: .05s;
   }

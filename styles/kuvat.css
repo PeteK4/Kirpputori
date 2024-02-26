@@ -1,46 +1,83 @@
 /* tuokuvat ja tekstit*/
 .product-preview-item {
-    padding: 10px;
-    max-width: 1200px;
-    margin:auto;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
-    border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
-  }
-  
-  .product-preview-item img {
-    max-width: 1200px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
-  }
-  
-  #product-form {
-    max-width: 1200px;
-    margin:auto;
-    background-color: aquamarine;
-    padding: 10px;
-  }
-  
-  .otsikko1 {
-    max-width: 1200px;
-    margin:auto;
-    background-color: white;
-    padding: 10px;
-  }
-  
-  .product-name {
-    padding-left: 20px;
-  }
-  
-  .delete-button {
-    padding-left: 50 px;
-    color:rgb(118, 13, 238);
-    font-weight: bolder;
-    width: 100px;
-    height: 50px;
-  }
+  padding: 10px;
+  max-width: 1200px;
+  margin:auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
+}
+
+.product-preview-item img {
+max-width: 1200px;
+padding: 10px;
+border-radius: 8px;
+border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
+}
+
+#product-form {
+max-width: 1200px;
+margin:auto;
+background-color: aquamarine;
+padding: 10px;
+}
+
+.otsikko1 {
+max-width: 1200px;
+margin:auto;
+background-color: white;
+padding: 10px;
+}
+
+.product-name {
+padding-left: 20px;
+}
+
+.delete-button {
+padding-left: 50 px;
+color:rgb(118, 13, 238);
+font-weight: bolder;
+width: 100px;
+height: 50px;
+}
+
+
+.logo,
+.logo1 {
+display: flex;
+}
+
+.logo img {
+margin-right: 50px; /* Lisää välistystä logon ja otsikon välille */
+margin-left: 300px;
+width: 200px; /* Voit muuttaa koon haluamaksesi */
+height: auto; /* Säilyttää kuvan suhteen oikean */
+
+}
+
+.logo1 img {
+margin-right: 10px;
+margin-left: auto;
+width: 200px; /* Voit muuttaa koon haluamaksesi */
+height: auto; /* Säilyttää kuvan suhteen oikeana */
+}
+
+#tuote-lomake-container {
+display: flex;
+}
+
+#tuote-lomake {
+flex: 1; /* Annetaan lomakkeelle joustavuutta */
+margin-right: 20px; /* Lisätään välistystä lomakkeen ja logon välille */
+}
+
+.logo1 {
+flex: 0 0 auto; /* Määritetään logo kiinteäksi leveydeksi */
+}
+
+
+
