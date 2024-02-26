@@ -8,22 +8,21 @@ document.addEventListener("DOMContentLoaded", function() {
     kaikkiKentat.forEach((syottoKentta) => {
       if (syottoKentta.value == "") {
         if (syottoKentta.placeholder == " * Täytä tämä kenttä" || syottoKentta.value == "") {
-          syottoKentta.style.transition = "transform 0.1s";
-          syottoKentta.style.transform = "scaleX(1.06)";
-          setTimeout(() => {
-            syottoKentta.style.transform = "scaleX(1)";
-          }, 100);
+          venyta(syottoKentta);
         }
         naytaHuomautus(syottoKentta, " * Täytä tämä kenttä");
         kaikkiOk -= 1;
       } else if (syottoKentta == id && syottoKentta.value.length < 5) {
         naytaHuomautus(syottoKentta, "Syötä vähintään 5 merkkiä");
+        venyta(syottoKentta);
         kaikkiOk -= 1;
       } else if (syottoKentta == salasana && !tarkistaSalasana(syottoKentta.value)) {
         naytaHuomautus(syottoKentta, "Syötä vähintään 5 merkkiä, 1 iso kirjain, 1 numero, 1 erikoismerkki");
+        venyta(syottoKentta);
         kaikkiOk -= 1;
       } else if (syottoKentta == sahkoposti && !tarkistaSposti(syottoKentta.value)) {
         naytaHuomautus(syottoKentta, "Sähköpostiosoitteen tulee olla muotoa: nimi@email.fi");
+        venyta(syottoKentta);
         kaikkiOk -= 1;
       }
     });
@@ -52,6 +51,12 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   });
+
+  syottoKentta.style.transition = "transform 0.1s";
+  syottoKentta.style.transform = "scaleX(1.06)";
+  setTimeout(() => {
+    syottoKentta.style.transform = "scaleX(1)";
+  }, 100);
 
 // Funktio, joka tarkistaa salasanan vaatimukset
     function tarkistaSalasana(salasana) {
@@ -84,4 +89,12 @@ document.addEventListener("DOMContentLoaded", function() {
   [id, salasana, nimi, sahkoposti].forEach((syottoKentta) => {
     syottoKentta.addEventListener("focus", () => aktiivinen(syottoKentta));
   });
+
+  function venyta(syottoKentta) {
+    syottoKentta.style.transition = "transform 0.1s";
+    syottoKentta.style.transform = "scaleX(1.06)";
+    setTimeout(() => {
+      syottoKentta.style.transform = "scaleX(1)";
+    }, 100);
+  }
 });

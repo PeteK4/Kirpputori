@@ -1,5 +1,5 @@
 body {
-  background-color: #3c6ace;
+  background-color: #286d6d;
   user-select: none;
 }
 
@@ -15,19 +15,20 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
-  background-color: rgb(105, 126, 194);
+  height: 6vw;
+  text-align: center;
+  background-image: linear-gradient(to top, #163b35, #337c7c);
   z-index: 999;
 }
 
 #ylaPalkkiTeksti1 {
   display: block;
-  font-size: 2em;
+  font-size: 1.8vw;
 }
 
 #ylaPalkkiTeksti2 {
   display: none;
-  font-size: 2.5em;
+  font-size: 2.5vw;
 }
 
 #ylaPalkkiTeksti1, 
@@ -39,8 +40,17 @@ body::before {
 
 .otsikko {
   color: white;
-  font-size: 4em;
+  font-size: 3.2vw;
   text-align: center;
+  margin-top: 4vw;
+}
+
+#etusivuKuva {
+  display: block;
+  margin: 3vw auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 40px;;
 }
 
 .lomake {
@@ -52,7 +62,7 @@ body::before {
   padding: 40px 50px 20px 20px;
   background-image: url("../kuvat/paperi2.webp");
   background-size: 100%;
-  box-shadow: 15px 15px 15px #1d375e;
+  box-shadow: 15px 15px 15px #1e5353;
   font-weight: bold;
   color: #333;
 }
@@ -99,9 +109,11 @@ body::before {
 #nappiPeruuta,
 #nappiPeruutaKirjautuminen {
   display: block;
+  color: black;
   margin: 20px 30px 20px 130px;
+  padding: 5px 15px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 15px;
   border: solid 1px;
   font-size: 1.1em;
   font-weight: bold;
@@ -109,25 +121,44 @@ body::before {
   cursor: pointer;
 }
 
-#nappiKirjaudu,
-#nappiLuoTunnus,
-#nappiKirjauduUlos {
-  margin: 3px 5px 0px 8px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: rgb(254, 242, 255);
-  cursor: pointer;
-  transition: .05s;
-}
-
 #nappiLuoUusiTunnus:hover,
 #nappiPeruuta:hover,
-#nappiKirjaudu:hover,
-#nappiLuoTunnus:hover,
 #nappiKirjauduKirppis:hover,
-#nappiPeruutaKirjautuminen:hover,
-#nappikirjauduUlos:hover {
-  transform: scale(1.04);
+#nappiPeruutaKirjautuminen:hover {
+  transform: scale(1.05);
+  color: rgb(126, 126, 126);
+  border: solid 1px;
+  border-color:#a1a1a1;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px #ffffff
+}
+
+
+#nappiKirjaudu,
+#nappiLuoTunnus {
+  display: inline-block;
+  margin: 0.5vw;
+  padding: 5px 15px;
+  color: black;
+  border: solid 1px;
+  border-color: #30503a;
+  border-radius: 15px;
+  background-color: #4fce75;
+  cursor: pointer;
+  transition: .05s;
+  max-width: 90%;
+  width: 200px; /
+}
+
+
+#nappiKirjaudu:hover,
+#nappiLuoTunnus:hover {
+  transform: scale(1.02);
+  color:#cdffdb;
+  border: solid 1px;
+  border-color:#5f9770;
+  background-color: #6eda8e;
+  box-shadow: 0px 0px 15px #75dac9
 }
 
 p {
@@ -139,15 +170,37 @@ p {
 
 @media only screen and (max-width: 920px) {
 
-  .ylaPalkki {
-    height: 100px
-
-  }
   .lomake {
     top: 0%;
     width: 80%;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .ylaPalkki {
+    height: 100px
+
+  }
+
+  #ylaPalkkiTeksti1 {
+    font-size: 5vw;
+
+  }
+
+  #ylaPalkkiTeksti2 {
+    font-size: 5vw;
+  }
+
+  .otsikko {
+    margin-top: 10vw;
+    font-size: 8vw;
+  }
+
+  #etusivuKuva {
+    display: block;
+    margin: 8vw auto;
+    max-width: 100%;
+    height: auto;
   }
   
   #kentta1 label,
@@ -164,8 +217,17 @@ p {
     width: 200%;
   }
   
-  #nappiLuo,
-  #nappiPeruuta {
-    margin: 20px auto;
+  #nappiKirjaudu,
+  #nappiLuoTunnus {
+  margin: 1vw;
+  padding: 5px 15px;
+  border-radius: 15px;
+  background-color: rgb(254, 242, 255);
+  cursor: pointer;
+  transition: .05s;
+  }
+
+  #etusivuKuva {
+    border-radius: 5px;;
   }
 }

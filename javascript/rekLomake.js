@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const elementti = document.querySelector(".lomake");
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
+    const etusivuKuva = document.getElementById("etusivuKuva")
     
     const vihjeTekstit = [
       "Anna vähintään 5 merkkiä", 
@@ -16,18 +17,23 @@ document.addEventListener("DOMContentLoaded", function() {
       kentat.setAttribute("placeholder", vihjeTekstit[i - 1]);
     }
     
-    ylaPalkkiTeksti2.innerText = "Hei, tervetuloa MoniTorin asiakkaaksi!"
+    ylaPalkkiTeksti2.innerText = "Tervetuloa MoniTorin asiakkaaksi!"
     document.getElementById("lomakeOtsikko").innerText = "Luo uusi käyttäjätunnus"
     document.getElementById("kentta3").style.display ="flex";
     document.getElementById("kentta4").style.display ="flex";
     document.getElementById("kentta5").style.display ="flex";
     document.getElementById("kentta6").style.display ="none";
+    document.getElementById("nappiKirjaudu").style.display ="none";
+    document.getElementById("nappiLuoTunnus").style.display ="none";
 
     // Yläpalkin feidaukset
     ylaPalkkiTeksti1.style.opacity = "1";
     ylaPalkkiTeksti1.style.transition = "opacity .8s";
+    etusivuKuva.style.opacity = "1";
+    etusivuKuva.style.transition = "opacity .4s";
     setTimeout(() => {
       ylaPalkkiTeksti1.style.opacity = "0";
+      etusivuKuva.style.opacity = "0";
     }, 100);
 
     ylaPalkkiTeksti2.style.opacity = "0";
@@ -43,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (window.innerWidth < 1000) {
       loppupiste = 110;
     } else {
-      loppupiste = 260;
+      loppupiste = 285;
     }
 
     // Elementti alas
@@ -56,8 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const elementti = document.querySelector(".lomake");
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
-    ylaPalkkiTeksti2.innerText = "Hei, tervetuloa MoniToriin!"
-
+    const etusivuKuva = document.getElementById("etusivuKuva")
+    
+    ylaPalkkiTeksti2.innerText = "Tervetuloa MoniToriin!"
     document.getElementById("lomakeOtsikko").innerText = "Kirjaudu kirppikselle"
     document.getElementById("kentta3").style.display ="none";
     document.getElementById("kentta4").style.display ="none";
@@ -67,10 +74,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // Yläpalkin feidaukset
     ylaPalkkiTeksti1.style.opacity = "1";
     ylaPalkkiTeksti1.style.transition = "opacity .8s";
+    etusivuKuva.style.opacity = "1";
+    etusivuKuva.style.transition = "opacity .4s";
     setTimeout(() => {
       ylaPalkkiTeksti1.style.opacity = "0";
     }, 100);
 
+    etusivuKuva.style.opacity = "0";
     ylaPalkkiTeksti2.style.opacity = "0";
     ylaPalkkiTeksti2.style.display = "block";
     setTimeout(() => {
@@ -84,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (window.innerWidth < 1000) {
       loppupiste = 110;
     } else {
-      loppupiste = 260;
+      loppupiste = 285;
     }
 
     // Elementti alas
@@ -105,12 +115,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
+    const etusivuKuva = document.getElementById("etusivuKuva")
+
+    document.getElementById("nappiKirjaudu").style.display ="inline-block";
+    document.getElementById("nappiLuoTunnus").style.display ="inline-block";
 
     ylaPalkkiTeksti1.style.opacity = "0";
     ylaPalkkiTeksti1.style.display = "block";
+    etusivuKuva.style.opacity = "0";
     setTimeout(() => {
       ylaPalkkiTeksti1.style.transition = "opacity .3s";
+      etusivuKuva.style.transition = "opacity .3s";
       ylaPalkkiTeksti1.style.opacity = "1";
+      etusivuKuva.style.opacity = "1";
     }, 100);
     ylaPalkkiTeksti2.style.display = "none";
 
