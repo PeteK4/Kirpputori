@@ -16,57 +16,58 @@
     <body>
 
       <div class="ylaPalkki">
-          <h3 id="ylaPalkkiTeksti1">Hei, kirjaudu tai luo uusi tunnus!<br>
-          <button id="nappiKirjaudu">Kirjaudu sisään</button>
-          <button id="nappiLuoTunnus">Luo uusi käyttäjätunnus</button></h3>
-          <h3 id="ylaPalkkiTeksti2"></h3>
+        <h3 id="ylaPalkkiTeksti1">Tervetuloa nettikirppikseen!
+        <button id="nappiKirjaudu">Kirjaudu sisään</button>
+        <button id="nappiLuoTunnus">Luo uusi käyttäjätunnus</button></h3>
+        <h3 id="ylaPalkkiTeksti2"></h3>
       </div>
-      
+
       <!-- Logo otsikon eteen, muokkaukset kuvat.css -->
-      <div class="logo">
+      <div class="logo" id="logo-container">
         <img src="./kuvat/logo.png" alt="Logo">
         <h1 class="otsikko">NETTIKIRPPIS MoniTori</h1>
       </div>
       <img id="etusivuKuva" src="./kuvat/etusivu.webp" alt="">
-      <div class="lomake">
+        <div class="lomake">
           <div id="lomakeOtsikko"></div>
-          
-          <form>
-            <div id="kentta1">
-              <label for="id">Käyttäjätunnus:</label>
-              <input class="kenttaLayout" type="text" id="id">
-            </div>
-      
-            <div id="kentta2">
-              <label for="salasana">Salasana:</label>
-              <input class="kenttaLayout" type="text" id="salasana">
-            </div>
-          
-            <div id="kentta3">
-              <label for="nimi">Nimi:</label>
-              <input class="kenttaLayout" type="text" id="nimi">
-            </div>
+            <div id="tuote-lomake-container">
+              <form id="tuote-lomake">
+              <div id="kentta1">
+                <label for="id">Käyttäjätunnus:</label>
+                <input class="kenttaLayout" type="text" id="id">
+              </div>
+        
+              <div id="kentta2">
+                <label for="salasana">Salasana:</label>
+                <input class="kenttaLayout" type="text" id="salasana">
+              </div>
+            
+              <div id="kentta3">
+                <label for="nimi">Nimi:</label>
+                <input class="kenttaLayout" type="text" id="nimi">
+              </div>
 
-            <div id="kentta4">
-              <label for="sahkoposti">Sähköposti:</label>
-              <input class="kenttaLayout" type="text" id="sahkoposti">
-            </div>
+              <div id="kentta4">
+                <label for="sahkoposti">Sähköposti:</label>
+                <input class="kenttaLayout" type="text" id="sahkoposti">
+              </div>
 
-            <div id="kentta5">
-              <button type="button" id="nappiLuoUusiTunnus">Luo tunnus</button>
-              <button type="button" id="nappiPeruuta" style="margin: 0px;">Peruuta</button>
-            </div>
+              <div id="kentta5">
+                <button type="button" id="nappiLuoUusiTunnus">Luo tunnus</button>
+                <button type="button" id="nappiPeruuta" style="margin: 0px;">Peruuta</button>
+              </div>
 
-            <div id="kentta6">
-              <button type="button" id="nappiKirjauduKirppis">Kirjaudu</button>
-              <button type="button" id="nappiPeruutaKirjautuminen" style="margin: 0px;">Peruuta
-              </button>
-            </div>
-          </form>
-          <div class="logo1">
-            <img class="logo1" src="./kuvat/logo.png" alt="Logo">
-          </div>        
-        </div>
+              <div id="kentta6">
+                <button type="button" id="nappiKirjauduKirppis">Kirjaudu</button>
+                <button type="button" id="nappiPeruutaKirjautuminen" style="margin: 0px;">Peruuta
+                </button>
+              </div>
+
+            </form>
+            <div class="logo1">
+              <img class="logo1" src="./kuvat/logo.png" alt="Logo">
+            </div>        
+          </div>
 
         <div style="display: none" id="lisaaTuotteet">
           <h1 class="otsikko1">Kirppistuotteiden tiedot</h1>
