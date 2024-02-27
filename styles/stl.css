@@ -168,6 +168,20 @@ p {
   margin-left: 60px; 
 }
 
+#palaaSivunAlkuun {
+  width: 50px;
+  position: fixed;
+  bottom: 15px;
+  right: -50px;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: right .2s ease-in-out;
+}
+
+#palaaSivunAlkuun:hover {
+  transform: translateX(-5px);
+}
+
 /* MOBIILI ----------------------------------------*/
 
 @media only screen and (max-width: 920px) {
@@ -230,5 +244,10 @@ p {
 
   #etusivuKuva {
     border-radius: 5px;;
+  }
+
+  #palaaSivunAlkuun {
+    bottom: 55px;
+    width: 30px;
   }
 }
