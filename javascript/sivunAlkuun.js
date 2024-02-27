@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
     const kuvake = document.getElementById("palaaSivunAlkuun");
-    const laukaisuPaikka = window.innerHeight / 3;
+    const laukaisuPaikka = window.innerHeight / 1.3;
     let onRuudulla = false;
 
     window.onscroll = function () {
