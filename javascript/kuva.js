@@ -55,25 +55,4 @@ document.getElementById('product-form').addEventListener('submit', function(even
      productPreviews.appendChild(productPreview);
   });
 
-// Etsi Kirjaudu sisään -painike
-const kirjauduNappi = document.getElementById("nappiKirjaudu");
-
-// Etsi Luo tunnus -painike
-const luoTunnusNappi = document.getElementById("nappiLuoTunnus");
-
-// Etsi logo-container-div
-const logoContainer = document.getElementById("logo-container");
-
-// Lisää tapahtumankuuntelija Kirjaudu sisään -napille
-kirjauduNappi.addEventListener("click", function() {
-    // Piilota logo-container-div asettamalla sen näkyvyys 'none':ksi
-    logoContainer.style.display = "none";
-});
-
-// Lisää tapahtumankuuntelija Luo tunnus -napille
-luoTunnusNappi.addEventListener("click", function() {
-    // Piilota logo-container-div asettamalla sen näkyvyys 'none':ksi
-    logoContainer.style.display = "none";
-});
-
 
