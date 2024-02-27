@@ -21,6 +21,24 @@
             <h1 class="otsikko">NETTIKIRPPIS MoniTori</h1>
         </div>
 
+        <!-- siirretty index.html: sivulta 27.2.2024-->
+        <div style="display: block" id="lisaaTuotteet">
+            <h1 class="otsikko1">Kirppistuotteiden tiedot</h1>
+            <form id="product-form">
+              <input type="file" class="image-upload" accept="image/*">
+              <input type="text" class="product-name" placeholder="Tuotteen nimi">
+              <input type="text" class="product-description" placeholder="Kuvaus">
+              <input type="number" class="product-price" placeholder="Hinta €">
+              <button type="submit">Lataa kuva ja tallenna tiedot</button>
+            </form>
+          </div>
+          <div id="product-previews"></div>
+
+        <script src="./javascript/rekLomake.js"></script>
+        <script src="./javascript/luoTunnus.js"></script>
+        <script src="./javascript/kirjaudu.js"></script>
+        <script src="./javascript/kuva.js"></script>
+
         <script src="kuva.js"></script>    
     </body>
 </html>

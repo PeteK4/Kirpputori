@@ -37,6 +37,11 @@ padding: 10px;
 padding-left: 20px;
 }
 
+/* lisätty 27.2.2024 kuvan ja tuotetekstin väliin tilaa*/
+.product-details {
+  margin: 20px;
+}
+
 .delete-button {
 padding-left: 50 px;
 color:rgb(118, 13, 238);
@@ -61,6 +66,11 @@ height: auto; /* Säilyttää kuvan suhteen oikean */
 margin-left: auto;
 width: 11vw; /* Voit muuttaa koon haluamaksesi */
 height: 8vw; /* Säilyttää kuvan suhteen oikeana */
+}
+
+
+#lisaaTuotteet {
+  display: none;
 }
 
 #tuote-lomake-container {
