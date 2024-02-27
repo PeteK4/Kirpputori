@@ -55,14 +55,12 @@ margin-right: 50px; /* Lisää välistystä logon ja otsikon välille */
 margin-left: 300px;
 width: 200px; /* Voit muuttaa koon haluamaksesi */
 height: auto; /* Säilyttää kuvan suhteen oikean */
-
 }
 
 .logo1 img {
-margin-right: 10px;
 margin-left: auto;
-width: 200px; /* Voit muuttaa koon haluamaksesi */
-height: auto; /* Säilyttää kuvan suhteen oikeana */
+width: 11vw; /* Voit muuttaa koon haluamaksesi */
+height: 8vw; /* Säilyttää kuvan suhteen oikeana */
 }
 
 #tuote-lomake-container {
@@ -78,5 +76,23 @@ margin-right: 20px; /* Lisätään välistystä lomakkeen ja logon välille */
 flex: 0 0 auto; /* Määritetään logo kiinteäksi leveydeksi */
 }
 
+/* NÄYTTÖ > 1920 ----------------------------------------*/
 
+@media only screen and (min-width: 1920px) {
+
+  .logo1 img {
+    margin-left: auto;
+    width: 9vw;
+    height: 6vw;
+    }
+}
+
+/* MOBIILI ----------------------------------------*/
+
+@media only screen and (max-width: 920px) {
+
+  .logo1 img {
+ display: none;
+    }
+}
 

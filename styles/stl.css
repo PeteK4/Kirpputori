@@ -15,7 +15,7 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 6vw;
+  height: 7vw;
   text-align: center;
   background-image: linear-gradient(to top, #163b35, #337c7c);
   z-index: 999;
@@ -23,7 +23,7 @@ body::before {
 
 #ylaPalkkiTeksti1 {
   display: block;
-  font-size: 1.8vw;
+  font-size: 2vw;
 }
 
 #ylaPalkkiTeksti2 {
@@ -33,21 +33,22 @@ body::before {
 
 #ylaPalkkiTeksti1, 
 #ylaPalkkiTeksti2 {
+  display: block;
   color: white;
-  margin-top: 1%;
+  margin-top: 10px;
   text-align: center;
 }
 
-.otsikko {
+#otsikko {
   color: white;
   font-size: 3.2vw;
   text-align: center;
-  margin-top: 4vw;
+  margin-top: 5vw;
 }
 
 #etusivuKuva {
   display: block;
-  margin: 3vw auto;
+  margin: 50px auto;
   max-width: 100%;
   height: auto;
   border-radius: 40px;;
@@ -68,7 +69,7 @@ body::before {
 }
 
 #lomakeOtsikko {
-  margin: 40px auto 10px auto;
+  margin: 50px auto 10px auto;
   margin-left: 0px;
   font-size: 2.5em;
 }
@@ -91,10 +92,11 @@ body::before {
   text-align: right;
   margin-top: 10px;
   margin-right: 10px;
+  font-size: 1em;
 }
   
 .kenttaLayout {
-  width: 58%;
+  width: 72%;
   height: 18px;
   border: solid 1px;
   background-color: #ffffff;
@@ -106,23 +108,22 @@ body::before {
 
 #nappiLuoUusiTunnus,
 #nappiKirjauduKirppis,
-#nappiPeruuta,
+#nappiPeruutaLuoTunnus,
 #nappiPeruutaKirjautuminen {
   display: block;
   color: black;
   margin: 20px 30px 20px 130px;
   padding: 5px 15px;
-  height: 30px;
   border-radius: 15px;
   border: solid 1px;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: bold;
   transition: .04s;
   cursor: pointer;
 }
 
 #nappiLuoUusiTunnus:hover,
-#nappiPeruuta:hover,
+#nappiPeruutaLuoTunnus:hover,
 #nappiKirjauduKirppis:hover,
 #nappiPeruutaKirjautuminen:hover {
   transform: scale(1.05);
@@ -133,12 +134,11 @@ body::before {
   box-shadow: 0px 0px 15px #ffffff
 }
 
-
 #nappiKirjaudu,
 #nappiLuoTunnus {
   display: inline-block;
-  margin: 0.5vw;
-  padding: 5px 15px;
+  margin-top: .5vw;
+  padding: 4px 15px;
   color: black;
   border: solid 1px;
   border-color: #30503a;
@@ -168,6 +168,8 @@ p {
   margin-left: 60px; 
 }
 
+/* MOBIILI ----------------------------------------*/
+
 @media only screen and (max-width: 920px) {
 
   .lomake {
@@ -178,27 +180,24 @@ p {
   }
 
   .ylaPalkki {
-    height: 100px
+    height: 100px;
 
   }
 
-  #ylaPalkkiTeksti1 {
-    font-size: 5vw;
-
-  }
-
+  #ylaPalkkiTeksti1,
   #ylaPalkkiTeksti2 {
-    font-size: 5vw;
+    margin-top: 5px;
+    font-size: 6vw;
   }
 
-  .otsikko {
-    margin-top: 10vw;
-    font-size: 8vw;
+  #otsikko {
+    margin-top: 20px;
+    font-size: 5vw;
   }
 
   #etusivuKuva {
     display: block;
-    margin: 8vw auto;
+    margin: 20px auto;
     max-width: 100%;
     height: auto;
   }
@@ -219,12 +218,14 @@ p {
   
   #nappiKirjaudu,
   #nappiLuoTunnus {
-  margin: 1vw;
-  padding: 5px 15px;
-  border-radius: 15px;
-  background-color: #6eda8e;
-  cursor: pointer;
-  transition: .05s;
+    width: 180px;
+    margin-top: 10px;;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 15px;
+    background-color: #6eda8e;
+    cursor: pointer;
+    transition: .05s;
   }
 
   #etusivuKuva {

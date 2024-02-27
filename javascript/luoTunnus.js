@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
 
-    // Tallennus localStorageen
+// Tallennus localStorageen
     if (kaikkiOk == 4) {
       // Tarkistetaan, onko käyttäjätunnus jo tallennettu
       const tallennettuKayttaja = localStorage.getItem(id.value);
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (tallennettuKayttaja) {
         naytaHuomautus(id, "Saman niminen käyttäjätunnus on jo olemassa.");
       } else {
-        // Luodaan käyttäjätunnus-objekti
+        // Luodaan käyttäjätunnus objekti
         const kayttaja = {
           id: id.value,
           salasana: salasana.value,
@@ -52,22 +52,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  syottoKentta.style.transition = "transform 0.1s";
-  syottoKentta.style.transform = "scaleX(1.06)";
-  setTimeout(() => {
-    syottoKentta.style.transform = "scaleX(1)";
-  }, 100);
-
 // Funktio, joka tarkistaa salasanan vaatimukset
     function tarkistaSalasana(salasana) {
-    // Salasanan tulee olla vähintään 5 merkkiä pitkä ja sisältää vähintään yhden iso kirjaimen
     const salasanaRegex = /^(?=.*[A-Z]).{5,}$/;
     return salasanaRegex.test(salasana);
     }
 
 // Funktio, joka tarkistaa sähköpostiosoitteen muodon
   function tarkistaSposti(sposti) {
-    // Tarkistetaan, että sähköpostiosoite vastaa yleistä sähköpostimuotoa
     const spostiRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return spostiRegex.test(sposti);
   }

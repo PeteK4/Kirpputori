@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
     const etusivuKuva = document.getElementById("etusivuKuva")
+    const nappiKirjaudu = document.getElementById("nappiKirjaudu")
+    const nappiLuoTunnus = document.getElementById("nappiLuoTunnus")
+    const otsikko = document.getElementById("otsikko")
     
     const vihjeTekstit = [
       "Anna vähintään 5 merkkiä", 
@@ -23,35 +26,39 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("kentta4").style.display ="flex";
     document.getElementById("kentta5").style.display ="flex";
     document.getElementById("kentta6").style.display ="none";
-    document.getElementById("nappiKirjaudu").style.display ="none";
-    document.getElementById("nappiLuoTunnus").style.display ="none";
 
     // Yläpalkin feidaukset
     ylaPalkkiTeksti1.style.opacity = "1";
     ylaPalkkiTeksti1.style.transition = "opacity .8s";
     etusivuKuva.style.opacity = "1";
     etusivuKuva.style.transition = "opacity .4s";
+    otsikko.style.opacity = "1";
+    otsikko.style.transition = "opacity .4s";
     setTimeout(() => {
       ylaPalkkiTeksti1.style.opacity = "0";
       etusivuKuva.style.opacity = "0";
+      otsikko.style.opacity = "0";
     }, 100);
-
     ylaPalkkiTeksti2.style.opacity = "0";
     ylaPalkkiTeksti2.style.display = "block";
     setTimeout(() => {
       ylaPalkkiTeksti2.style.transition = "opacity .8s";
       ylaPalkkiTeksti2.style.opacity = "1";
       ylaPalkkiTeksti1.style.display = "none";
+      nappiKirjaudu.style.display = "none";
+      nappiLuoTunnus.style.display = "none";
     }, 100);
 
     // Näytön leveyden tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
     let loppupiste;
-    if (window.innerWidth < 1000) {
-      loppupiste = 110;
+    if (window.innerWidth > 1920) {
+      loppupiste = 390;
+    } else if (window.innerWidth > 1000) {
+      loppupiste = 320;
     } else {
-      loppupiste = 285;
+      loppupiste = 110;
     }
-
+    
     // Elementti alas
     elementti.style.display = "block";
     ylhaaltaAlas(elementti, loppupiste);
@@ -63,6 +70,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
     const etusivuKuva = document.getElementById("etusivuKuva")
+    const otsikko = document.getElementById("otsikko")
+    const nappiKirjaudu = document.getElementById("nappiKirjaudu")
+    const nappiLuoTunnus = document.getElementById("nappiLuoTunnus")
     
     ylaPalkkiTeksti2.innerText = "Tervetuloa MoniToriin!"
     document.getElementById("lomakeOtsikko").innerText = "Kirjaudu kirppikselle"
@@ -76,10 +86,13 @@ document.addEventListener("DOMContentLoaded", function() {
     ylaPalkkiTeksti1.style.transition = "opacity .8s";
     etusivuKuva.style.opacity = "1";
     etusivuKuva.style.transition = "opacity .4s";
+    otsikko.style.opacity = "1";
+    otsikko.style.transition = "opacity .4s";
     setTimeout(() => {
       ylaPalkkiTeksti1.style.opacity = "0";
     }, 100);
 
+    otsikko.style.opacity = "0";
     etusivuKuva.style.opacity = "0";
     ylaPalkkiTeksti2.style.opacity = "0";
     ylaPalkkiTeksti2.style.display = "block";
@@ -87,14 +100,18 @@ document.addEventListener("DOMContentLoaded", function() {
       ylaPalkkiTeksti2.style.transition = "opacity .8s";
       ylaPalkkiTeksti2.style.opacity = "1";
       ylaPalkkiTeksti1.style.display = "none";
+      nappiKirjaudu.style.display = "none";
+      nappiLuoTunnus.style.display = "none";
     }, 100);
 
     // Näytön leveyden tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
     let loppupiste;
-    if (window.innerWidth < 1000) {
-      loppupiste = 110;
+    if (window.innerWidth > 1920) {
+      loppupiste = 390;
+    } else if (window.innerWidth > 1000) {
+      loppupiste = 300;
     } else {
-      loppupiste = 285;
+      loppupiste = 110;
     }
 
     // Elementti alas
@@ -103,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // Elementti ylös
-  document.getElementById("nappiPeruuta").addEventListener("click", peruuta);
+  document.getElementById("nappiPeruutaLuoTunnus").addEventListener("click", peruuta);
   document.getElementById("nappiPeruutaKirjautuminen").addEventListener("click", peruuta);
 
   function peruuta() {
@@ -116,18 +133,24 @@ document.addEventListener("DOMContentLoaded", function() {
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
     const etusivuKuva = document.getElementById("etusivuKuva")
-
-    document.getElementById("nappiKirjaudu").style.display ="inline-block";
-    document.getElementById("nappiLuoTunnus").style.display ="inline-block";
+    const otsikko = document.getElementById("otsikko")
+    const nappiKirjaudu = document.getElementById("nappiKirjaudu")
+    const nappiLuoTunnus = document.getElementById("nappiLuoTunnus")
 
     ylaPalkkiTeksti1.style.opacity = "0";
     ylaPalkkiTeksti1.style.display = "block";
     etusivuKuva.style.opacity = "0";
+    otsikko.style.opacity = "0";
+
     setTimeout(() => {
       ylaPalkkiTeksti1.style.transition = "opacity .3s";
       etusivuKuva.style.transition = "opacity .3s";
+      otsikko.style.transition = "opacity .3s";
       ylaPalkkiTeksti1.style.opacity = "1";
       etusivuKuva.style.opacity = "1";
+      otsikko.style.opacity = "1";
+      nappiKirjaudu.style.display = "inline-block";
+      nappiLuoTunnus.style.display = "inline-block";
     }, 100);
     ylaPalkkiTeksti2.style.display = "none";
 

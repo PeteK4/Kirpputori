@@ -3,11 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="cache-control" content="no-cache, must-revalidate, max-age=0">
-        <meta http-equiv="cache-control" content="no-store, must-revalidate">
-        <meta http-equiv="pragma" content="no-cache">
-        <meta http-equiv="expires" content="0"> 
         <link rel="stylesheet" href="./styles/stl.css">
         <link rel="stylesheet" href="./styles/kuvat.css">
         <title>Nettikirppis MoniTori</title>
@@ -16,16 +11,16 @@
     <body>
 
       <div class="ylaPalkki">
-        <h3 id="ylaPalkkiTeksti1">Tervetuloa nettikirppikseen!
+        <div id="ylaPalkkiTeksti1">Tervetuloa nettikirppikseen!</div>
         <button id="nappiKirjaudu">Kirjaudu sisään</button>
-        <button id="nappiLuoTunnus">Luo uusi käyttäjätunnus</button></h3>
+        <button id="nappiLuoTunnus">Luo uusi käyttäjätunnus</button>
         <h3 id="ylaPalkkiTeksti2"></h3>
       </div>
 
-
-      <h1 class="otsikko">NETTIKIRPPIS MoniTori</h1>
-      </div>
+      <h1 id="otsikko">NETTIKIRPPIS MoniTori</h1>
+    
       <img id="etusivuKuva" src="./kuvat/etusivu.webp" alt="">
+      
         <div class="lomake">
           <div id="lomakeOtsikko"></div>
             <div id="tuote-lomake-container">
@@ -52,7 +47,7 @@
 
               <div id="kentta5">
                 <button type="button" id="nappiLuoUusiTunnus">Luo tunnus</button>
-                <button type="button" id="nappiPeruuta" style="margin: 0px;">Peruuta</button>
+                <button type="button" id="nappiPeruutaLuoTunnus" style="margin: 0px;">Peruuta</button>
               </div>
 
               <div id="kentta6">
