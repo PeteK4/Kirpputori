@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("nappiLuoTunnus").addEventListener("click", function() {
-    const elementti = document.querySelector(".lomake");
+    const lomake = document.querySelector(".lomake");
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
     const etusivuKuva = document.getElementById("etusivuKuva")
@@ -60,13 +60,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     // Elementti alas
-    elementti.style.display = "block";
-    ylhaaltaAlas(elementti, loppupiste);
+    lomake.style.display = "block";
+    ylhaaltaAlas(lomake, loppupiste);
   });
 
   // Tapahtumankäsittelijä nappiKirjaudu-painikkeelle
   document.getElementById("nappiKirjaudu").addEventListener("click", function() {
-    const elementti = document.querySelector(".lomake");
+    const lomake = document.querySelector(".lomake");
     const ylaPalkkiTeksti1 = document.getElementById("ylaPalkkiTeksti1");
     const ylaPalkkiTeksti2 = document.getElementById("ylaPalkkiTeksti2");
     const etusivuKuva = document.getElementById("etusivuKuva")
@@ -115,8 +115,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Elementti alas
-    elementti.style.display = "block";
-    ylhaaltaAlas(elementti, loppupiste);
+    lomake.style.display = "block";
+    ylhaaltaAlas(lomake, loppupiste);
   });
 
   // Elementti ylös
@@ -154,30 +154,30 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 100);
     ylaPalkkiTeksti2.style.display = "none";
 
-    const elementti = document.querySelector(".lomake");
-    alhaaltaYlos(elementti);
+    const lomake = document.querySelector(".lomake");
+    alhaaltaYlos(lomake);
   }
 
   // Siirrä elementti ylhäältä alas
-  function ylhaaltaAlas(elementti, loppupiste) {
-    const alkupiste = -elementti.offsetHeight;
-    elementti.style.top = `${alkupiste}px`;
-    elementti.style.transition = "top 0.4s";
+  function ylhaaltaAlas(lomake, loppupiste) {
+    const alkupiste = -lomake.offsetHeight;
+    lomake.style.top = `${alkupiste}px`;
+    lomake.style.transition = "top 0.4s";
 
     setTimeout(() => {
-      elementti.style.top = `${loppupiste}px`;
+      lomake.style.top = `${loppupiste}px`;
     }, 100);
   }
 
   // Siirrä elementti alhaalta ylös
-  function alhaaltaYlos(elementti) {
-    const loppupiste = -elementti.offsetHeight;
+  function alhaaltaYlos(lomake) {
+    const loppupiste = -lomake.offsetHeight;
     const alkupiste = window.innerHeight / 1.5;
-    elementti.style.top = `${alkupiste}px`;
-    elementti.style.transition = "top 0.4s";
+    lomake.style.top = `${alkupiste}px`;
+    lomake.style.transition = "top 0.4s";
 
     setTimeout(() => {
-      elementti.style.top = `${loppupiste}px`;
+      lomake.style.top = `${loppupiste}px`;
     }, 100);
   }
 });
