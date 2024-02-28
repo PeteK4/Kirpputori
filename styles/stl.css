@@ -67,6 +67,7 @@ body::before {
   box-shadow: 15px 15px 15px #1e5353;
   font-weight: bold;
   color: #333;
+  z-index: 1;
 }
 
 #lomakeOtsikko {
