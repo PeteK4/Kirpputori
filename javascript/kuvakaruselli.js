@@ -41,17 +41,17 @@ function kuvaKaruselli() {
 setInterval(kuvaKaruselli, 5000); // Yhden kuvan näkymisaika millisekunteina, 5 sekuntia
 
 // Estetään kuvakarusellin toiminta, jos kirjautumislomake on näytöllä
-document.getElementById("nappiPeruutaLuoTunnus").addEventListener("click", animOff);
-document.getElementById("nappiPeruutaKirjautuminen").addEventListener("click", animOff);
+document.getElementById("nappiKirjaudu").addEventListener("click", animOff);
+document.getElementById("nappiLuoTunnus").addEventListener("click", animOff);
 
 // Palautetaan kuvakarusellin toiminta, jos kirjautumislomake poistuu näytöltä
-document.getElementById("nappiKirjaudu").addEventListener("click", animOn);
-document.getElementById("nappiLuoTunnus").addEventListener("click", animOn);
+document.getElementById("nappiPeruutaLuoTunnus").addEventListener("click", animOn);
+document.getElementById("nappiPeruutaKirjautuminen").addEventListener("click", animOn);
 
 function animOff() {
-  kuvakaruselli = true;
+  kuvakaruselli = false;
 }
 
 function animOn() {
-  kuvakaruselli = false;
+  kuvakaruselli = true;
 }
