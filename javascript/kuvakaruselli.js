@@ -1,13 +1,20 @@
+// Kirjautumissivun vaihtuvat kuvat (kuvakaruselli)
+const etusivuKuva = document.getElementById("etusivuKuva");
 const kuvat = [];
 let kuvaNro = 0;
+let kuvakaruselli = true;
 
 for (let i = 1; i <= 5; i++) {
   kuvat.push(`./kuvat/etusivu${i}.webp`);
 }
 
-const etusivuKuva = document.getElementById("etusivuKuva");
-
+// Seurataan kirjautumislomakkeen tilaa
 function kuvaKaruselli() {
+  if (!kuvakaruselli) {
+    return;
+  }
+
+// Kuvat vaihdetaan pehmeästi feidaamalla kuvasta toiseen
   kuvaNro = (kuvaNro + 1) % kuvat.length;
   const kuvaPolku = kuvat[kuvaNro];
   const uusiKuva = new Image();
@@ -31,4 +38,20 @@ function kuvaKaruselli() {
   }, 1000);
 }
 
-setInterval(kuvaKaruselli, 5000);
+setInterval(kuvaKaruselli, 5000); // Yhden kuvan näkymisaika millisekunteina, 5 sekuntia
+
+// Estetään kuvakarusellin toiminta, jos kirjautumislomake on näytöllä
+document.getElementById("nappiPeruutaLuoTunnus").addEventListener("click", animOff);
+document.getElementById("nappiPeruutaKirjautuminen").addEventListener("click", animOff);
+
+// Palautetaan kuvakarusellin toiminta, jos kirjautumislomake poistuu näytöltä
+document.getElementById("nappiKirjaudu").addEventListener("click", animOn);
+document.getElementById("nappiLuoTunnus").addEventListener("click", animOn);
+
+function animOff() {
+  kuvakaruselli = true;
+}
+
+function animOn() {
+  kuvakaruselli = false;
+}
