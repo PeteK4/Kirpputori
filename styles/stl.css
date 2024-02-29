@@ -131,6 +131,25 @@ p {
   cursor: pointer;
 }
 
+/* nappien muokkailut, tietojen anto osion muokkailut (tt)*/
+#nappiKirjauduUlos,
+.image-upload,
+.product-name,
+.product-description,
+.product-price,
+.lataa {
+  display: inline-block;
+  color: black;
+  margin-right: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: solid 1px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: .04s;
+  cursor: pointer;
+}
+
 #nappiLuoUusiTunnus:hover,
 #nappiPeruutaLuoTunnus:hover,
 #nappiKirjauduKirppis:hover,

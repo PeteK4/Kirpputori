@@ -55,3 +55,9 @@ document.addEventListener("DOMContentLoaded", function() {
     syottoKentta.addEventListener("focus", () => aktiivinen(syottoKentta));
   });
 });
+
+// JavaScript: Kirjaudu ulos -nappi
+document.getElementById('nappiKirjauduUlos').addEventListener('click', function() {
+  // Siirry etusivulle (index.html)
+  window.location.href = 'index.html';
+});

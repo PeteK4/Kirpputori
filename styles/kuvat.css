@@ -1,9 +1,16 @@
+.otsikko {
+  color: white;
+  font-size: 4.2vw;
+  text-align: center;
+  margin-top: 5vw;
+}
+
 /* tuokuvat ja tekstit*/
 .product-preview-item {
   padding: 10px;
   max-width: 1200px;
   margin:auto;
-  background-color: white;
+  background-color: rgb(120, 173, 175);
   display: flex;
   align-items: center;
   border-radius: 8px;
@@ -17,12 +24,13 @@ padding: 10px;
 border-radius: 8px;
 border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
+
 }
 
 #product-form {
 max-width: 1200px;
 margin:auto;
-background-color: aquamarine;
+background-color: rgb(40, 134, 3);
 padding: 10px;
 }
 
@@ -40,12 +48,14 @@ padding-left: 20px;
 /* lisätty 27.2.2024 kuvan ja tuotetekstin väliin tilaa*/
 .product-details {
   margin: 20px;
+  
 }
 
 .delete-button {
 padding-left: 50 px;
-color:rgb(118, 13, 238);
+color:rgb(0, 0, 0);
 font-weight: bolder;
+font-size: large;
 width: 100px;
 height: 50px;
 }
@@ -75,6 +85,7 @@ height: 8vw; /* Säilyttää kuvan suhteen oikeana */
 
 #tuote-lomake-container {
 display: flex;
+
 }
 
 #tuote-lomake {
