@@ -11,8 +11,15 @@
     <body>
 
         <div class="ylaPalkki">
-        <h3 class="ylaPalkki_Teksti">Tervetuloa nettikirppikseen!
-        <button id="nappiKirjauduUlos">Kirjaudu ulos</button></h3>
+            <div id="ylaPalkkiTeksti1">Tervetuloa nettikirppikseen!
+            <button id="nappiKirjauduUlos">Kirjaudu ulos</button></div>
+
+            <div id="linkit">
+                <button id="nappiEtusivu">Etusivu</button>
+                <button id="nappiKategoriat">Kategoriat</button>
+                <button id="nappiIlmoita">Ilmoita</button>
+            </div>
+    
         </div>
 
         <!-- Logo otsikon eteen, muokkaukset kuvat.css -->
@@ -25,7 +32,7 @@
         <div style="display: block" id="lisaaTuotteet">
             <h1 class="otsikko1">Kirppistuotteiden tiedot</h1>
             <form id="product-form">
-            <!-- Hakukenttä -->
+<!-- Hakukenttä -->
             <input type="text" id="hakukentta" placeholder="Etsi tuotteita">
             <button id="hakunappi">Hae</button>
 
@@ -33,11 +40,11 @@
             <div id="hakutulokset"></div>
 
             <!--
-            <input type="file" class="image-upload" accept="image/*">
-            -->
-            <input type="text" class="product-name" placeholder="Tuotteen nimi">
-            <input type="text" class="product-description" placeholder="Kuvaus">
-            <input type="text" class="product-price" placeholder="Hinta €" pattern="[0-9]*">
+              <input type="file" class="image-upload" accept="image/*">
+-->
+              <input type="text" class="product-name" placeholder="Tuotteen nimi">
+              <input type="text" class="product-description" placeholder="Kuvaus">
+              <input type="text" class="product-price" placeholder="Hinta €" pattern="[0-9]*">
             <select class="kategoria">
                 <option value="vaatteet">Vaatteet</option>
                 <option value="keittiö">Keittiö</option>
@@ -47,14 +54,13 @@
             </select>
             <button type="submit" class="lataa">Lataa tiedot</button> <!-- Lataa kuva ja tallenna tiedot -->
             </form>
-            </div>
+        </div>
           <div id="product-previews"></div>
 
-        <script src="./javascript/rekLomake.js"></script>
-        <script src="./javascript/luoTunnus.js"></script>
-        <script src="./javascript/kirjaudu.js"></script>
         <script src="./javascript/kuva.js"></script>
+        <script src="./javascript/kirjaudu.js"></script>
 
         <script src="kuva.js"></script>    
     </body>
 </html>
+

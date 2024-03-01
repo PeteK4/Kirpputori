@@ -31,7 +31,11 @@ document.addEventListener("DOMContentLoaded", function() {
           naytaHuomautus(salasana, "Salasana ei täsmää käyttäjätunnuksen kanssa.");
         } else {
           // Ohjataan käyttäjä eteenpäin
+          
+          lomakeYlos();
+          setTimeout(() => {
           window.location.href = "./kirppis.html";
+          }, 300);
         }
       }
     }
@@ -61,3 +65,14 @@ document.getElementById('nappiKirjauduUlos').addEventListener('click', function(
   // Siirry etusivulle (index.html)
   window.location.href = 'index.html';
 });
+
+function lomakeYlos() {
+  const lomake = document.querySelector(".lomake");
+  const loppupiste = -lomake.offsetHeight;
+  const alkupiste = window.innerHeight / 1.5;
+  lomake.style.top = `${alkupiste}px`;
+  lomake.style.transition = "top 0.4s";
+  setTimeout(() => {
+    lomake.style.top = `${loppupiste}px`;
+  }, 100);
+};

@@ -132,7 +132,7 @@ p {
 }
 
 /* nappien muokkailut, tietojen anto osion muokkailut (tt)*/
-#nappiKirjauduUlos,
+
 /*.image-upload,*/
 #hakukentta,
 #hakunappi,
@@ -153,10 +153,24 @@ p {
   cursor: pointer;
 }
 
+#nappiKirjauduUlos {
+  display: inline-block;
+  color: black;
+  margin-right: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: solid 1px;
+  font-size: .3em;
+  font-weight: bold;
+  transition: .04s;
+  cursor: pointer;
+}
+
 #nappiLuoUusiTunnus:hover,
 #nappiPeruutaLuoTunnus:hover,
 #nappiKirjauduKirppis:hover,
-#nappiPeruutaKirjautuminen:hover {
+#nappiPeruutaKirjautuminen:hover,
+#nappiKirjauduUlos:hover {
   transform: scale(1.05);
   color: rgb(126, 126, 126);
   border: solid 1px;
@@ -165,8 +179,18 @@ p {
   box-shadow: 0px 0px 15px #ffffff
 }
 
+#nappiEtusivu,
+#nappiKategoriat,
+#nappiIlmoita {
+  font-size: 1em;
+  font-weight: bold;
+}
+
 #nappiKirjaudu,
-#nappiLuoTunnus {
+#nappiLuoTunnus,
+#nappiEtusivu,
+#nappiKategoriat,
+#nappiIlmoita {
   display: inline-block;
   margin-top: .5vw;
   padding: 4px 15px;
@@ -178,12 +202,14 @@ p {
   cursor: pointer;
   transition: .05s;
   max-width: 90%;
-  width: 200px; /
+  width: 200px; 
 }
 
-
 #nappiKirjaudu:hover,
-#nappiLuoTunnus:hover {
+#nappiLuoTunnus:hover,
+#nappiEtusivu:hover,
+#nappiKategoriat:hover,
+#nappiIlmoita:hover {
   transform: scale(1.02);
   color:#cdffdb;
   border: solid 1px;
