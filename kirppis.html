@@ -25,13 +25,29 @@
         <div style="display: block" id="lisaaTuotteet">
             <h1 class="otsikko1">Kirppistuotteiden tiedot</h1>
             <form id="product-form">
-              <input type="file" class="image-upload" accept="image/*">
-              <input type="text" class="product-name" placeholder="Tuotteen nimi">
-              <input type="text" class="product-description" placeholder="Kuvaus">
-              <input type="number" class="product-price" placeholder="Hinta €">
-              <button type="submit" class="lataa">Lataa kuva ja tallenna tiedot</button>
+            <!-- Hakukenttä -->
+            <input type="text" id="hakukentta" placeholder="Etsi tuotteita">
+            <button id="hakunappi">Hae</button>
+
+            <!-- Hakutulokset -->
+            <div id="hakutulokset"></div>
+
+            <!--
+            <input type="file" class="image-upload" accept="image/*">
+            -->
+            <input type="text" class="product-name" placeholder="Tuotteen nimi">
+            <input type="text" class="product-description" placeholder="Kuvaus">
+            <input type="text" class="product-price" placeholder="Hinta €" pattern="[0-9]*">
+            <select class="kategoria">
+                <option value="vaatteet">Vaatteet</option>
+                <option value="keittiö">Keittiö</option>
+                <option value="kirjat">Kirjat</option>
+                <option value="huonekalut">Huonekalut</option>
+                <option value="muut">Muut</option>
+            </select>
+            <button type="submit" class="lataa">Lataa tiedot</button> <!-- Lataa kuva ja tallenna tiedot -->
             </form>
-        </div>
+            </div>
           <div id="product-previews"></div>
 
         <script src="./javascript/rekLomake.js"></script>

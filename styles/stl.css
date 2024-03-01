@@ -133,11 +133,14 @@ p {
 
 /* nappien muokkailut, tietojen anto osion muokkailut (tt)*/
 #nappiKirjauduUlos,
-.image-upload,
+/*.image-upload,*/
+#hakukentta,
+#hakunappi,
 .product-name,
 .product-description,
 .product-price,
-.lataa {
+.lataa,
+.kategoria {
   display: inline-block;
   color: black;
   margin-right: 10px;
