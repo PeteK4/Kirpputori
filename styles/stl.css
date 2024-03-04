@@ -140,7 +140,8 @@ p {
 .product-description,
 .product-price,
 .lataa,
-.kategoria {
+.kategoria,
+.tyyppi {
   display: inline-block;
   color: black;
   margin-right: 10px;
@@ -160,7 +161,7 @@ p {
   padding: 5px 15px;
   border-radius: 5px;
   border: solid 1px;
-  font-size: .3em;
+  font-size: 0.6em;
   font-weight: bold;
   transition: .04s;
   cursor: pointer;
@@ -181,7 +182,8 @@ p {
 
 #nappiEtusivu,
 #nappiKategoriat,
-#nappiIlmoita {
+#nappiIlmoita,
+#tuoteHaku {
   font-size: 1em;
   font-weight: bold;
 }
@@ -190,7 +192,8 @@ p {
 #nappiLuoTunnus,
 #nappiEtusivu,
 #nappiKategoriat,
-#nappiIlmoita {
+#nappiIlmoita,
+#tuoteHaku {
   display: inline-block;
   margin-top: .5vw;
   padding: 4px 15px;
@@ -209,7 +212,8 @@ p {
 #nappiLuoTunnus:hover,
 #nappiEtusivu:hover,
 #nappiKategoriat:hover,
-#nappiIlmoita:hover {
+#nappiIlmoita:hover,
+#tuoteHaku:hover {
   transform: scale(1.02);
   color:#cdffdb;
   border: solid 1px;

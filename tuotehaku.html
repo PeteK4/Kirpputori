@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/stl.css">
+        <link rel="stylesheet" href="./styles/kuvat.css">
+        <title>Nettikirppis MoniTori</title>
+    </head>
+
+    <body>
+
+        <div class="ylaPalkki">
+            <div id="ylaPalkkiTeksti1">Tervetuloa nettikirppikseen!
+                <button id="nappiKirjauduUlos">Kirjaudu ulos</button>
+            </div>
+
+            <div id="linkit">
+                <button id="nappiEtusivu">Etusivu</button>
+                <button id="nappiKategoriat">Kategoriat</button>
+                <button id="nappiIlmoita">Ilmoita</button>
+                <button id="tuoteHaku">Etsi</button>
+            </div>
+    
+        </div>
+
+        <!-- Logo otsikon eteen, muokkaukset kuvat.css -->
+        <div class="logo">
+            <img src="./kuvat/logo.png" alt="Logo">
+            <h1 class="otsikko">NETTIKIRPPIS MoniTori</h1>
+        </div>
+        <!-- Hakukenttä -->
+        <div>
+            <form id="haku">
+                <input type="text" id="hakukentta" placeholder="Etsi tuotteita">
+                    <button type="button" id="hakunappi">Hae</button>
+            </form>
+        </div>
+        <!-- Hakutulokset -->
+        <div id="hakutulokset"></div>
+
+        <script src="./javascript/rekLomake.js"></script>
+        <script src="./javascript/luoTunnus.js"></script>
+        <script src="./javascript/kirjaudu.js"></script>
+        <script src="./javascript/kuva.js"></script>
+        <script src="./javascript/tuotehaku.js"></script>
+
+
+
+    </body>
+</html>        

@@ -93,6 +93,14 @@ flex: 1; /* Annetaan lomakkeelle joustavuutta */
 margin-right: 20px; /* Lisätään välistystä lomakkeen ja logon välille */
 }
 
+#hakutulokset {
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
 .logo1 {
 flex: 0 0 auto; /* Määritetään logo kiinteäksi leveydeksi */
 }

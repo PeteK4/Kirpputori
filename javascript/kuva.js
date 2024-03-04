@@ -83,49 +83,23 @@ document.getElementById('product-form').addEventListener('submit', function(even
     document.getElementById('product-form').reset();
 });
 
-/// Haun suorittaminen
-document.getElementById('hakunappi').addEventListener('click', function(event) {
-    event.preventDefault();
-    suoritaHaku();
+
+// Otetaan kiinni painike nappiIlmoita
+const nappiIlmoita = document.getElementById('nappiIlmoita');
+
+// Lisätään tapahtumankäsittelijä painikkeeseen
+nappiIlmoita.addEventListener('click', function() {
+    // Ohjataan käyttäjä kirppis.html-sivulle
+    console.log("Nappi Ilmoita on painettu.");
+    window.location.href = 'kirppis.html';
 });
 
-function suoritaHaku() {
-    // Haetaan hakusana
-    let hakusana = document.getElementById('hakukentta').value.toLowerCase();
-    
-    // Haetaan tuotteet hakusanan perusteella
-    let loytyneetTuotteet = etsiTuotteet(hakusana);
+// Otetaan kiinni painike tuoteHaku
+const tuoteHaku = document.getElementById('tuoteHaku');
 
-    // Näytetään hakutulokset
-    naytaHakutulokset(loytyneetTuotteet);
-}
-
-function etsiTuotteet(hakusana) {
-    // Käytetään tallennettuja tuotteita localStoragesta
-    let tallennetutTuotteet = JSON.parse(localStorage.getItem('productList')) || [];
-    let loydetytTuotteet = [];
-
-    // Käydään läpi jokainen tuote
-    tallennetutTuotteet.forEach(function(tuote) {
-        // Tarkistetaan, vastaako tuotteen nimi, kuvaus, hinta tai kategoria hakusanaa
-        if (tuote.name.toLowerCase().includes(hakusana) || tuote.description.toLowerCase().includes(hakusana) || tuote.price.toString().includes(hakusana) || tuote.kategoria.toLowerCase().includes(hakusana)) {
-            loydetytTuotteet.push(tuote);
-        }
-    });
-
-    // Palautetaan löydetyt tuotteet
-    return loydetytTuotteet;
-}
-
-// Hakutulosten näyttäminen HTML:ssä
-function naytaHakutulokset(tuotteet) {
-    var hakutulosteElementti = document.getElementById('hakutulokset');
-    hakutulosteElementti.innerHTML = ''; // Tyhjennetään aiemmat hakutulokset
-
-    // Lisätään jokainen löydetty tuote hakutuloksiin
-    tuotteet.forEach(function(tuote) {
-        var tuoteElementti = document.createElement('div');
-        tuoteElementti.textContent = 'Nimi: ' + tuote.name + ', Kuvaus: ' + tuote.description + ', Hinta: ' + tuote.price + ', Kategoria: ' + tuote.kategoria;
-        hakutulosteElementti.appendChild(tuoteElementti);
-    });
-}
+// Lisätään tapahtumankäsittelijä painikkeeseen
+tuoteHaku.addEventListener('click', function() {
+    // Ohjataan käyttäjä tuotehaku.html-sivulle
+    console.log("Nappi Etsi on painettu.");
+    window.location.href = 'tuotehaku.html';
+});
