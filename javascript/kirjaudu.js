@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
           
           lomakeYlos();
           setTimeout(() => {
-          window.location.href = "./kirppis.html";
+          window.location.href = "./etusivu.html";
           }, 300);
         }
       }

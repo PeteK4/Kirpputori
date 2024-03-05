@@ -46,6 +46,13 @@ body::before {
   margin-top: 5vw;
 }
 
+#otsikkoKirppis {
+  color: white;
+  font-size: 3.2vw;
+  text-align: center;
+  margin-top: 3vw;
+}
+
 #etusivuKuva {
   display: block;
   margin: 50px auto;
@@ -131,6 +138,37 @@ p {
   cursor: pointer;
 }
 
+#nappiKirjauduUlos {
+  display: inline-block;
+  color: black;
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: solid 1px;
+  font-size: 0.4em;
+  font-weight: bold;
+  transition: .04s;
+  transform: translateY(-20%);
+  cursor: pointer;
+}
+
+#nappiLuoUusiTunnus:hover,
+#nappiPeruutaLuoTunnus:hover,
+#nappiKirjauduKirppis:hover,
+#nappiPeruutaKirjautuminen:hover,
+#nappiKirjauduUlos:hover {
+  transform: scale(1.05);
+  color: rgb(126, 126, 126);
+  border: solid 1px;
+  border-color:#a1a1a1;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px #ffffff
+}
+
+#nappiKirjauduUlos:hover {
+  transform: translateY(-20%);
+}
+
 /* nappien muokkailut, tietojen anto osion muokkailut (tt)*/
 
 /*.image-upload,*/
@@ -174,24 +212,9 @@ p {
 }
 
 #napitKategoria {
-  padding: 50px;
-}
-
-#nappiLuoUusiTunnus:hover,
-#nappiPeruutaLuoTunnus:hover,
-#nappiKirjauduKirppis:hover,
-#nappiPeruutaKirjautuminen:hover,
-#nappiKirjauduUlos:hover {
-  transform: scale(1.05);
-  color: rgb(126, 126, 126);
-  border: solid 1px;
-  border-color:#a1a1a1;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 15px #ffffff
-}
-
-#nappiKirjauduUlos:hover {
-  transform: translateY(-20%);
+  margin: -20px auto;
+  text-align: center;
+  padding: 10px;
 }
 
 #nappiEtusivu,
