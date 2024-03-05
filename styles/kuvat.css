@@ -60,7 +60,14 @@ width: 100px;
 height: 50px;
 }
 
-.logo,
+.logo {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 8%;
+}
+
 .logo1 {
 display: flex;
 }
@@ -68,7 +75,7 @@ display: flex;
 .logo img {
 margin-right: 50px; /* Lisää välistystä logon ja otsikon välille */
 margin-left: 300px;
-width: 200px; /* Voit muuttaa koon haluamaksesi */
+width: 100px; /* Voit muuttaa koon haluamaksesi */
 height: auto; /* Säilyttää kuvan suhteen oikean */
 }
 
@@ -118,7 +125,12 @@ flex: 0 0 auto; /* Määritetään logo kiinteäksi leveydeksi */
 
 /* MOBIILI ----------------------------------------*/
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1000px) {
+
+  .logo {
+    display: none;
+
+  }
 
   .logo1 img {
  display: none;

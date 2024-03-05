@@ -157,13 +157,14 @@ p {
 #nappiKirjauduUlos {
   display: inline-block;
   color: black;
-  margin-right: 10px;
-  padding: 5px 15px;
+  margin-left: 10px;
+  padding: 5px 10px;
   border-radius: 5px;
   border: solid 1px;
-  font-size: 0.6em;
+  font-size: 0.4em;
   font-weight: bold;
   transition: .04s;
+  transform: translateY(-20%);
   cursor: pointer;
 }
 
@@ -180,10 +181,14 @@ p {
   box-shadow: 0px 0px 15px #ffffff
 }
 
+#nappiKirjauduUlos:hover {
+  transform: translateY(-20%);
+}
+
 #nappiEtusivu,
 #nappiKategoriat,
 #nappiIlmoita,
-#tuoteHaku {
+#nappiTuotehaku {
   font-size: 1em;
   font-weight: bold;
 }
@@ -193,7 +198,7 @@ p {
 #nappiEtusivu,
 #nappiKategoriat,
 #nappiIlmoita,
-#tuoteHaku {
+#nappiTuotehaku {
   display: inline-block;
   margin-top: .5vw;
   padding: 4px 15px;
@@ -213,7 +218,7 @@ p {
 #nappiEtusivu:hover,
 #nappiKategoriat:hover,
 #nappiIlmoita:hover,
-#tuoteHaku:hover {
+#nappiTuoteHaku:hover {
   transform: scale(1.02);
   color:#cdffdb;
   border: solid 1px;
@@ -241,6 +246,12 @@ p {
 
 @media only screen and (max-width: 920px) {
 
+  body::before {
+    display: block;
+    content: "";
+    height: 150px;
+  }
+
   .lomake {
     top: 0%;
     width: 80%;
@@ -249,7 +260,7 @@ p {
   }
 
   .ylaPalkki {
-    height: 100px;
+    height: 160px;
 
   }
 
@@ -261,7 +272,7 @@ p {
 
   #otsikko {
     margin-top: 20px;
-    font-size: 5vw;
+    font-size: 5em;
   }
 
   #etusivuKuva {
@@ -295,6 +306,14 @@ p {
     background-color: #6eda8e;
     cursor: pointer;
     transition: .05s;
+  }
+
+    #nappiEtusivu,
+    #nappiKategoriat,
+    #nappiIlmoita,
+    #nappiTuotehaku {
+    max-width: 50%;
+    width: 200px; 
   }
 
   #etusivuKuva {

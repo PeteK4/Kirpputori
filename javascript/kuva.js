@@ -84,6 +84,7 @@ document.getElementById('product-form').addEventListener('submit', function(even
 });
 
 
+/*
 // Otetaan kiinni painike nappiIlmoita
 const nappiIlmoita = document.getElementById('nappiIlmoita');
 
@@ -103,3 +104,4 @@ tuoteHaku.addEventListener('click', function() {
     console.log("Nappi Etsi on painettu.");
     window.location.href = 'tuotehaku.html';
 });
+*/

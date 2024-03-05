@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 function suoritaHaku() {
     // Haetaan hakusana
     let hakusana = document.getElementById('hakukentta').value.toLowerCase();

@@ -10,7 +10,8 @@
 
     <body>
 
-        <div class="ylaPalkki">
+        <div class="ylaPalkki">            
+            <img class="logo" src="./kuvat/logo.png" alt="Logo">
             <div id="ylaPalkkiTeksti1">Tervetuloa nettikirppikseen!
             <button id="nappiKirjauduUlos">Kirjaudu ulos</button></div>
 
@@ -18,19 +19,14 @@
                 <button id="nappiEtusivu">Etusivu</button>
                 <button id="nappiKategoriat">Kategoriat</button>
                 <button id="nappiIlmoita">Ilmoita</button>
-                <button id="tuoteHaku">Etsi</button>
+                <button id="nappiTuotehaku">Etsi</button>
             </div>
-    
         </div>
 
-        <!-- Logo otsikon eteen, muokkaukset kuvat.css -->
-        <div class="logo">
-            <img src="./kuvat/logo.png" alt="Logo">
-            <h1 class="otsikko">NETTIKIRPPIS MoniTori</h1>
-        </div>
+        <h1 class="otsikko">NETTIKIRPPIS MoniTori</h1>
 
         <!-- siirretty index.html: sivulta 27.2.2024-->
-        <a href="tuotehaku.html">tuotehaku</a>
+        
         <div style="display: block" id="lisaaTuotteet">
             <h1 class="otsikko1">Kirppistuotteiden tiedot</h1>
             
@@ -58,10 +54,8 @@
         </div>
           <div id="product-previews"></div>
 
-        <script src="./javascript/rekLomake.js"></script>
-        <script src="./javascript/luoTunnus.js"></script>
-        <script src="./javascript/kirjaudu.js"></script>
         <script src="./javascript/kuva.js"></script>
+        <script src="./javascript/napit.js"></script>
        
     </body>
 </html>
