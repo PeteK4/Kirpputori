@@ -154,18 +154,27 @@ p {
   cursor: pointer;
 }
 
-#nappiKirjauduUlos {
+#nappiVaatteet,
+#nappiKeittio,
+#nappiKirjat,
+#nappiHuonekalut,
+#nappiTietotekniikka,
+#nappiMuut {
   display: inline-block;
   color: black;
   margin-left: 10px;
   padding: 5px 10px;
   border-radius: 5px;
   border: solid 1px;
-  font-size: 0.4em;
+  font-size: 1.4em;
   font-weight: bold;
   transition: .04s;
   transform: translateY(-20%);
   cursor: pointer;
+}
+
+#napitKategoria {
+  padding: 50px;
 }
 
 #nappiLuoUusiTunnus:hover,
@@ -308,10 +317,10 @@ p {
     transition: .05s;
   }
 
-    #nappiEtusivu,
-    #nappiKategoriat,
-    #nappiIlmoita,
-    #nappiTuotehaku {
+  #nappiEtusivu,
+  #nappiKategoriat,
+  #nappiIlmoita,
+  #nappiTuotehaku {
     max-width: 50%;
     width: 200px; 
   }
