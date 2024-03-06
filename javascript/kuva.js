@@ -6,6 +6,7 @@ document.getElementById('product-form').addEventListener('submit', function(even
     const productPrice = document.querySelector('.product-price').value;
     //const imageFile = document.querySelector('.image-upload').files[0];
     const kategoriaTieto = document.querySelector('.kategoria');
+    const tyyppi = document.querySelector('.tyyppi');
   
     const productPreviews = document.getElementById('product-previews');
   
@@ -34,13 +35,17 @@ document.getElementById('product-form').addEventListener('submit', function(even
 
     const kategoriaTietoElement = document.createElement('p');
     kategoriaTietoElement.textContent = 'Kategoria: ' + kategoriaTieto.value;
+
+    const tyyppiElement = document.createElement('p');
+    tyyppiElement.textContent = 'Tyyppi: ' + tyyppi.value;
     
     // Luo tuotteen objekti
     const product = {
         name: productName,
         description: productDescription,
         price: productPrice,
-        kategoria: kategoriaTieto.value
+        kategoria: kategoriaTieto.value,
+        tyyppi: tyyppi.value
     };
 
     // Tarkista, onko tuotelista jo tallennettu localStorageen
@@ -76,6 +81,7 @@ document.getElementById('product-form').addEventListener('submit', function(even
      productPreview.appendChild(deleteButton); // Lisää poista-nappi
      // Lisätään kategoriatieto productDetails-diviin
      productDetails.appendChild(kategoriaTietoElement);
+     productDetails.appendChild(tyyppiElement);
    
      // Lisää tuotteen esikatselu tuotepreview-containeriin
      productPreviews.appendChild(productPreview);

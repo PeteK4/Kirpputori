@@ -1,0 +1,41 @@
+.kategoriat {
+    margin-bottom: 20px;
+}
+
+.kategoriat button {
+    margin-right: 10px;
+}
+
+.tuotteet div {
+    background-color: #3f20c7;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#napitKategoria{
+    max-width: 1200px;
+    background-color: #168816;
+    padding: 30px;
+}
+
+.tuote-elementti {
+    max-width: 1200px;
+    border: 6px solid #2426a7;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.tuote-elementti h3 {
+    color: #035503;
+    font-size: 2em;
+    
+}
+
+.tuote-elementti p {
+    padding: 0 0 0 10;
+    margin: 5px 0;
+    color: #666;
+}
