@@ -240,8 +240,7 @@ body::before {
 #nappiKirjat:hover,
 #nappiHuonekalut:hover,
 #nappiTietotekniikka:hover,
-#nappiMuut:hover,
-#hakunappi:hover {
+#nappiMuut:hover {
   transform: scale(1.05);
   color: rgb(126, 126, 126);
   border: solid 1px;
@@ -255,8 +254,7 @@ body::before {
 #nappiEtusivu:hover,
 #nappiKategoriat:hover,
 #nappiIlmoita:hover,
-#nappiTuotehaku:hover,
-#hakunappi:hover {
+#nappiTuotehaku:hover {
   transform: scale(1.02);
   color:#cdffdb;
   border: solid 1px;
@@ -298,19 +296,19 @@ body::before {
   }
 
   .ylaPalkki {
-    height: 160px;
+    height: 100px;
 
   }
 
   #ylaPalkkiTeksti1,
   #ylaPalkkiTeksti2 {
-    margin-top: 5px;
+    margin-top: 15px;
     font-size: 6vw;
   }
 
   #otsikko {
-    margin-top: 20px;
-    font-size: 5em;
+    margin-top: -30px;
+    font-size: 10vw;
   }
 
   #otsikkoKirppis {
