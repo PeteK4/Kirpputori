@@ -15,5 +15,7 @@ document.getElementById("nappiTuotehaku").addEventListener("click", function() {
 });
 
 document.getElementById("nappiKirjauduUlos").addEventListener("click", function() {
-    window.location.href = "index.html";
+    if (confirm("Vahvista uloskirjautuminen.")) {
+        window.location.href = "index.html";
+    }
 });
