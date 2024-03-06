@@ -69,5 +69,6 @@ function naytaHakutulokset(tuotteet) {
         // Lisätään tuote-elementti hakutuloksiin
         hakutulosteElementti.appendChild(tuoteElementti);
     });
+
 }
 

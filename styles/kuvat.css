@@ -100,12 +100,20 @@ flex: 1; /* Annetaan lomakkeelle joustavuutta */
 margin-right: 20px; /* Lisätään välistystä lomakkeen ja logon välille */
 }
 
+#haku {
+  width: 50%; /* Määrittele hakukentän leveys */
+  margin: 0 auto; /* Aseta marginaali automaattisesti vaakasuunnassa keskittämistä varten */
+  text-align: center; /* Aseta tekstin keskitys hakukentässä */
+}
+
 #hakutulokset {
-    padding: 10px;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    border-radius: 5px;
+  width: 50%; /* Määrittele hakutulosten divin leveys */
+  margin: 0 auto; /* Aseta marginaali automaattisesti vaakasuunnassa keskittämistä varten */
+  text-align: left; /* Aseta tekstin vasen reunus hakutuloksissa */
+  background-color: aliceblue;
+  border: 1px solid black; /* Lisää kehys laatikon ympärille */
+  border-radius: 8px;
+  padding: 10px; /* Lisää sisätilaa sisällölle */
 }
 
 .logo1 {

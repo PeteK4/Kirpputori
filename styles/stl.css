@@ -240,7 +240,8 @@ body::before {
 #nappiKirjat:hover,
 #nappiHuonekalut:hover,
 #nappiTietotekniikka:hover,
-#nappiMuut:hover {
+#nappiMuut:hover,
+#hakunappi:hover {
   transform: scale(1.05);
   color: rgb(126, 126, 126);
   border: solid 1px;
@@ -254,7 +255,8 @@ body::before {
 #nappiEtusivu:hover,
 #nappiKategoriat:hover,
 #nappiIlmoita:hover,
-#nappiTuotehaku:hover {
+#nappiTuotehaku:hover,
+#hakunappi:hover {
   transform: scale(1.02);
   color:#cdffdb;
   border: solid 1px;
