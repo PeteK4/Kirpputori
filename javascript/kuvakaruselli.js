@@ -27,6 +27,11 @@ function kuvaKaruselli() {
   uusiKuva.style.borderRadius = "40px";
   uusiKuva.style.maxWidth = "100%"
 
+  if (window.innerWidth < 1000) {
+    uusiKuva.style.borderRadius = "0px";
+    uusiKuva.style.maxWidth = "96%";
+  }
+
   etusivuKuva.parentNode.appendChild(uusiKuva);
   uusiKuva.offsetHeight; 
   uusiKuva.style.transition = "opacity 1s ease-in-out"; 
