@@ -51,8 +51,18 @@ padding-left: 20px;
   
 }
 
+#tuotteenNimi {
+  margin: 5px;
+}
+
+p {
+  margin: 0;
+  padding-left: 10px;
+}
+
 .delete-button {
-padding-left: 50 px;
+margin-left: auto;
+padding-left: 10px;
 color:rgb(0, 0, 0);
 font-weight: bolder;
 font-size: large;

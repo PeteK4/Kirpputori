@@ -1,45 +1,21 @@
+// Kun sivu latautuu, tarkista, onko tallennettuja tuotteita localStoragesta ja näytä ne
+document.addEventListener('DOMContentLoaded', function () {
+    const productList = JSON.parse(localStorage.getItem('productList')) || [];
+    productList.forEach(product => {
+        addProductToPreview(product);
+    });
+});
+
+// Lisää tapahtumankäsittelijä lomakkeen lähettämiselle
 document.getElementById('product-form').addEventListener('submit', function(event) {
     event.preventDefault();
-  
+
     const productName = document.querySelector('.product-name').value;
     const productDescription = document.querySelector('.product-description').value;
     const productPrice = document.querySelector('.product-price').value;
-    //const imageFile = document.querySelector('.image-upload').files[0];
     const kategoriaTieto = document.querySelector('.kategoria');
     const tyyppi = document.querySelector('.tyyppi');
-  
-    const productPreviews = document.getElementById('product-previews');
-  
-    const productPreview = document.createElement('div');
-    productPreview.classList.add('product-preview-item'); // Lisää luokka
-  
-    /*const imagePreview = document.createElement('img');
-    imagePreview.src = URL.createObjectURL(imageFile);
-    imagePreview.alt = 'Tuotteen kuva';
-    imagePreview.width = 200; // Aseta kuvan leveys pikseleinä*/
-  
-  
-    const productDetails = document.createElement('div');
-    productDetails.classList.add('product-details'); // Lisää luokka
-  
-    const productNameElement = document.createElement('h2');
-    productNameElement.textContent = productName;
-  
-  
-    const productDescriptionElement = document.createElement('p');
-    productDescriptionElement.textContent = productDescription;
-   
-  
-    const productPriceElement = document.createElement('p');
-    productPriceElement.textContent = 'Hinta:' + productPrice + ' €';
 
-    const kategoriaTietoElement = document.createElement('p');
-    kategoriaTietoElement.textContent = 'Kategoria: ' + kategoriaTieto.value;
-
-    const tyyppiElement = document.createElement('p');
-    tyyppiElement.textContent = 'Tyyppi: ' + tyyppi.value;
-    
-    // Luo tuotteen objekti
     const product = {
         name: productName,
         description: productDescription,
@@ -48,7 +24,7 @@ document.getElementById('product-form').addEventListener('submit', function(even
         tyyppi: tyyppi.value
     };
 
-    // Tarkista, onko tuotelista jo tallennettu localStorageen
+    // Hae tai alusta tuotelista localStoragesta
     let productList = JSON.parse(localStorage.getItem('productList')) || [];
 
     // Lisää uusi tuote tuotelistaan
@@ -57,57 +33,75 @@ document.getElementById('product-form').addEventListener('submit', function(even
     // Tallenna päivitetty tuotelista localStorageen
     localStorage.setItem('productList', JSON.stringify(productList));
 
+    // Lisää tuote esikatseluun
+    addProductToPreview(product);
+
     // Tyhjennä lomake seuraavaa syöttöä varten
     document.getElementById('product-form').reset();
-    
+});
+
+// Lisää yksittäinen tuote esikatseluun
+function addProductToPreview(product) {
+    const productPreviews = document.getElementById('product-previews');
+
+    const productPreview = document.createElement('div');
+    productPreview.classList.add('product-preview-item');
+
+    const productDetails = document.createElement('div');
+    productDetails.classList.add('product-details');
+
+    const productNameElement = document.createElement('h2');
+    productNameElement.textContent = product.name;
+    productNameElement.id = 'tuotteenNimi'
+
+    const productDescriptionElement = document.createElement('p');
+    productDescriptionElement.textContent = product.description;
+
+    const productPriceElement = document.createElement('p');
+    productPriceElement.textContent = 'Hinta: ' + product.price + ' €';
+
+    const kategoriaTietoElement = document.createElement('p');
+    kategoriaTietoElement.textContent = 'Kategoria: ' + product.kategoria;
+
+    const tyyppiElement = document.createElement('p');
+    tyyppiElement.textContent = 'Tyyppi: ' + product.tyyppi;
+
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Poista';
     deleteButton.classList.add('delete-button');
-    deleteButton.type = 'button'; // Estää lähettämästä lomaketta
-  
+    deleteButton.type = 'button';
+
     deleteButton.addEventListener('click', function() {
-        // Tässä voit lisätä koodin tuotteen poistamiseksi
-        productPreview.remove(); // Poista koko tuotteen esikatselu
+        productPreview.remove();
+        // Poista tuote myös localStoragesta
+        removeProductFromLocalStorage(product);
     });
-  
-     // Lisää elementit productDetails-diviin
-     productDetails.appendChild(productNameElement);
-     productDetails.appendChild(productDescriptionElement);
-     productDetails.appendChild(productPriceElement);
-   
-     // Lisää kuva ja tiedot productPreview-diviin
-     //productPreview.appendChild(imagePreview);
-     productPreview.appendChild(productDetails);
-     productPreview.appendChild(deleteButton); // Lisää poista-nappi
-     // Lisätään kategoriatieto productDetails-diviin
-     productDetails.appendChild(kategoriaTietoElement);
-     productDetails.appendChild(tyyppiElement);
-   
-     // Lisää tuotteen esikatselu tuotepreview-containeriin
-     productPreviews.appendChild(productPreview);
 
-    document.getElementById('product-form').reset();
-});
+    productDetails.appendChild(productNameElement);
+    productDetails.appendChild(productDescriptionElement);
+    productDetails.appendChild(productPriceElement);
+    productDetails.appendChild(kategoriaTietoElement);
+    productDetails.appendChild(tyyppiElement);
 
+    productPreview.appendChild(productDetails);
+    productPreview.appendChild(deleteButton);
 
-/*
-// Otetaan kiinni painike nappiIlmoita
-const nappiIlmoita = document.getElementById('nappiIlmoita');
+    productPreviews.appendChild(productPreview);
+}
 
-// Lisätään tapahtumankäsittelijä painikkeeseen
-nappiIlmoita.addEventListener('click', function() {
-    // Ohjataan käyttäjä kirppis.html-sivulle
-    console.log("Nappi Ilmoita on painettu.");
-    window.location.href = 'kirppis.html';
-});
+// Poista tuote localStoragesta
+function removeProductFromLocalStorage(productToRemove) {
+    let productList = JSON.parse(localStorage.getItem('productList')) || [];
 
-// Otetaan kiinni painike tuoteHaku
-const tuoteHaku = document.getElementById('tuoteHaku');
+    // Etsi tuote listasta ja poista se
+    const updatedProductList = productList.filter(product => {
+        return product.name !== productToRemove.name || 
+               product.description !== productToRemove.description ||
+               product.price !== productToRemove.price ||
+               product.kategoria !== productToRemove.kategoria ||
+               product.tyyppi !== productToRemove.tyyppi;
+    });
 
-// Lisätään tapahtumankäsittelijä painikkeeseen
-tuoteHaku.addEventListener('click', function() {
-    // Ohjataan käyttäjä tuotehaku.html-sivulle
-    console.log("Nappi Etsi on painettu.");
-    window.location.href = 'tuotehaku.html';
-});
-*/
+    // Päivitä tuotelista localStorageen
+    localStorage.setItem('productList', JSON.stringify(updatedProductList));
+}
