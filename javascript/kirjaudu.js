@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
           
           lomakeYlos();
           setTimeout(() => {
+          localStorage.setItem("kayttajaTunnus", id.value);
           window.location.href = "./etusivu.html";
           }, 300);
         }
@@ -58,12 +59,6 @@ document.addEventListener("DOMContentLoaded", function() {
   [id, salasana].forEach((syottoKentta) => {
     syottoKentta.addEventListener("focus", () => aktiivinen(syottoKentta));
   });
-});
-
-// JavaScript: Kirjaudu ulos -nappi
-document.getElementById('nappiKirjauduUlos').addEventListener('click', function() {
-  // Siirry etusivulle (index.html)
-  window.location.href = 'index.html';
 });
 
 function lomakeYlos() {

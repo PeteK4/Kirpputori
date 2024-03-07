@@ -29,12 +29,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Tallennus localStorageen
     if (kaikkiOk == 4) {
-      // Tarkistetaan, onko käyttäjätunnus jo tallennettu
       const tallennettuKayttaja = localStorage.getItem(id.value);
-
+  
+      // Tarkistetaan, onko käyttäjätunnus jo tallennettu
       if (tallennettuKayttaja) {
         naytaHuomautus(id, "Saman niminen käyttäjätunnus on jo olemassa.");
       } else {
+
         // Luodaan käyttäjätunnus objekti
         const kayttaja = {
           id: id.value,
@@ -47,7 +48,9 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem(id.value, JSON.stringify(kayttaja));
 
         // Ohjataan käyttäjä eteenpäin
-        window.location.href = "./kirppis.html";
+        if (confirm("Käyttäjätunnus on luotu. Nyt voit kirjautua kirppikselle.")) {
+          window.location.href = "index.html";
+        }
       }
     }
   });

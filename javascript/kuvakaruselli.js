@@ -3,6 +3,7 @@ const etusivuKuva = document.getElementById("etusivuKuva");
 const kuvat = [];
 let kuvaNro = 0;
 let kuvakaruselli = true;
+// localStorage.clear();
 
 for (let i = 1; i <= 5; i++) {
   kuvat.push(`./kuvat/etusivu${i}.webp`);
