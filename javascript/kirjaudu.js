@@ -31,7 +31,16 @@ document.addEventListener("DOMContentLoaded", function() {
           naytaHuomautus(salasana, "Salasana ei täsmää käyttäjätunnuksen kanssa.");
         } else {
           // Ohjataan käyttäjä eteenpäin
-          
+          if (tallennettuSalasana === salasana.value) {
+            // Tallenna käyttäjän rooli
+            localStorage.setItem("kayttajanRooli", "lisääjä"); // Tässä oletusarvoisesti käyttäjä on lisääjä
+            // Ohjataan käyttäjä eteenpäin
+            lomakeYlos();
+            setTimeout(() => {
+                localStorage.setItem("kayttajaTunnus", id.value);
+                window.location.href = "./etusivu.html";
+            }, 300);
+        }  
           lomakeYlos();
           setTimeout(() => {
           localStorage.setItem("kayttajaTunnus", id.value);
@@ -71,3 +80,20 @@ function lomakeYlos() {
     lomake.style.top = `${loppupiste}px`;
   }, 100);
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Tarkista käyttäjän rooli sisäänkirjautumisen yhteydessä ja tallenna se
+  const kayttajanRooli = localStorage.getItem("kayttajanRooli");
+
+  // Lisää tapahtumankäsittelijä poistopainikkeelle
+  deleteButton.addEventListener('click', function() {
+      if (kayttajanRooli === 'lisääjä') {
+          // Vain lisääjät voivat poistaa tuotteita
+          productPreview.remove();
+          // Poista tuote myös localStoragesta
+          removeProductFromLocalStorage(product);
+      } else {
+          alert('Sinulla ei ole oikeuksia poistaa tuotteita.');
+      }
+  });
+});

@@ -21,7 +21,8 @@ document.getElementById('product-form').addEventListener('submit', function(even
         description: productDescription,
         price: productPrice,
         kategoria: kategoriaTieto.value,
-        tyyppi: tyyppi.value
+        tyyppi: tyyppi.value,
+        addedBy: localStorage.getItem("kayttajaTunnus")
     };
 
     // Hae tai alusta tuotelista localStoragesta
@@ -72,9 +73,17 @@ function addProductToPreview(product) {
     deleteButton.type = 'button';
 
     deleteButton.addEventListener('click', function() {
+        const currentUser = localStorage.getItem("kayttajaTunnus");
+    const addedByUser = product.addedBy;
+
+    if (currentUser === addedByUser) {
+        // Käyttäjä voi poistaa oman lisäämänsä tuotteen
         productPreview.remove();
         // Poista tuote myös localStoragesta
         removeProductFromLocalStorage(product);
+    } else {
+        alert('Sinulla ei ole oikeuksia poistaa tätä tuotetta.');
+    }
     });
 
     productDetails.appendChild(productNameElement);
@@ -105,3 +114,15 @@ function removeProductFromLocalStorage(productToRemove) {
     // Päivitä tuotelista localStorageen
     localStorage.setItem('productList', JSON.stringify(updatedProductList));
 }
+
+// Lisää tapahtumankäsittelijä poistopainikkeelle
+deleteButton.addEventListener('click', function() {
+    if (kayttajanRooli === 'lisääjä') {
+        // Vain lisääjät voivat poistaa tuotteita
+        productPreview.remove();
+        // Poista tuote myös localStoragesta
+        removeProductFromLocalStorage(product);
+    } else {
+        alert('Sinulla ei ole oikeuksia poistaa tuotteita.');
+    }
+});
