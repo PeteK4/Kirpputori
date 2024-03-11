@@ -64,8 +64,8 @@ function naytaHakutulokset(tuotteet) {
         tuoteElementti.classList.add('tuote'); // Lisätään luokka 'tuote' elementtiin
 
         // Luo p-elementit ja asettaa niihin tuotteen tiedot
-        let nimiElementti = document.createElement('p');
-        nimiElementti.textContent = 'Nimi: ' + tuote.name;
+        let nimiElementti = document.createElement('h2');
+        nimiElementti.textContent = tuote.name;
 
         let kuvausElementti = document.createElement('p');
         kuvausElementti.textContent = 'Kuvaus: ' + tuote.description;

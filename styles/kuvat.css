@@ -4,18 +4,33 @@
   text-align: center;
   margin-top: 5vw;
 }
+/* lisätty 11.3.*/
+#product-list,
+.hakutulokset {
+  padding: 10px;
+  max-width: 1200px;
+  margin: auto;
+}
 
 /* tuokuvat ja tekstit*/
-.product-preview-item {
+.product-preview-item,
+.hakutulokset-item,
+#product-list {
   padding: 10px;
   max-width: 1200px;
   margin:auto;
   background-color: rgb(120, 173, 175);
-  display: flex;
+  display: block; /* muutettu flex block*/
   align-items: center;
   border-radius: 8px;
   border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
+}
+
+/* lisätty 11.3. */
+.product-preview-item h2,
+.product-preview-item p {
+  margin: 5px 10px; /* Lisää marginaalia ylä- ja alapuolelle */
 }
 
 .product-preview-item img {
@@ -116,6 +131,7 @@ margin-right: 20px; /* Lisätään välistystä lomakkeen ja logon välille */
   text-align: center; /* Aseta tekstin keskitys hakukentässä */
 }
 
+/* lisätty 11.3. */
 #hakutulokset,
 #product-list {
   width: 50%; /* Määrittele hakutulosten divin leveys */
