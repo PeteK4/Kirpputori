@@ -25,10 +25,17 @@ function createProductElement(product) {
     const productPriceElement = document.createElement('p');
     productPriceElement.textContent = 'Hinta: ' + product.price + ' €';
 
-    
+    const kategoriaElement = document.createElement('p');
+    kategoriaElement.textContent = 'Kategoria: ' + product.kategoria;
+
+    const tyyppiElement = document.createElement('p');
+    tyyppiElement.textContent = 'Tyyppi: ' + product.tyyppi;
+
     productElement.appendChild(productNameElement);
     productElement.appendChild(productDescriptionElement);
     productElement.appendChild(productPriceElement);
+    productElement.appendChild(kategoriaElement);
+    productElement.appendChild(tyyppiElement);
 
     return productElement;
 }

@@ -40,9 +40,13 @@ function etsiTuotteet(hakusana) {
     // Käydään läpi jokainen tuote
     tallennetutTuotteet.forEach(function(tuote) {
         // Tarkistetaan, että tuote on määritelty ja sillä on nimi, kuvaus ja kategoria
-        if (tuote && tuote.name && tuote.description && tuote.price && tuote.kategoria) {
+        if (tuote && tuote.name && tuote.description && tuote.price && tuote.kategoria && tuote.tyyppi) {
             // Tarkistetaan, vastaako tuotteen nimi, kuvaus, hinta tai kategoria hakusanaa
-            if (tuote.name.toLowerCase().includes(hakusana) || tuote.description.toLowerCase().includes(hakusana) || tuote.price.toString().includes(hakusana) || tuote.kategoria.toLowerCase().includes(hakusana)) {
+            if (tuote.name.toLowerCase().includes(hakusana) || 
+            tuote.description.toLowerCase().includes(hakusana) || 
+            tuote.price.toString().includes(hakusana) || 
+            tuote.kategoria.toLowerCase().includes(hakusana) || 
+            tuote.tyyppi.toLowerCase().includes(hakusana)) {
                 loydetytTuotteet.push(tuote);
                 hakuTuloksetAlue.style.display="block";
             }
@@ -76,11 +80,16 @@ function naytaHakutulokset(tuotteet) {
         let kategoriaElementti = document.createElement('p');
         kategoriaElementti.textContent = 'Kategoria: ' + tuote.kategoria;
 
+        let tyyppiElementti = document.createElement('p');
+        tyyppiElementti.textContent = 'Tyyppi: ' + tuote.tyyppi;
+        
+
         // Lisätään p-elementit tuote-elementtiin
         tuoteElementti.appendChild(nimiElementti);
         tuoteElementti.appendChild(kuvausElementti);
         tuoteElementti.appendChild(hintaElementti);
         tuoteElementti.appendChild(kategoriaElementti);
+        tuoteElementti.appendChild(tyyppiElementti);
 
         // Lisätään tuote-elementti hakutuloksiin
         hakutulosteElementti.appendChild(tuoteElementti);
