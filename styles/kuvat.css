@@ -15,12 +15,14 @@
 /* tuokuvat ja tekstit*/
 .product-preview-item,
 .hakutulokset-item,
-#product-list {
+#product-list,
+.tuote,
+.product {
   padding: 10px;
   max-width: 1200px;
   margin:auto;
   background-color: rgb(120, 173, 175);
-  display: block; /* muutettu flex block*/
+  display: block;
   align-items: center;
   border-radius: 8px;
   border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
