@@ -131,6 +131,14 @@ margin-right: 20px; /* Lisätään välistystä lomakkeen ja logon välille */
 flex: 0 0 auto; /* Määritetään logo kiinteäksi leveydeksi */
 }
 
+input:hover,
+.kategoria,
+.tyyppi,
+.lataa,
+.delete-button {
+  cursor: url("../kuvat/handy.webp"), auto;
+}
+
 /* NÄYTTÖ > 1920 ----------------------------------------*/
 
 @media only screen and (min-width: 1920px) {
