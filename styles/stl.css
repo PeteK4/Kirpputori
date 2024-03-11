@@ -223,7 +223,6 @@ body::before {
   border-color: #30503a;
   border-radius: 15px;
   background-color: #4fce75;
-  cursor: pointer;
   transition: .05s;
   max-width: 90%;
   width: 200px;
