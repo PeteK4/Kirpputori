@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/stl.css">
+        <link rel="stylesheet" href="./styles/stlMobiili.css">
         <link rel="stylesheet" href="./styles/kuvat.css">
         <title>Nettikirppis MoniTori</title>
     </head>
@@ -13,13 +14,14 @@
         <div class="ylaPalkki">            
             <img class="logo" src="./kuvat/logo.png" alt="Logo">
             <div id="ylaPalkkiTeksti1">Tervetuloa nettikirppikseen, <span id="kayttajaNimi"></span>
-            <button id="nappiKirjauduUlos">Kirjaudu ulos</button></div>
+        </div>
 
             <div id="linkit">
                 <button id="nappiEtusivu">Etusivu</button>
                 <button id="nappiKategoriat">Kategoriat</button>
                 <button id="nappiIlmoita">Ilmoita</button>
                 <button id="nappiTuotehaku">Etsi</button>
+                <button id="nappiKirjauduUlos">Kirjaudu ulos</button>
             </div>
         </div>
 
@@ -33,7 +35,7 @@
             </form>
         </div>
         <!-- Hakutulokset -->
-        <div id="hakutulokset"></div>
+        <div style="display: none" id="hakutulokset"></div>
 
         <script src="./javascript/tuotehaku.js"></script>
         <script src="./javascript/napit.js"></script>
