@@ -140,7 +140,7 @@ body::before {
   cursor: url("../kuvat/handy.webp"), auto;
 }
 
-#nappiKirjauduUlos {
+/*#nappiKirjauduUlos {
   display: inline-block;
   color: black;
   margin-left: 10px;
@@ -151,7 +151,7 @@ body::before {
   font-weight: bold;
   transition: .04s;
   cursor: url("../kuvat/handy.webp"), auto;
-}
+}*/
 
 /* nappien muokkailut, tietojen anto osion muokkailut (tt)*/
 
@@ -209,6 +209,23 @@ body::before {
   cursor: url("../kuvat/handy.webp"), auto;
 }
 
+#nappiKirjauduUlos {
+  display: inline-block;
+  margin-top: .5vw;
+  padding: 4px 15px;
+  color: rgb(204, 28, 28);
+  border: solid 1px;
+  border-color: #30503a;
+  border-radius: 15px;
+  background-color: #4fce75;
+  transition: .05s;
+  max-width: 90%;
+  width: 200px;
+  font-weight: bold;
+  cursor: url("../kuvat/handy.webp"), auto;
+}
+
+
 #nappiKirjaudu,
 #nappiLuoTunnus,
 #nappiEtusivu,
@@ -233,7 +250,6 @@ body::before {
 #nappiPeruutaLuoTunnus:hover,
 #nappiKirjauduKirppis:hover,
 #nappiPeruutaKirjautuminen:hover,
-#nappiKirjauduUlos:hover,
 #nappiVaatteet:hover,
 #nappiKeittio:hover,
 #nappiKirjat:hover,
@@ -253,7 +269,8 @@ body::before {
 #nappiEtusivu:hover,
 #nappiKategoriat:hover,
 #nappiIlmoita:hover,
-#nappiTuotehaku:hover {
+#nappiTuotehaku:hover,
+#nappiKirjauduUlos:hover {
   transform: scale(1.02);
   color:#cdffdb;
   border: solid 1px;
@@ -333,10 +350,10 @@ body::before {
     width: 200%;
   }
 
-#kategoriaTuotteet {
-  margin: 40px auto;
-  max-width: 100%;
-}
+  #kategoriaTuotteet {
+    margin: 40px auto;
+    max-width: 100%;
+  }
   
   #nappiKirjaudu,
   #nappiLuoTunnus {

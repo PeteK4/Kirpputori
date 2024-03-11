@@ -20,16 +20,19 @@
 }
 
 .tuote-elementti {
-    max-width: 1200px;
-    border: 6px solid #2426a7;
     padding: 10px;
-    margin-bottom: 5px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
+    max-width: 1200px;
+    margin:auto;
+    background-color: rgb(120, 173, 175);
+    display: block;
+    align-items: center;
+    border-radius: 8px;
+    border: 3px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Lisää varjostus */
 }
 
 .tuote-elementti h3 {
-    color: #035503;
+    color: #000000;
     font-size: 2em;
     
 }
@@ -37,5 +40,5 @@
 .tuote-elementti p {
     padding: 0 0 0 10;
     margin: 5px 0;
-    color: #666;
+    color: #050505;
 }

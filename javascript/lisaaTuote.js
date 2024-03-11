@@ -1,8 +1,11 @@
 // Kun sivu latautuu, tarkista, onko tallennettuja tuotteita localStoragesta ja näytä ne
 document.addEventListener('DOMContentLoaded', function () {
     const productList = JSON.parse(localStorage.getItem('productList')) || [];
+    const currentUser = localStorage.getItem('kayttajaTunnus')
     productList.forEach(product => {
-        addProductToPreview(product);
+        if (product.addedBy === currentUser) {
+            addProductToPreview(product);
+        }
     });
 });
 

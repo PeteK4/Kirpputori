@@ -135,7 +135,8 @@ margin-right: 20px; /* Lisätään välistystä lomakkeen ja logon välille */
 
 /* lisätty 11.3. */
 #hakutulokset,
-#product-list {
+#product-list,
+#kategoriaTuotteet-item {
   width: 50%; /* Määrittele hakutulosten divin leveys */
   margin: 0 auto; /* Aseta marginaali automaattisesti vaakasuunnassa keskittämistä varten */
   text-align: left; /* Aseta tekstin vasen reunus hakutuloksissa */
