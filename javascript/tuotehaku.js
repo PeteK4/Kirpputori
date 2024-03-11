@@ -1,3 +1,6 @@
+const hakuTuloksetAlue = document.getElementById("hakutulokset")
+const hakuKentta = document.getElementById("hakukentta")
+
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('hakunappi').addEventListener('click', function(event) {
         event.preventDefault();
@@ -8,9 +11,22 @@ document.addEventListener('DOMContentLoaded', function () {
 function suoritaHaku() {
     // Haetaan hakusana
     let hakusana = document.getElementById('hakukentta').value.toLowerCase();
+
+    // Tarkistetaan onko hakukenttään syötetty tekstiä
+    if (hakusana == "") {
+        hakuKentta.placeholder = "Kirjoita hakusana";
+        return
+    }
     
     // Haetaan tuotteet hakusanan perusteella
     let loytyneetTuotteet = etsiTuotteet(hakusana);
+
+    // Tarkistetaan löytyikö tuote
+    if (loytyneetTuotteet.length == 0) {
+        hakuKentta.value = "";
+        hakuKentta.placeholder = "Tuotetta ei löydy";
+        return;
+    }
 
     // Näytetään hakutulokset
     naytaHakutulokset(loytyneetTuotteet);
@@ -28,6 +44,7 @@ function etsiTuotteet(hakusana) {
             // Tarkistetaan, vastaako tuotteen nimi, kuvaus, hinta tai kategoria hakusanaa
             if (tuote.name.toLowerCase().includes(hakusana) || tuote.description.toLowerCase().includes(hakusana) || tuote.price.toString().includes(hakusana) || tuote.kategoria.toLowerCase().includes(hakusana)) {
                 loydetytTuotteet.push(tuote);
+                hakuTuloksetAlue.style.display="block";
             }
         }
     });
@@ -35,7 +52,6 @@ function etsiTuotteet(hakusana) {
     // Palautetaan löydetyt tuotteet
     return loydetytTuotteet;
 }
-
 
 // Hakutulosten näyttäminen HTML:ssä
 function naytaHakutulokset(tuotteet) {
