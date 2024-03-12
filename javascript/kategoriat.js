@@ -13,7 +13,7 @@ function naytaTuotteet(kategoria) {
             tuoteElementti.classList.add('tuote-elementti'); // Lisää CSS-luokka
             
             tuoteElementti.innerHTML = `
-                <p>Nimi: ${tuote.name}</p>
+                <h3>${tuote.name}</h3>
                 <p>Kuvaus: ${tuote.description}</p>
                 <p>Hinta: ${tuote.price}</p>
                 <p>Tyyppi: ${tuote.tyyppi}</p>
@@ -24,28 +24,31 @@ function naytaTuotteet(kategoria) {
 }
 
 // Kuuntele kategorianappien klikkauksia ja näytä tuotteet
-document.getElementById('nappiVaatteet').addEventListener('click', function() {
-    naytaTuotteet('vaatteet');
-});
+document.addEventListener('DOMContentLoaded', function() {
+    // Lisää tapahtumankäsittelijä kategorianappien klikkauksille
+    document.getElementById('nappiVaatteet').addEventListener('click', function() {
+        naytaTuotteet('vaatteet');
+    });
 
-document.getElementById('nappiKeittiö').addEventListener('click', function() {
-    naytaTuotteet('keittiö');
-});
+    document.getElementById('nappiKeittio').addEventListener('click', function() {
+        naytaTuotteet('keittio');
+    });
 
-document.getElementById('nappiKirjat').addEventListener('click', function() {
-    naytaTuotteet('kirjat');
-});
+    document.getElementById('nappiKirjat').addEventListener('click', function() {
+        naytaTuotteet('kirjat');
+    });
 
-document.getElementById('nappiHuonekalut').addEventListener('click', function() {
-    naytaTuotteet('huonekalut');
-});
+    document.getElementById('nappiHuonekalut').addEventListener('click', function() {
+        naytaTuotteet('huonekalut');
+    });
 
-document.getElementById('nappiTietotekniikka').addEventListener('click', function() {
-    naytaTuotteet('tietotekniikka');
-});
+    document.getElementById('nappiTietotekniikka').addEventListener('click', function() {
+        naytaTuotteet('tietotekniikka');
+    });
 
-document.getElementById('nappiMuut').addEventListener('click', function() {
-    naytaTuotteet('muut');
+    document.getElementById('nappiMuut').addEventListener('click', function() {
+        naytaTuotteet('muut');
+    });
 });
 
 /*

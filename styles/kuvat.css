@@ -19,7 +19,7 @@
 .tuote,
 .product {
   padding: 10px;
-  max-width: 1200px;
+  max-width: 500px;
   margin:auto;
   background-color: rgb(120, 173, 175);
   display: block;
@@ -29,19 +29,12 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
 }
 
-/* lisätty 11.3. */
-.product-preview-item h2,
-.product-preview-item p {
-  margin: 5px 10px; /* Lisää marginaalia ylä- ja alapuolelle */
-}
-
 .product-preview-item img {
-max-width: 1200px;
-padding: 10px;
-border-radius: 8px;
-border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
-
+  max-width: 1200px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
 }
 
 #product-form {

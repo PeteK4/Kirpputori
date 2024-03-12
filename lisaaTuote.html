@@ -34,10 +34,11 @@
             <h1 class="otsikko1">Kirppistuotteiden tiedot</h1>
             
             <form id="product-form">
-              <input type="text" class="product-name" placeholder="Tuotteen nimi">
-              <input type="text" class="product-description" placeholder="Kuvaus">
-              <input type="text" class="product-price" placeholder="Hinta €" pattern="[0-9]*">
-                <select class="kategoria">
+              <input type="text" class="product-name" placeholder="Tuotteen nimi" required>
+              <input type="text" class="product-description" placeholder="Kuvaus" required>
+              <input type="text" class="product-price" placeholder="Hinta €" pattern="[0-9]*" required>
+                <select class="kategoria" required>
+                    <option value="" disabled selected>Valitse kategoria</option>
                     <option value="vaatteet">Vaatteet</option>
                     <option value="keittiö">Keittiö</option>
                     <option value="kirjat">Kirjat</option>
@@ -47,6 +48,7 @@
                 </select>
                 
                 <select class="tyyppi">
+                    <option value="" disabled selected>Valitse tyyppi</option>
                     <option value="ostan">Ostan</option>
                     <option value="myyn">Myyn</option>
                     <option value="tarvitsen">Tarvitsen</option>
