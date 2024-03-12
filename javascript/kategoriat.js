@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
         naytaTuotteet('vaatteet');
     });
 
-    document.getElementById('nappiKeittio').addEventListener('click', function() {
-        naytaTuotteet('keittio');
+    document.getElementById('nappiKeittiö').addEventListener('click', function() {
+        naytaTuotteet('keittiö');
     });
 
     document.getElementById('nappiKirjat').addEventListener('click', function() {

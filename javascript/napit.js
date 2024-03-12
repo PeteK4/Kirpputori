@@ -7,7 +7,7 @@ document.getElementById("nappiKategoriat").addEventListener("click", function() 
 });
 
 document.getElementById("nappiIlmoita").addEventListener("click", function() {
-    window.location.href = "lisaaTuote.html";
+    window.location.href = "ilmoitaTuote.html";
 });
 
 document.getElementById("nappiTuotehaku").addEventListener("click", function() {
