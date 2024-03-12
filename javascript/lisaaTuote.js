@@ -72,14 +72,15 @@ function addProductToPreview(product) {
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Poista';
-    deleteButton.classList.add('delete-button');
+    deleteButton.classList.add('deleteButton');
     deleteButton.type = 'button';
 
     deleteButton.addEventListener('click', function() {
-        const currentUser = localStorage.getItem("kayttajaTunnus");
+    const currentUser = localStorage.getItem("kayttajaTunnus");
     const addedByUser = product.addedBy;
 
     if (currentUser === addedByUser) {
+        if (confirm("Vahvista tuotteen poisto.")) {
         // Käyttäjä voi poistaa oman lisäämänsä tuotteen
         productPreview.remove();
         // Poista tuote myös localStoragesta
@@ -87,7 +88,7 @@ function addProductToPreview(product) {
     } else {
         alert('Sinulla ei ole oikeuksia poistaa tätä tuotetta.');
     }
-    });
+    }});
 
     productDetails.appendChild(productNameElement);
     productDetails.appendChild(productDescriptionElement);
@@ -117,15 +118,3 @@ function removeProductFromLocalStorage(productToRemove) {
     // Päivitä tuotelista localStorageen
     localStorage.setItem('productList', JSON.stringify(updatedProductList));
 }
-
-// Lisää tapahtumankäsittelijä poistopainikkeelle
-deleteButton.addEventListener('click', function() {
-    if (kayttajanRooli === 'lisääjä') {
-        // Vain lisääjät voivat poistaa tuotteita
-        productPreview.remove();
-        // Poista tuote myös localStoragesta
-        removeProductFromLocalStorage(product);
-    } else {
-        alert('Sinulla ei ole oikeuksia poistaa tuotteita.');
-    }
-});

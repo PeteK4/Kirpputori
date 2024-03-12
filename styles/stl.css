@@ -43,18 +43,26 @@ body::before {
   text-align: center;
 }
 
-#otsikko {
+#otsikko{
   color: white;
   font-size: 3.2vw;
   text-align: center;
   margin-top: 5vw;
 }
 
-#otsikkoKirppis {
+#otsikkoKirppis,
+#kategoriaTuotteetOtsikko {
   color: white;
   font-size: 3.2vw;
   text-align: center;
   margin-top: 3vw;
+}
+
+#valiOtsikko {
+  color: white;
+  text-align:center;
+  font-size: 2.5vw;
+  margin-bottom: 40px;
 }
 
 #etusivuKuva {
@@ -124,37 +132,6 @@ body::before {
   color: rgb(121, 134, 155);
 }
 
-#nappiLuoUusiTunnus,
-#nappiKirjauduKirppis,
-#nappiPeruutaLuoTunnus,
-#nappiPeruutaKirjautuminen {
-  display: block;
-  color: black;
-  margin: 20px 30px 20px 130px;
-  padding: 5px 15px;
-  border-radius: 15px;
-  border: solid 1px;
-  font-size: 1em;
-  font-weight: bold;
-  transition: .04s;
-  cursor: url("../kuvat/handy.webp"), auto;
-}
-
-/*#nappiKirjauduUlos {
-  display: inline-block;
-  color: black;
-  margin-left: 10px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: solid 1px;
-  font-size: 0.4em;
-  font-weight: bold;
-  transition: .04s;
-  cursor: url("../kuvat/handy.webp"), auto;
-}*/
-
-/* nappien muokkailut, tietojen anto osion muokkailut (tt)*/
-
 /*.image-upload,*/
 #hakukentta,
 #hakunappi,
@@ -177,7 +154,7 @@ body::before {
 }
 
 #nappiVaatteet,
-#nappiKeittio,
+#nappiKeittiö,
 #nappiKirjat,
 #nappiHuonekalut,
 #nappiTietotekniikka,
@@ -203,35 +180,20 @@ body::before {
 #nappiEtusivu,
 #nappiKategoriat,
 #nappiIlmoita,
-#nappiTuotehaku {
+#nappiTuotehaku,
+#nappiKirjauduUlos {
   font-size: 1em;
   font-weight: bold;
   cursor: url("../kuvat/handy.webp"), auto;
 }
-
-#nappiKirjauduUlos {
-  display: inline-block;
-  margin-top: .5vw;
-  padding: 4px 15px;
-  color: rgb(204, 28, 28);
-  border: solid 1px;
-  border-color: #30503a;
-  border-radius: 15px;
-  background-color: #4fce75;
-  transition: .05s;
-  max-width: 90%;
-  width: 200px;
-  font-weight: bold;
-  cursor: url("../kuvat/handy.webp"), auto;
-}
-
 
 #nappiKirjaudu,
 #nappiLuoTunnus,
 #nappiEtusivu,
 #nappiKategoriat,
 #nappiIlmoita,
-#nappiTuotehaku {
+#nappiTuotehaku,
+#nappiKirjauduUlos {
   display: inline-block;
   margin-top: .5vw;
   padding: 4px 15px;
@@ -241,8 +203,27 @@ body::before {
   border-radius: 15px;
   background-color: #4fce75;
   transition: .05s;
-  max-width: 90%;
   width: 200px;
+  cursor: url("../kuvat/handy.webp"), auto;
+}
+
+#nappiKirjauduUlos {
+  color: rgb(204, 28, 28) !important;
+}
+
+#nappiLuoUusiTunnus,
+#nappiKirjauduKirppis,
+#nappiPeruutaLuoTunnus,
+#nappiPeruutaKirjautuminen {
+  display: block;
+  color: black;
+  margin: 20px 30px 20px 130px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: solid 1px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: .04s;
   cursor: url("../kuvat/handy.webp"), auto;
 }
 
@@ -276,7 +257,7 @@ body::before {
   border: solid 1px;
   border-color:#5f9770;
   background-color: #6eda8e;
-  box-shadow: 0px 0px 15px #75dac9
+  box-shadow: 0px 0px 15px #75dac9;
 }
 
 #palaaSivunAlkuun {
@@ -296,7 +277,7 @@ body::before {
 
 /* MOBIILI ----------------------------------------*/
 
-@media only screen and (max-width: 920px) {
+@media (max-width: 1000px) {
 
   body::before {
     display: block;
@@ -312,14 +293,13 @@ body::before {
   }
 
   .ylaPalkki {
-    height: 120px;
-
+    height: 170px !important;
   }
 
   #ylaPalkkiTeksti1,
   #ylaPalkkiTeksti2 {
     margin-top: 15px;
-    font-size: 6vw;
+    font-size: 6vw !important;
   }
 
   #otsikko {
@@ -329,6 +309,11 @@ body::before {
   #otsikkoKirppis {
     font-size: 8vw;
     margin-top: 1vw;
+  }
+
+  #valiOtsikko {
+    font-size: 6vw;
+    margin-bottom: 40px;
   }
 
   #etusivuKuva {
@@ -370,9 +355,11 @@ body::before {
   #nappiEtusivu,
   #nappiKategoriat,
   #nappiIlmoita,
-  #nappiTuotehaku {
-    max-width: 50%;
-    width: 200px; 
+  #nappiTuotehaku,
+  #nappiKirjauduUlos {
+    font-size: .8em;
+    margin-top: 2px;
+    width: 150px !important; 
   }
 
   #etusivuKuva {

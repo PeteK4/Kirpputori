@@ -4,6 +4,8 @@ function naytaTuotteet(kategoria) {
     tuoteAlue.innerHTML = ''; // Tyhjennä tuotealue
 
     const productList = JSON.parse(localStorage.getItem('productList')) || [];
+        
+    document.getElementById("kategoriaTuotteetOtsikko").innerText = kategoria.charAt(0).toUpperCase() + kategoria.slice(1);
 
     productList.forEach(tuote => {
         if (tuote.kategoria === kategoria) {
@@ -11,7 +13,6 @@ function naytaTuotteet(kategoria) {
             tuoteElementti.classList.add('tuote-elementti'); // Lisää CSS-luokka
             
             tuoteElementti.innerHTML = `
-                <h3>${tuote.kategoria}</h3>
                 <p>Nimi: ${tuote.name}</p>
                 <p>Kuvaus: ${tuote.description}</p>
                 <p>Hinta: ${tuote.price}</p>
@@ -27,8 +28,8 @@ document.getElementById('nappiVaatteet').addEventListener('click', function() {
     naytaTuotteet('vaatteet');
 });
 
-document.getElementById('nappiKeittio').addEventListener('click', function() {
-    naytaTuotteet('keittio');
+document.getElementById('nappiKeittiö').addEventListener('click', function() {
+    naytaTuotteet('keittiö');
 });
 
 document.getElementById('nappiKirjat').addEventListener('click', function() {

@@ -77,7 +77,7 @@ p {
   padding-left: 10px;
 }
 
-.delete-button {
+.deleteButton {
 margin-left: auto;
 padding-left: 10px;
 color:rgb(0, 0, 0);
@@ -154,7 +154,7 @@ input:hover,
 .kategoria,
 .tyyppi,
 .lataa,
-.delete-button {
+.deleteButton {
   cursor: url("../kuvat/handy.webp"), auto;
 }
 
