@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (window.innerWidth > 1000) {
       loppupiste = 320;
     } else {
-      loppupiste = 110;
+      loppupiste = 120;
     }
     
     // Elementti alas
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (window.innerWidth > 1000) {
       loppupiste = 300;
     } else {
-      loppupiste = 110;
+      loppupiste = 120;
     }
 
     // Elementti alas
