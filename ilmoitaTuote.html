@@ -32,10 +32,10 @@
             <h1 class="otsikko1">Kirppistuotteiden tiedot</h1>
             
             <form id="product-form">
-              <input type="text" class="product-name" placeholder="Tuotteen nimi" required>
-              <input type="text" class="product-description" placeholder="Kuvaus" required>
-              <input type="text" class="product-price" placeholder="Hinta €" pattern="[0-9]*" required>
-                <select class="kategoria" required>
+                <input type="text" class="product-name" placeholder="Tuotteen nimi" required maxlength="40">
+                <input type="text" class="product-description" placeholder="Kuvaus" required maxlength="100">
+                <input type="text" class="product-price" placeholder="Hinta €" pattern="[0-9]*" required maxlength="5">
+                  <select class="kategoria" required>
                     <option value="" disabled selected>Valitse kategoria</option>
                     <option value="vaatteet">Vaatteet</option>
                     <option value="keittiö">Keittiö</option>
