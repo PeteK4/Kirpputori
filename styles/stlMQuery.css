@@ -1,11 +1,11 @@
-/* MOBIILI ----------------------------------------*/
+/* MEDIA QUERYT ----------------------------------------*/
 
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
 
   body::before {
     display: block;
     content: "";
-    height: 230px;
+    height: 180px;
   }
 
   .lomake {
@@ -16,14 +16,14 @@
   }
 
   .ylaPalkki {
-    height: 200px !important;
-
+    height: 140px !important;
   }
 
   #ylaPalkkiTeksti1,
   #ylaPalkkiTeksti2 {
+    white-space: nowrap;
     margin-top: 15px;
-    font-size: 6vw;
+    font-size: 5.5vw !important;
   }
 
   #otsikko {
@@ -32,7 +32,13 @@
 
   #otsikkoKirppis {
     font-size: 8vw;
-    margin-top: 1vw;
+    margin-top: 1em;
+  }
+
+  #valiOtsikko {
+    font-size: 6vw;
+    margin-top: -20px;
+    margin-bottom: 20px;
   }
 
   #etusivuKuva {
@@ -54,10 +60,10 @@
     width: 200%;
   }
 
-#kategoriaTuotteet {
-  margin: 40px auto;
-  max-width: 100%;
-}
+  #kategoriaTuotteet {
+    margin: 40px auto;
+    max-width: 100%;
+  }
   
   #nappiKirjaudu,
   #nappiLuoTunnus {
@@ -76,8 +82,9 @@
   #nappiIlmoita,
   #nappiTuotehaku,
   #nappiKirjauduUlos {
-    max-width: 50%;
-    width: 200px; 
+    font-size: .8em;
+    margin-top: 2px;
+    width: 150px !important; 
   }
 
   #etusivuKuva {
@@ -87,5 +94,18 @@
   #palaaSivunAlkuun {
     bottom: 55px;
     width: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  body::before {
+    display: block;
+    content: "";
+    height: 210px;
+  }
+
+  .ylaPalkki {
+    height: 180px !important;
   }
 }
