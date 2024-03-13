@@ -13,8 +13,19 @@
 }
 
 /* tuokuvat ja tekstit*/
+.product-preview-item {
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background-color: rgb(120, 173, 175);
+  align-items: center;
+  border-radius: 8px;
+  border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
+}
+
 .product-preview-item,
-.hakutulokset-item,
 #product-list,
 .tuote,
 .product {
@@ -27,6 +38,10 @@
   border-radius: 8px;
   border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
+}
+
+.tuote h3 {
+  margin: 0;
 }
 
 .product-preview-item img {
@@ -71,13 +86,15 @@ p {
 }
 
 .deleteButton {
-margin-left: auto;
-padding-left: 10px;
-color:rgb(0, 0, 0);
-font-weight: bolder;
-font-size: large;
-width: 100px;
-height: 50px;
+  margin-right: auto;
+  align-self: flex-start;
+  padding: 0;
+  color:rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: large;
+  width: 100px;
+  height: 50px;
+  border-radius: 8px;
 }
 
 .logo {
@@ -112,7 +129,6 @@ height: 8vw; /* Säilyttää kuvan suhteen oikeana */
 
 #tuote-lomake-container {
 display: flex;
-
 }
 
 #tuote-lomake {
@@ -127,7 +143,6 @@ margin-right: 20px; /* Lisätään välistystä lomakkeen ja logon välille */
 }
 
 /* lisätty 11.3. */
-#hakutulokset,
 #product-list,
 #kategoriaTuotteet-item {
   width: 50%; /* Määrittele hakutulosten divin leveys */

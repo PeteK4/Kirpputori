@@ -16,7 +16,7 @@ function createProductElement(product) {
     const productElement = document.createElement('div');
     productElement.classList.add('product');
 
-    const productNameElement = document.createElement('h2');
+    const productNameElement = document.createElement('h3');
     productNameElement.textContent = product.name;
 
     const productDescriptionElement = document.createElement('p');

@@ -54,7 +54,7 @@ function addProductToPreview(product) {
     const productDetails = document.createElement('div');
     productDetails.classList.add('product-details');
 
-    const productNameElement = document.createElement('h2');
+    const productNameElement = document.createElement('h3');
     productNameElement.textContent = product.name;
     productNameElement.id = 'tuotteenNimi'
 

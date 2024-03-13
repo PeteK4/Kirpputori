@@ -31,15 +31,13 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Lisää varjostus */
 }
 
-.tuote-elementti h3 {
-    color: #000000;
-    font-size: 2em;
-    margin: auto;
-    
-}
-
 .tuote-elementti p {
     padding: 0 0 0 10;
     margin: 5px 0;
     color: #050505;
+}
+
+h3,
+.tuote{
+    margin: 0;
 }
