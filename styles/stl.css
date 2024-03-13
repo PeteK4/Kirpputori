@@ -62,7 +62,7 @@ body::before {
   color: white;
   text-align:center;
   font-size: 2.5vw;
-  margin: 80px;
+  margin: 60px 0px;
 }
 
 #etusivuKuva {
@@ -275,7 +275,7 @@ body::before {
   transform: translateX(-5px);
 }
 
-/* MOBIILI ----------------------------------------*/
+/* MEDIA QUERYT ----------------------------------------*/
 
 @media (max-width: 1000px) {
 
@@ -308,12 +308,13 @@ body::before {
 
   #otsikkoKirppis {
     font-size: 8vw;
-    margin-top: 1vw;
+    margin-top: 1em;
   }
 
   #valiOtsikko {
     font-size: 6vw;
-    margin-bottom: 40px;
+    margin-top: -20px;
+    margin-bottom: 20px;
   }
 
   #etusivuKuva {
@@ -370,4 +371,13 @@ body::before {
     bottom: 55px;
     width: 30px;
   }
+}
+
+@media (min-width: 1921px) {
+  #valiOtsikko {
+    font-size: 3vw;
+    margin-top: 120px;
+    margin-bottom: 40px;
+  }
+
 }
