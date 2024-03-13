@@ -183,11 +183,19 @@ input:hover,
 
   .logo {
     display: none;
-
   }
 
   .logo1 img {
- display: none;
+    display: none;
     }
+
+  #product-previews,
+  #product-list,
+  .tuote,
+  .product {
+    padding: 5px;
+    width: 95%;
+    margin: auto;
+  }
 }
 
