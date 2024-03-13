@@ -41,11 +41,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.location.href = "./etusivu.html";
             }, 300);
         }  
-          lomakeYlos();
-          setTimeout(() => {
+          localStorage.setItem("kirjautunut", "kirjautunut");
           localStorage.setItem("kayttajaTunnus", id.value);
-          window.location.href = "./etusivu.html";
-          }, 300);
+          lomakeYlos();
+          
+            setTimeout(() => {
+            window.location.href = "./etusivu.html";
+            }, 300);
         }
       }
     }

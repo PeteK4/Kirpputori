@@ -16,6 +16,7 @@ document.getElementById("nappiTuotehaku").addEventListener("click", function() {
 
 document.getElementById("nappiKirjauduUlos").addEventListener("click", function() {
     if (confirm("Vahvista uloskirjautuminen.")) {
+        localStorage.setItem("kirjautunut", "eiKirjautunut");
         window.location.href = "index.html";
     }
 });
