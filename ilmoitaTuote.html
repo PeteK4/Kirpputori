@@ -31,11 +31,11 @@
         <div style="display: block" id="lisaaTuotteet">
             <h1 class="otsikko1">Kirppistuotteiden tiedot</h1>
             
-            <form id="product-form">
-                <input type="text" class="product-name" placeholder="Tuotteen nimi" required maxlength="40">
-                <input type="text" class="product-description" placeholder="Kuvaus" required maxlength="100">
-                <input type="text" class="product-price" placeholder="Hinta €" pattern="[0-9]*" required maxlength="5">
-                  <select class="kategoria" required>
+            <form id="product-form" style="width: 100%; margin: auto;">
+                <input type="text" class="product-name" placeholder="Tuotteen nimi" required maxlength="40" style="width: 90%; margin-bottom: 10px; margin-top: 10px;">
+                <textarea class="product-description" placeholder="Kuvaus" required maxlength="200" style="width: 90%; margin-bottom: 10px; height: 100px;"></textarea>
+                <input type="text" class="product-price" placeholder="Hinta €" pattern="[0-9]*" required maxlength="5" style="width: 90%; margin-bottom: 10px;">
+                <select class="kategoria" required style="width: 40%; margin-bottom: 10px;">
                     <option value="" disabled selected>Valitse kategoria</option>
                     <option value="vaatteet">Vaatteet</option>
                     <option value="keittiö">Keittiö</option>

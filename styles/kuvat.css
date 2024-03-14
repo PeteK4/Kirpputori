@@ -14,7 +14,7 @@
 
 /* tuokuvat ja tekstit*/
 .product-preview-item {
-  max-width: 500px;
+  max-width: 600px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -30,7 +30,7 @@
 .tuote,
 .product {
   padding: 5px;
-  max-width: 500px;
+  max-width: 600px;
   margin:auto;
   background-color: rgb(120, 173, 175);
   display: block;
@@ -40,39 +40,43 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
 }
 
+#product-previews {
+  margin-top: 370px;
+}
+
 .tuote h3 {
   margin: 0;
 }
 
 .product-preview-item img {
   max-width: 1200px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 8px;
   border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
 }
 
 #product-form {
-max-width: 1200px;
-margin:auto;
-background-color: rgb(40, 134, 3);
-padding: 10px;
+  max-width: 1200px;
+  margin:5px;
+  background-color: rgb(40, 134, 3);
+  padding: 0;
 }
 
 .otsikko1 {
-max-width: 1200px;
-margin:auto;
-background-color: white;
-padding: 10px;
+  max-width: 1200px;
+  margin:auto;
+  background-color: white;
+  padding: 10px;
 }
 
 .product-name {
-padding-left: 20px;
+  padding-left: 5px;
 }
 
 /* lisätty 27.2.2024 kuvan ja tuotetekstin väliin tilaa*/
 .product-details {
-  margin: 20px;
+  margin: 10px;
   flex: 1;
 }
 
@@ -106,34 +110,38 @@ p {
 }
 
 .logo1 {
-display: flex;
+  display: flex;
 }
 
 .logo img {
-margin-right: 50px; /* Lisää välistystä logon ja otsikon välille */
-margin-left: 300px;
-width: 100px; /* Voit muuttaa koon haluamaksesi */
-height: auto; /* Säilyttää kuvan suhteen oikean */
+  margin-right: 50px; /* Lisää välistystä logon ja otsikon välille */
+  margin-left: 300px;
+  width: 100px; /* Voit muuttaa koon haluamaksesi */
+  height: auto; /* Säilyttää kuvan suhteen oikean */
 }
 
 .logo1 img {
-margin-left: auto;
-width: 11vw; /* Voit muuttaa koon haluamaksesi */
-height: 8vw; /* Säilyttää kuvan suhteen oikeana */
+  margin-left: auto;
+  width: 11vw; /* Voit muuttaa koon haluamaksesi */
+  height: 8vw; /* Säilyttää kuvan suhteen oikeana */
 }
 
 
 #lisaaTuotteet {
   display: none;
-}
+  max-width: 1200px;
+  position: absolute;
+  margin-top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);}
 
 #tuote-lomake-container {
 display: flex;
 }
 
 #tuote-lomake {
-flex: 1; /* Annetaan lomakkeelle joustavuutta */
-margin-right: 20px; /* Lisätään välistystä lomakkeen ja logon välille */
+  flex: 1; /* Annetaan lomakkeelle joustavuutta */
+  margin-right: 20px; /* Lisätään välistystä lomakkeen ja logon välille */
 }
 
 #haku {
@@ -155,7 +163,7 @@ margin-right: 20px; /* Lisätään välistystä lomakkeen ja logon välille */
 }
 
 .logo1 {
-flex: 0 0 auto; /* Määritetään logo kiinteäksi leveydeksi */
+  flex: 0 0 auto; /* Määritetään logo kiinteäksi leveydeksi */
 }
 
 input:hover,
@@ -170,11 +178,11 @@ input:hover,
 
 @media only screen and (min-width: 1920px) {
 
-  .logo1 img {
-    margin-left: auto;
-    width: 9vw;
-    height: 6vw;
-    }
+.logo1 img {
+  margin-left: auto;
+  width: 9vw;
+  height: 6vw;
+  }
 }
 
 /* MOBIILI ----------------------------------------*/
