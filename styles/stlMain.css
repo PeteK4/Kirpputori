@@ -43,7 +43,7 @@ body::before {
   text-align: center;
 }
 
-#otsikko{
+#otsikko {
   color: white;
   font-size: 3.2vw;
   text-align: center;
@@ -128,6 +128,15 @@ body::before {
   max-width: 50%;
 }
 
+#laskuri {
+  position: relative;
+  margin: -12px auto 15px;
+  width: 85%;
+  text-align: right;
+  color: white;
+  font-weight: bolds;
+}
+
 ::placeholder {
   color: rgb(121, 134, 155);
 }
@@ -151,6 +160,13 @@ body::before {
   font-weight: bold;
   transition: .04s;
   cursor: pointer;
+}
+
+.product-description {
+  font-size: 1.3em;
+  min-width: 90%;
+  max-width: 90%;
+  resize: none;
 }
 
 #nappiVaatteet,
