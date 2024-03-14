@@ -9,7 +9,7 @@ let klikattu = false;
 tekstiKentta.addEventListener("click", function() {
   if (!klikattu) {
     tekstiKentta.value = "";
-    merkkienMaara.innerText = `0/${merkitMax}`;
+    merkkienMaara.innerText = `0 / ${merkitMax}`;
     tekstiKentta.setSelectionRange(0, 0);
     klikattu = true;
   }
