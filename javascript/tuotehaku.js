@@ -1,4 +1,4 @@
-const hakuTuloksetAlue = document.getElementById("hakutulokset")
+const hakuTulokset = document.getElementById("hakutulokset")
 const hakuKentta = document.getElementById("hakukentta")
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -24,7 +24,7 @@ function suoritaHaku() {
     // Tarkistetaan löytyikö tuote
     if (loytyneetTuotteet.length == 0) {
         hakuKentta.value = "";
-        hakuKentta.placeholder = "Tuotetta ei löydy";
+        hakuKentta.placeholder = "Tuotteita ei löydy";
         return;
     }
 
@@ -48,7 +48,7 @@ function etsiTuotteet(hakusana) {
             tuote.kategoria.toLowerCase().includes(hakusana) || 
             tuote.tyyppi.toLowerCase().includes(hakusana)) {
                 loydetytTuotteet.push(tuote);
-                hakuTuloksetAlue.style.display="block";
+                hakuTulokset.style.display = "block";
             }
         }
     });
@@ -74,7 +74,7 @@ function naytaHakutulokset(tuotteet) {
         // Lisätään linkki yhteydenottolomakkeeseen
         let contactLink = document.createElement('a');
         contactLink.textContent = 'Ota yhteyttä ilmoittajaan';
-        contactLink.href = `yhteydenottolomake.html?user=${tuote.addedBy}`;
+        contactLink.href = `yhteydenottoLomake.html?user=${tuote.addedBy}`;
         contactLink.target = '_blank'; // Avaa uudessa välilehdessä
 
         let kuvausElementti = document.createElement('p');

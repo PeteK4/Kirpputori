@@ -34,10 +34,11 @@ document.addEventListener("DOMContentLoaded", function() {
           if (tallennettuSalasana === salasana.value) {
             // Tallenna käyttäjän rooli
             localStorage.setItem("kayttajanRooli", "lisääjä"); // Tässä oletusarvoisesti käyttäjä on lisääjä
+            localStorage.setItem("kayttajaTunnus", id.value);
+            
             // Ohjataan käyttäjä eteenpäin
             lomakeYlos();
             setTimeout(() => {
-                localStorage.setItem("kayttajaTunnus", id.value);
                 window.location.href = "./etusivu.html";
             }, 300);
         }  

@@ -58,14 +58,14 @@
 
 #product-form {
   max-width: 1200px;
-  margin:5px;
+  margin: 0px;
   background-color: rgb(40, 134, 3);
-  padding: 0;
+  padding: 0px 0px;
 }
 
 .otsikko1 {
-  max-width: 1200px;
-  margin:auto;
+  max-width: 100%;
+  margin: 0 auto;
   background-color: white;
   padding: 10px;
 }
@@ -126,14 +126,12 @@ p {
   height: 8vw; /* Säilyttää kuvan suhteen oikeana */
 }
 
-
 #lisaaTuotteet {
-  display: none;
-  max-width: 1200px;
-  position: absolute;
-  margin-top: 100px;
-  left: 50%;
-  transform: translate(-50%, -50%);}
+  position: relative;
+  display: block;
+  max-width: 800px;
+  margin: 0px auto;
+}
 
 #tuote-lomake-container {
 display: flex;
@@ -166,11 +164,15 @@ display: flex;
   flex: 0 0 auto; /* Määritetään logo kiinteäksi leveydeksi */
 }
 
-input:hover,
+input:hover {
+  cursor: url("../kuvat/handy.webp"), auto;
+}
+
 .kategoria,
 .tyyppi,
 .lataa,
 .deleteButton {
+  margin: 5px 0px;
   cursor: url("../kuvat/handy.webp"), auto;
 }
 

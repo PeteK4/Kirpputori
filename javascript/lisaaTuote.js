@@ -46,6 +46,7 @@ document.getElementById('product-form').addEventListener('submit', function(even
 
 // Lisää yksittäinen tuote esikatseluun
 function addProductToPreview(product) {
+    console.log("LISTA")
     const productPreviews = document.getElementById('product-previews');
 
     const productPreview = document.createElement('div');
@@ -85,9 +86,7 @@ function addProductToPreview(product) {
         productPreview.remove();
         // Poista tuote myös localStoragesta
         removeProductFromLocalStorage(product);
-    } else {
-        alert('Sinulla ei ole oikeuksia poistaa tätä tuotetta.');
-    }
+        } 
     }});
 
     productDetails.appendChild(productNameElement);

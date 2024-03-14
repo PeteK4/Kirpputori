@@ -5,7 +5,7 @@
   body::before {
     display: block;
     content: "";
-    height: 180px;
+    height: 200px;
   }
 
   .lomake {
@@ -16,7 +16,7 @@
   }
 
   .ylaPalkki {
-    height: 140px !important;
+    height: 180px !important;
   }
 
   #ylaPalkkiTeksti1,
@@ -96,17 +96,39 @@
     bottom: 55px;
     width: 30px;
   }
+
+  #laskuri {
+    margin: -35px auto 15px;
+    width: 96%;
+  }
+
+  .product-form {
+    width: 100%;
+  }
+
+  .product-description {
+    height: 120px;
+    width: 96%;
+  }
+
+  .product-name {
+    width: 96%;
+  }
+  
+  .product-price {
+    width: 38% !important;
+  }
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 1921px) {
 
   body::before {
     display: block;
     content: "";
-    height: 210px;
+    height: 180px;
   }
 
-  .ylaPalkki {
-    height: 180px !important;
+  #otsikko {
+    margin-top: 0px;
   }
 }

@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
       // Tarkistetaan, onko käyttäjätunnus jo tallennettu
       if (tallennettuKayttaja) {
-        naytaHuomautus(id, "Saman niminen käyttäjätunnus on jo olemassa.");
+        naytaHuomautus(id, "Tämä käyttäjätunnus on varattu.");
       } else {
 
         // Luodaan käyttäjätunnus objekti

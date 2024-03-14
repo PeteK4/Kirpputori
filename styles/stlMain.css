@@ -130,11 +130,11 @@ body::before {
 
 #laskuri {
   position: relative;
-  margin: -12px auto 15px;
-  width: 85%;
+  margin: -35px auto 15px;
+  width: 96%;
   text-align: right;
-  color: white;
-  font-weight: bolds;
+  color: black;
+  font-weight: bold;
 }
 
 ::placeholder {
@@ -153,7 +153,7 @@ body::before {
   display: inline-block;
   color: black;
   margin-right: 10px;
-  padding: 5px 15px;
+  padding: 5px 5px;
   border-radius: 5px;
   border: solid 1px;
   font-size: 1em;
@@ -162,10 +162,16 @@ body::before {
   cursor: pointer;
 }
 
+.product-name {
+  margin: 10px 0px;
+  width: 50%;
+}
+
 .product-description {
+  width: 98%;
+  margin-bottom: 10px;
+  height: 65px;
   font-size: 1.3em;
-  min-width: 90%;
-  max-width: 90%;
   resize: none;
 }
 
