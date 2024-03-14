@@ -71,6 +71,12 @@ function naytaHakutulokset(tuotteet) {
         let nimiElementti = document.createElement('h3');
         nimiElementti.textContent = tuote.name;
 
+        // Lisätään linkki yhteydenottolomakkeeseen
+        let contactLink = document.createElement('a');
+        contactLink.textContent = 'Ota yhteyttä ilmoittajaan';
+        contactLink.href = `yhteydenottolomake.html?user=${tuote.addedBy}`;
+        contactLink.target = '_blank'; // Avaa uudessa välilehdessä
+
         let kuvausElementti = document.createElement('p');
         kuvausElementti.textContent = 'Kuvaus: ' + tuote.description;
 
@@ -86,6 +92,7 @@ function naytaHakutulokset(tuotteet) {
 
         // Lisätään p-elementit tuote-elementtiin
         tuoteElementti.appendChild(nimiElementti);
+        tuoteElementti.appendChild(contactLink); // Lisää linkki tuotteen nimen jälkeen
         tuoteElementti.appendChild(kuvausElementti);
         tuoteElementti.appendChild(hintaElementti);
         tuoteElementti.appendChild(kategoriaElementti);
