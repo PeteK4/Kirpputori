@@ -25,3 +25,31 @@ document.addEventListener("DOMContentLoaded", function() {
     tuoteTiedotDiv.appendChild(productPriceElement);
     // jne. jatkaisit muiden elementtien lisäämistä
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Etsi lomake
+    const lomake = document.getElementById("yhteydenotto");
+
+    // Lisää tapahtumankäsittelijä lomakkeen lähetykselle
+    lomake.addEventListener("submit", function(event) {
+        event.preventDefault(); // Estä lomakkeen oletustoiminto
+
+        // Lue lomakkeen tiedot
+        const omaNimi = document.getElementById("omanimi").value;
+        const omaSahkoposti = document.getElementById("omasposti").value;
+        const viesti = document.getElementById("viesti").value;
+
+        // Tarkista, että lomake on täytetty
+        if (omaNimi && omaSahkoposti && viesti) {
+            // Täällä voit tehdä jotain lomakkeen tiedoilla, esim. lähettää ne takaisin palvelimelle jatkokäsittelyä varten
+
+            // Tyhjennä lomake
+            lomake.reset();
+        } else {
+            // Ilmoita käyttäjälle, että kaikki tiedot on täytettävä
+            alert("Täytä kaikki lomakkeen kentät.");
+        }
+    });
+
+    // Voit jättää tuotetietojen koodin samanlaiseksi kuin aiemmin, jotta tuotetiedot näytetään oikein
+});
