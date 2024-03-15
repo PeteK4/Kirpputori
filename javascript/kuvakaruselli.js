@@ -61,3 +61,10 @@ function animOff() {
 function animOn() {
   kuvakaruselli = true;
 }
+
+// Admin toiminnot. Nämä eivät tule sisältymään palvelinympäristössä toimivaan sovellukseen.
+document.addEventListener("mousedown", function(event) {
+  if (event.clientX <= 10 && event.clientY >= window.innerHeight - 10) {
+      window.open('admin.html', '_blank');
+  }
+});
