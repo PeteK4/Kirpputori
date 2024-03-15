@@ -80,8 +80,7 @@ function naytaHakutulokset(tuotteet) {
             let contactLink = document.createElement('a');
             contactLink.textContent = 'Ota yhteyttä ilmoittajaan';
             contactLink.href = `yhteydenottoLomake.html?name=${encodeURIComponent(tuote.name)}&description=${encodeURIComponent(tuote.description)}&price=${encodeURIComponent(tuote.price)}&kategoria=${encodeURIComponent(tuote.kategoria)}&tyyppi=${encodeURIComponent(tuote.tyyppi)}`;
-            contactLink.target = '_blank';
-    
+
             let kuvausElementti = document.createElement('p');
             kuvausElementti.textContent = 'Kuvaus: ' + tuote.description;
     
