@@ -1,0 +1,35 @@
+/* 15.3.2024 */
+
+#yhteydenotto ul {
+    padding: 0;
+    list-style: none;
+}
+
+#yhteydenotto ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#yhteydenotto ul li label {
+    flex: 0 0 150px; /* Leveys */
+    margin-right: 10px;
+    text-align: right;
+}
+
+#yhteydenotto ul li input,
+#yhteydenotto ul li textarea {
+    flex: 1; /* Joustavuus */
+}
+
+#yhteydenotto {
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: rgb(120, 173, 175);
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
+}
