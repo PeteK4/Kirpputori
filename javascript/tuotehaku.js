@@ -2,10 +2,16 @@ const hakuTulokset = document.getElementById("hakutulokset")
 const hakuKentta = document.getElementById("hakukentta")
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('hakunappi').addEventListener('click', function(event) {
-        event.preventDefault();
-        suoritaHaku();
-    });
+    const hakunappi = document.getElementById('hakunappi');
+
+    if (hakunappi) {
+        hakunappi.addEventListener('click', function(event) {
+            event.preventDefault();
+            suoritaHaku();
+        });
+    } else {
+        console.error('Hakunappi ei löytynyt');
+    }
 });
 
 function suoritaHaku() {
@@ -64,30 +70,29 @@ function naytaHakutulokset(tuotteet) {
 
     // Lisätään jokainen löydetty tuote hakutuloksiin
     tuotteet.forEach(function(tuote) {
-        let tuoteElementti = document.createElement('div');
-        tuoteElementti.classList.add('tuote'); // Lisätään luokka 'tuote' elementtiin
-
-        // Luo p-elementit ja asettaa niihin tuotteen tiedot
-        let nimiElementti = document.createElement('h3');
-        nimiElementti.textContent = tuote.name;
-
-        // Lisätään linkki yhteydenottolomakkeeseen
-        let contactLink = document.createElement('a');
-        contactLink.textContent = 'Ota yhteyttä ilmoittajaan';
-        contactLink.href = `yhteydenottoLomake.html?user=${tuote.addedBy}`;
-        contactLink.target = '_blank'; // Avaa uudessa välilehdessä
-
-        let kuvausElementti = document.createElement('p');
-        kuvausElementti.textContent = 'Kuvaus: ' + tuote.description;
-
-        let hintaElementti = document.createElement('p');
-        hintaElementti.textContent = 'Hinta: ' + tuote.price;
-
-        let kategoriaElementti = document.createElement('p');
-        kategoriaElementti.textContent = 'Kategoria: ' + tuote.kategoria;
-
-        let tyyppiElementti = document.createElement('p');
-        tyyppiElementti.textContent = 'Tyyppi: ' + tuote.tyyppi;
+        if (tuote && tuote.name !== null) { // Tarkista, että tuotteen nimi ei ole null
+            let tuoteElementti = document.createElement('div');
+            tuoteElementti.classList.add('tuote');
+    
+            let nimiElementti = document.createElement('h3');
+            nimiElementti.textContent = tuote.name;
+    
+            let contactLink = document.createElement('a');
+            contactLink.textContent = 'Ota yhteyttä ilmoittajaan';
+            contactLink.href = `yhteydenottoLomake.html?name=${encodeURIComponent(tuote.name)}&description=${encodeURIComponent(tuote.description)}&price=${encodeURIComponent(tuote.price)}&kategoria=${encodeURIComponent(tuote.kategoria)}&tyyppi=${encodeURIComponent(tuote.tyyppi)}`;
+            contactLink.target = '_blank';
+    
+            let kuvausElementti = document.createElement('p');
+            kuvausElementti.textContent = 'Kuvaus: ' + tuote.description;
+    
+            let hintaElementti = document.createElement('p');
+            hintaElementti.textContent = 'Hinta: ' + tuote.price;
+    
+            let kategoriaElementti = document.createElement('p');
+            kategoriaElementti.textContent = 'Kategoria: ' + tuote.kategoria;
+    
+            let tyyppiElementti = document.createElement('p');
+            tyyppiElementti.textContent = 'Tyyppi: ' + tuote.tyyppi;
         
 
         // Lisätään p-elementit tuote-elementtiin
@@ -100,6 +105,7 @@ function naytaHakutulokset(tuotteet) {
 
         // Lisätään tuote-elementti hakutuloksiin
         hakutulosteElementti.appendChild(tuoteElementti);
+        }
     });
 
 }

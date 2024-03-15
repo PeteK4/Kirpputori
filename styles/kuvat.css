@@ -28,7 +28,8 @@
 #product-previews,
 #product-list,
 .tuote,
-.product {
+.product,
+#tuoteTiedot  {
   padding: 5px;
   max-width: 600px;
   margin:auto;
