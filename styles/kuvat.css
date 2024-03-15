@@ -14,7 +14,7 @@
 
 /* tuokuvat ja tekstit*/
 .product-preview-item {
-  max-width: 600px;
+  max-width: 800px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -31,7 +31,7 @@
 .product,
 #tuoteTiedot  {
   padding: 5px;
-  max-width: 600px;
+  max-width: 800px;
   margin:auto;
   background-color: rgb(120, 173, 175);
   display: block;
@@ -42,7 +42,7 @@
 }
 
 #product-previews {
-  margin-top: 370px;
+  margin-top: 50px;
 }
 
 .tuote h3 {
