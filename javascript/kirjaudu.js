@@ -32,26 +32,17 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
           // Ohjataan käyttäjä eteenpäin
           if (tallennettuSalasana === salasana.value) {
+            
             // Tallenna käyttäjän rooli
             localStorage.setItem("kayttajanRooli", "lisääjä"); // Tässä oletusarvoisesti käyttäjä on lisääjä
             localStorage.setItem("kayttajaTunnus", id.value);
-            
-            // Ohjataan käyttäjä eteenpäin
+            localStorage.setItem("kirjautunut", "kirjautunut");
             lomakeYlos();
             setTimeout(() => {
                 window.location.href = "./etusivu.html";
             }, 300);
-        }  
-          localStorage.setItem("kirjautunut", "kirjautunut");
-          localStorage.setItem("kayttajaTunnus", id.value);
-          lomakeYlos();
-          
-            setTimeout(() => {
-            window.location.href = "./etusivu.html";
-            }, 300);
-        }
-      }
-    }
+        }}
+      }}
   });
 
   // Näytä huomautus syöttökentässä, jos kenttä on tyhjä tai virheellisesti täytetty
