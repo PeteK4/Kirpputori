@@ -29,13 +29,14 @@
 
         <!-- <script src="./javascript/tarkistaKirjautuminen.js"></script> -->
         <script src="../javascript/tuotelista.js"></script>
-        <script src="../javascript/sivunAlkuun.js"></script>       
+        <script src="../javascript/sivunAlkuun.js"></script>
+        <script src="../admin/admin.js"></script>     
 
         <script>
             document.getElementById("nappiKirjauduUlos").addEventListener("click", function() {
               if (confirm("Vahvista uloskirjautuminen.")) {
                 localStorage.setItem("kirjautunut", "eiKirjautunut");
-                window.location.href = "admin.html";
+                window.location.href = "../admin/admin.html";
               }
             });
         </script>

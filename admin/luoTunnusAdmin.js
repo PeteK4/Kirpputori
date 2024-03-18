@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Tallennetaan käyttäjätunnus localStorageen
         localStorage.setItem(id.value, JSON.stringify(admin));
-        window.location.href = "adminToimet.html";
+        window.location.href = "../admin/etusivu.html";
       }
     }
   });
