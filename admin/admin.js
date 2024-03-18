@@ -40,6 +40,7 @@ function createProductElement(product) {
         if (confirm("Vahvista tuotteen poisto.")) {
             // Poista tuote esikatselusta ja localStoragesta
             productElement.remove();
+            // Poista tuote myös localStoragesta
             removeProductFromLocalStorage(product);
         }
     });
@@ -51,10 +52,25 @@ function createProductElement(product) {
     productElement.appendChild(tyyppiElement);
 
     // Asetetaan deleteButton oikealle puolelle
-    const deleteButtonContainer = document.createElement('div');
-    deleteButtonContainer.classList.add('deleteButtonContainer');
-    deleteButtonContainer.appendChild(deleteButton);
-    productElement.appendChild(deleteButtonContainer);
+ 
+    productElement.appendChild(deleteButton);
     
     return productElement;
+}
+
+// Poista tuote localStoragesta
+function removeProductFromLocalStorage(productToRemove) {
+    let productList = JSON.parse(localStorage.getItem('productList')) || [];
+
+    // Etsi tuote listasta ja poista se
+    const updatedProductList = productList.filter(product => {
+        return product.name !== productToRemove.name || 
+               product.description !== productToRemove.description ||
+               product.price !== productToRemove.price ||
+               product.kategoria !== productToRemove.kategoria ||
+               product.tyyppi !== productToRemove.tyyppi;
+    });
+
+    // Päivitä tuotelista localStorageen
+    localStorage.setItem('productList', JSON.stringify(updatedProductList));
 }
