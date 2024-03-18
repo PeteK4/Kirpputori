@@ -41,6 +41,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
 }
 
+#admin-list {
+  margin-bottom: 100px;
+}
+
 #product-previews {
   margin-top: 50px;
 }

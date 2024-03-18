@@ -118,6 +118,10 @@
   .product-price {
     width: 38% !important;
   }
+
+  #admin-list {
+    margin-bottom: 10px !important;
+  }
 }
 
 @media (min-width: 1921px) {
