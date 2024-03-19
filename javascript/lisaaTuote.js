@@ -2,10 +2,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     let productList = JSON.parse(localStorage.getItem('productList')) || [];
     let currentUser = localStorage.getItem('kayttajaTunnus');
+    const valiOtsikko2 = document.getElementById("valiOtsikko2");
+    const viesti = document.getElementById("viesti");
 
     if (productList.length == 0) {
-        document.getElementById("valiOtsikko2").innerHTML = '<div style="margin-top: 100px"></div>';
-        document.getElementById('product-previews').innerHTML = '<h1 style="text-align: center;">Sinulla ei ole ilmoituksia kirpparilla.</h1>';
+        viesti.style.display = "block";
+        valiOtsikko2.style.display = "none";
     } else {
         productList.forEach(product => {
             if (product.addedBy === currentUser) {
@@ -24,6 +26,7 @@ document.getElementById('product-form').addEventListener('submit', function(even
     const productPrice = document.querySelector('.product-price').value;
     const kategoriaTieto = document.querySelector('.kategoria');
     const tyyppi = document.querySelector('.tyyppi');
+    valiOtsikko2.style.display = "block";
 
     const product = {
         name: productName,
@@ -52,6 +55,7 @@ document.getElementById('product-form').addEventListener('submit', function(even
 
 // Lisää yksittäinen tuote esikatseluun
 function addProductToPreview(product) {
+    viesti.style.display = "none";
     console.log("LISTA")
     const productPreviews = document.getElementById('product-previews');
 
@@ -110,6 +114,7 @@ function addProductToPreview(product) {
 // Poista tuote localStoragesta
 function removeProductFromLocalStorage(productToRemove) {
     let productList = JSON.parse(localStorage.getItem('productList')) || [];
+    
 
     // Etsi tuote listasta ja poista se
     const updatedProductList = productList.filter(product => {
@@ -122,4 +127,9 @@ function removeProductFromLocalStorage(productToRemove) {
 
     // Päivitä tuotelista localStorageen
     localStorage.setItem('productList', JSON.stringify(updatedProductList));
+    let localLista = JSON.parse(localStorage.getItem('productList')) || [];
+    if (localLista.length == 0) {
+        viesti.style.display = "block";
+        valiOtsikko2.style.display = "none";
+    }
 }
