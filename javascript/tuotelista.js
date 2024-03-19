@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Näytetään tuotteet etusivulla
     const productListElement = document.getElementById('product-list');
 
+    if (productList.length == 0) {
+        productListElement.innerHTML = '<h1 style="text-align: center;">Kirppiksellä ei ole ilmoituksia.</h1>';
+    }
+
     productList.forEach(function(product) {
         const productElement = createProductElement(product);
         productListElement.appendChild(productElement);

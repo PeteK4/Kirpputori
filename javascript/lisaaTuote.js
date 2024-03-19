@@ -1,12 +1,17 @@
 // Kun sivu latautuu, tarkista, onko tallennettuja tuotteita localStoragesta ja näytä ne
 document.addEventListener('DOMContentLoaded', function () {
-    const productList = JSON.parse(localStorage.getItem('productList')) || [];
-    const currentUser = localStorage.getItem('kayttajaTunnus')
-    productList.forEach(product => {
-        if (product.addedBy === currentUser) {
-            addProductToPreview(product);
-        }
-    });
+    let productList = JSON.parse(localStorage.getItem('productList')) || [];
+    let currentUser = localStorage.getItem('kayttajaTunnus');
+
+    if (productList.length == 0) {
+        document.getElementById('product-previews').innerHTML = '<h1 style="text-align: center;">Sibulla ei ole ilmoituksia kirpparilla.</h1>';
+    } else {
+        productList.forEach(product => {
+            if (product.addedBy === currentUser) {
+                addProductToPreview(product);
+            }
+        });
+    }
 });
 
 // Lisää tapahtumankäsittelijä lomakkeen lähettämiselle
