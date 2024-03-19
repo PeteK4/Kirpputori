@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const productListElement = document.getElementById('product-list');
 
     if (productList.length == 0) {
+        document.getElementById("valiOtsikko").innerHTML = '<div style="margin-top: 100px"></div>';
         productListElement.innerHTML = '<h1 style="text-align: center;">Kirppiksellä ei ole ilmoituksia.</h1>';
     }
 
