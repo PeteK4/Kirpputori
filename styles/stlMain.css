@@ -58,7 +58,8 @@ body::before {
   margin-top: 3vw;
 }
 
-#valiOtsikko {
+#valiOtsikko,
+#valiOtsikko2 {
   color: white;
   text-align:center;
   font-size: 2.5vw;
