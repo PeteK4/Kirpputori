@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentUser = localStorage.getItem('kayttajaTunnus');
 
     if (productList.length == 0) {
-        document.getElementById('product-previews').innerHTML = '<h1 style="text-align: center;">Sibulla ei ole ilmoituksia kirpparilla.</h1>';
+        document.getElementById('product-previews').innerHTML = '<h1 style="text-align: center;">Sinulla ei ole ilmoituksia kirpparilla.</h1>';
     } else {
         productList.forEach(product => {
             if (product.addedBy === currentUser) {
