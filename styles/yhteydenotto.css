@@ -12,6 +12,7 @@
 }
 
 #yhteydenotto ul li label {
+    width: 100%;
     flex: 0 0 150px; /* Leveys */
     margin-right: 10px;
     text-align: right;
@@ -19,7 +20,7 @@
 
 #yhteydenotto ul li input,
 #yhteydenotto ul li textarea {
-    flex: 1; /* Joustavuus */
+    width: 100%;
 }
 
 #yhteydenotto {
@@ -34,3 +35,33 @@
     border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
 }
+
+#tekstiKentta {
+    height: 80px;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+@media (max-width: 1000px) {
+
+    #yhteydenotto ul li label {
+        flex: 0 0 80px;
+    }
+
+    #yhteydenotto ul li input,
+    #yhteydenotto ul li textarea {
+        width: 80%;
+    }
+
+    #yhteydenotto {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #tekstiKentta {
+        height: 150px;
+    }
+}
+
+
+

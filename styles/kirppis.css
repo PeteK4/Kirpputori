@@ -107,7 +107,7 @@ p {
 
 .deleteButton2 {
   transform: translateY(-140%);
-  margin-left: 85%;
+  margin-left: 80%;
   margin-bottom: -20px;
 }
 
@@ -238,7 +238,7 @@ input:hover {
 
   .deleteButton2 {
     transform: translateY(-140%);
-    margin-left: 70%;
+    margin-left: 65%;
     margin-bottom: -20px;
   }
 }

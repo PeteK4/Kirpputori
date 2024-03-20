@@ -87,6 +87,10 @@ body::before {
   margin: 10px 0px;
 }
 
+#tekstiKentta {
+resize: none;
+}
+
 #etusivuKuva {
   display: block;
   margin: 50px auto;
@@ -150,7 +154,8 @@ body::before {
   max-width: 50%;
 }
 
-#laskuri {
+#laskuri,
+laskuri2 {
   position: relative;
   margin: -35px auto 15px;
   width: 96%;
@@ -159,11 +164,15 @@ body::before {
   font-weight: bold;
 }
 
+.laskuri2 {
+  margin: -70px auto 55px !important;
+}
+
 ::placeholder {
   color: rgb(121, 134, 155);
 }
 
-/*.image-upload,*/
+
 #hakukentta,
 #hakunappi,
 .product-name,
@@ -258,7 +267,8 @@ body::before {
 #nappiLuoUusiTunnus,
 #nappiKirjauduKirppis,
 #nappiPeruutaLuoTunnus,
-#nappiPeruutaKirjautuminen {
+#nappiPeruutaKirjautuminen,
+#nappiLaheta {
   display: block;
   color: black;
   margin: 20px 30px 20px 130px;
@@ -271,6 +281,10 @@ body::before {
   cursor: url("../kuvat/handy.webp"), auto;
 }
 
+#nappiLaheta {
+margin: 0px 170px ;
+}
+
 #nappiLuoUusiTunnus:hover,
 #nappiPeruutaLuoTunnus:hover,
 #nappiKirjauduKirppis:hover,
@@ -280,7 +294,8 @@ body::before {
 #nappiKirjat:hover,
 #nappiHuonekalut:hover,
 #nappiTietotekniikka:hover,
-#nappiMuut:hover {
+#nappiMuut:hover,
+#nappiLaheta:hover {
   transform: scale(1.05);
   color: rgb(126, 126, 126);
   border: solid 1px;
@@ -297,7 +312,7 @@ body::before {
 #nappiTuotehaku:hover,
 #nappiKirjauduUlos:hover {
   transform: scale(1.02);
-  color:#cdffdb;
+  color:#cdffdb !important;
   border: solid 1px;
   border-color:#5f9770;
   background-color: #6eda8e;
