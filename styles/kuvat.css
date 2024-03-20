@@ -95,15 +95,14 @@ p {
 }
 
 .deleteButton {
-  margin-right: auto;
-  align-self: flex-start;
-  padding: 0;
+  padding: 5px;
+  margin-right: 20px;
   color:rgb(0, 0, 0);
   font-weight: bolder;
   font-size: large;
   width: 100px;
-  height: 50px;
   border-radius: 8px;
+  cursor: url("../kuvat/handy.webp"), auto;
 }
 
 #prevPageButton,
@@ -196,14 +195,6 @@ display: flex;
 }
 
 input:hover {
-  cursor: url("../kuvat/handy.webp"), auto;
-}
-
-.kategoria,
-.tyyppi,
-.lataa,
-.deleteButton {
-  margin: 5px 0px;
   cursor: url("../kuvat/handy.webp"), auto;
 }
 

@@ -5,37 +5,52 @@ document.addEventListener('DOMContentLoaded', function () {
     // Näytetään tuotteet järjestelmänvalvojalle (admin kansiossa admin.js)
     const productListElement = document.getElementById('product-list');
 
+    const productsPerPage = 5; // Tuotteita per sivu
+    let currentPage = 1;
+
     if (productList.length === 0) {
         document.getElementById("valiOtsikko").innerHTML = '<div style="margin-top: 100px"></div>';
         productListElement.innerHTML = '<h1 style="text-align: center;">Kirppiksellä ei ole ilmoituksia.</h1>';
     } else {
-        paginateProducts(productList);
+        paginateProducts(productList, productsPerPage, currentPage);
     }
-});
 
-// Funktio, joka jakaa tuotteet sivuille ja näyttää ensimmäisen sivun
-function paginateProducts(products) {
-    // Lasketaan sivujen määrä
-    const totalPages = Math.ceil(products.length / productsPerPage);
+    // Näytä tuotteet sivun latauduttua
+    function displayProductsOnPage(products, page) {
+        const startIndex = (page - 1) * productsPerPage;
+        const endIndex = startIndex + productsPerPage;
+        const displayedProducts = products.slice(startIndex, endIndex);
 
-    // Näytetään ensimmäinen sivu
-    displayProductsOnPage(products, currentPage);
+        productListElement.innerHTML = '';
+        displayedProducts.forEach(function(product) {
+            const productElement = createProductElement(product);
+            productListElement.appendChild(productElement);
+        });
+    }
 
-    // Kuuntele sivunvaihtimien klikkauksia ja päivitä näytettävät tuotteet
-    document.getElementById('nextPageButton').addEventListener('click', function() {
-        if (currentPage < totalPages) {
-            currentPage++;
-            displayProductsOnPage(products, currentPage);
-        }
-    });
+    // Funktio, joka jakaa tuotteet sivuille ja näyttää ensimmäisen sivun
+    function paginateProducts(products, productsPerPage, currentPage) {
+        // Lasketaan sivujen määrä
+        const totalPages = Math.ceil(products.length / productsPerPage);
 
-    document.getElementById('prevPageButton').addEventListener('click', function() {
-        if (currentPage > 1) {
-            currentPage--;
-            displayProductsOnPage(products, currentPage);
-        }
-    });
-}
+        // Näytetään ensimmäinen sivu
+        displayProductsOnPage(products, currentPage);
+
+        // Kuuntele sivunvaihtimien klikkauksia ja päivitä näytettävät tuotteet
+        document.getElementById('nextPageButton').addEventListener('click', function() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayProductsOnPage(products, currentPage);
+            }
+        });
+
+        document.getElementById('prevPageButton').addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayProductsOnPage(products, currentPage);
+            }
+        });
+    }
 
     // Funktio luo tuote-elementin
     function createProductElement(product) {
@@ -69,8 +84,6 @@ function paginateProducts(products) {
                 productElement.remove();
                 // Poista tuote myös localStoragesta
                 removeProductFromLocalStorage(product);
-                // Tarkista ja päivitä ilmoitus
-                tarkistaLocalStorage();
             }
         });
 
@@ -82,68 +95,20 @@ function paginateProducts(products) {
 
         // Asetetaan deleteButton oikealle puolelle
         productElement.appendChild(deleteButton);
-        
         return productElement;
     }
 
     // Poista tuote localStoragesta
     function removeProductFromLocalStorage(productToRemove) {
         productList = productList.filter(product => {
-            return product.name !== productToRemove.name || 
-                   product.description !== productToRemove.description ||
-                   product.price !== productToRemove.price ||
-                   product.kategoria !== productToRemove.kategoria ||
-                   product.tyyppi !== productToRemove.tyyppi;
+            return product.name !== productToRemove.name ||
+                product.description !== productToRemove.description ||
+                product.price !== productToRemove.price ||
+                product.kategoria !== productToRemove.kategoria ||
+                product.tyyppi !== productToRemove.tyyppi;
         });
 
         // Päivitä tuotelista localStorageen
         localStorage.setItem('productList', JSON.stringify(productList));
     }
-
-    // Ilmoitus teksti ruutuun, jos logaStoragessa ei ole ilmoituksia
-    function tarkistaLocalStorage() {
-        if (productList.length == 0) {
-            productListElement.innerHTML = '<h1 style="text-align: center;">Kirppiksellä ei ole ilmoituksia.</h1>';
-        }
-    }
-
-    // Näytä tuotteet sivun latauduttua
-    function tuotteetRuutuun() {
-        productListElement.innerHTML = '';
-        productList.forEach(function(product) {
-            const productElement = createProductElement(product);
-            productListElement.appendChild(productElement);
-        });
-    }
-
-    // Seuraa Poista -nappia 
-    document.querySelectorAll('.deleteButton').forEach(nappi => {
-        nappi.addEventListener('click', tarkistaLocalStorage);
-    });
-
-    tuotteetRuutuun();
-    tarkistaLocalStorage();
-
-// Funktio, joka jakaa tuotteet sivuille ja näyttää ensimmäisen sivun
-function paginateProducts(products) {
-    // Lasketaan sivujen määrä
-    const totalPages = Math.ceil(products.length / productsPerPage);
-
-    // Näytetään ensimmäinen sivu
-    displayProductsOnPage(products, currentPage);
-
-    // Kuuntele sivunvaihtimien klikkauksia ja päivitä näytettävät tuotteet
-    document.getElementById('nextPageButton').addEventListener('click', function() {
-        if (currentPage < totalPages) {
-            currentPage++;
-            displayProductsOnPage(products, currentPage);
-        }
-    });
-
-    document.getElementById('prevPageButton').addEventListener('click', function() {
-        if (currentPage > 1) {
-            currentPage--;
-            displayProductsOnPage(products, currentPage);
-        }    
 });
-}
