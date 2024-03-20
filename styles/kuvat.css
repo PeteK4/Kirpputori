@@ -106,6 +106,23 @@ p {
   border-radius: 8px;
 }
 
+#prevPageButton,
+#nextPageButton {
+  margin: auto;
+  align-items: center;
+  padding: 0;
+  color:rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: small;
+  width: 80px;
+  height: 20px;
+  border-radius: 8px;
+}
+
+#pagination {
+  text-align: center;
+}
+
 .logo {
   display: block;
   position: absolute;

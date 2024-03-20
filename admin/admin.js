@@ -5,6 +5,38 @@ document.addEventListener('DOMContentLoaded', function () {
     // Näytetään tuotteet järjestelmänvalvojalle (admin kansiossa admin.js)
     const productListElement = document.getElementById('product-list');
 
+    if (productList.length === 0) {
+        document.getElementById("valiOtsikko").innerHTML = '<div style="margin-top: 100px"></div>';
+        productListElement.innerHTML = '<h1 style="text-align: center;">Kirppiksellä ei ole ilmoituksia.</h1>';
+    } else {
+        paginateProducts(productList);
+    }
+});
+
+// Funktio, joka jakaa tuotteet sivuille ja näyttää ensimmäisen sivun
+function paginateProducts(products) {
+    // Lasketaan sivujen määrä
+    const totalPages = Math.ceil(products.length / productsPerPage);
+
+    // Näytetään ensimmäinen sivu
+    displayProductsOnPage(products, currentPage);
+
+    // Kuuntele sivunvaihtimien klikkauksia ja päivitä näytettävät tuotteet
+    document.getElementById('nextPageButton').addEventListener('click', function() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            displayProductsOnPage(products, currentPage);
+        }
+    });
+
+    document.getElementById('prevPageButton').addEventListener('click', function() {
+        if (currentPage > 1) {
+            currentPage--;
+            displayProductsOnPage(products, currentPage);
+        }
+    });
+}
+
     // Funktio luo tuote-elementin
     function createProductElement(product) {
         const productElement = document.createElement('div');
@@ -91,4 +123,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     tuotteetRuutuun();
     tarkistaLocalStorage();
+
+// Funktio, joka jakaa tuotteet sivuille ja näyttää ensimmäisen sivun
+function paginateProducts(products) {
+    // Lasketaan sivujen määrä
+    const totalPages = Math.ceil(products.length / productsPerPage);
+
+    // Näytetään ensimmäinen sivu
+    displayProductsOnPage(products, currentPage);
+
+    // Kuuntele sivunvaihtimien klikkauksia ja päivitä näytettävät tuotteet
+    document.getElementById('nextPageButton').addEventListener('click', function() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            displayProductsOnPage(products, currentPage);
+        }
+    });
+
+    document.getElementById('prevPageButton').addEventListener('click', function() {
+        if (currentPage > 1) {
+            currentPage--;
+            displayProductsOnPage(products, currentPage);
+        }    
 });
+}

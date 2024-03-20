@@ -14,7 +14,39 @@ document.addEventListener('DOMContentLoaded', function () {
         const productElement = createProductElement(product);
         productListElement.appendChild(productElement);
     });
+
+    // Kutsutaan paginateProducts-funktiota productList-parametrilla
+    paginateProducts(productList);
 });
+
+// Funktio, joka jakaa tuotteet sivuille ja näyttää ensimmäisen sivun
+function paginateProducts(products) {
+    // Tarkista, onko tuotelista tyhjä
+    if (products.length === 0) {
+        return;
+    }
+
+    // Lasketaan sivujen määrä
+    const totalPages = Math.ceil(products.length / productsPerPage);
+
+    // Kuuntele sivunvaihtimien klikkauksia ja päivitä näytettävät tuotteet
+    document.getElementById('nextPageButton').addEventListener('click', function() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            displayProductsOnPage(products, currentPage);
+        }
+    });
+
+    document.getElementById('prevPageButton').addEventListener('click', function() {
+        if (currentPage > 1) {
+            currentPage--;
+            displayProductsOnPage(products, currentPage);
+        }
+    });
+
+    // Näytä ensimmäinen sivu
+    displayProductsOnPage(products, currentPage);
+}
 
 // Luo yksittäisen tuotteen HTML-elementin
 function createProductElement(product) {
@@ -45,5 +77,25 @@ function createProductElement(product) {
     return productElement;
 }
 
+// Funktio, joka näyttää tietyn sivun tuotteet
+function displayProductsOnPage(products, pageNumber) {
+    const startIndex = (pageNumber - 1) * productsPerPage;
+    const endIndex = startIndex + productsPerPage;
+    const productsToShow = products.slice(startIndex, endIndex);
+    displayProducts(productsToShow);
+}
 
+// Funktio, joka näyttää tuotteet käyttöliittymässä
+function displayProducts(products) {
+    const productListElement = document.getElementById('product-list');
+    productListElement.innerHTML = ''; // Tyhjennetään lista ennen kuin lisätään uudet tuotteet
+    products.forEach(function(product) {
+        const productElement = createProductElement(product);
+        productListElement.appendChild(productElement);
+    });
+}
+
+// Määritellään kuinka monta tuotetta näytetään per sivu
+const productsPerPage = 5;
+let currentPage = 1;
 
