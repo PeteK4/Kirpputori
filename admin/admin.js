@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentPage = 1;
 
     if (productList.length === 0) {
-        document.getElementById("valiOtsikko").innerHTML = '<div style="margin-top: 100px"></div>';
-        productListElement.innerHTML = '<h1 style="text-align: center;">Kirppiksellä ei ole ilmoituksia.</h1>';
+        viestiRuutuun();
     } else {
         paginateProducts(productList, productsPerPage, currentPage);
     }
@@ -75,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Lisätään deleteButton jokaiselle tuotteelle
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Poista';
-        deleteButton.classList.add('deleteButton');
+        deleteButton.classList.add('deleteButton2');
         deleteButton.type = 'button';
 
         deleteButton.addEventListener('click', function() {
@@ -84,6 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 productElement.remove();
                 // Poista tuote myös localStoragesta
                 removeProductFromLocalStorage(product);
+                if (productList.length === 0) {
+                    viestiRuutuun();
+                }
             }
         });
 
@@ -110,5 +112,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Päivitä tuotelista localStorageen
         localStorage.setItem('productList', JSON.stringify(productList));
+    }
+
+    function viestiRuutuun() {
+        document.getElementById("valiOtsikko").innerHTML = '<div style="margin-top: 100px"></div>';
+        document.getElementById("sivuNumerointi").style.display = "none";
+        document.getElementById("pagination").style.display = "none";
+        document.getElementById("valiOtsikko").innerHTML = '<div style="margin-top: 100px"></div>';
+        productListElement.innerHTML = '<h1 style="text-align: center;">Kirppiksellä ei ole ilmoituksia.</h1>';
     }
 });

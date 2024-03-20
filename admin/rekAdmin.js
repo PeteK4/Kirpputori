@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
       kentat.setAttribute("placeholder", vihjeTekstit[i - 1]);
     }
     
-    ylaPalkkiTeksti2.innerText = "Admin rules"
+    ylaPalkkiTeksti2.innerText = "Admin rules :)"
     document.getElementById("lomakeOtsikko").innerText = "Luo uusi tunnus"
     document.getElementById("kentta5").style.display ="flex";
     document.getElementById("kentta6").style.display ="none";
