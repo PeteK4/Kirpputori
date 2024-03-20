@@ -39,7 +39,11 @@
   #valiOtsikko {
     font-size: 6vw;
     margin-top: -20px;
-    margin-bottom: 20px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  #sivuNumerointi {
+    font-size: 5vw;
   }
 
   #etusivuKuva {

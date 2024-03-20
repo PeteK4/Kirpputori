@@ -5,8 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Näytetään tuotteet etusivulla
     const productListElement = document.getElementById('product-list');
 
+    // Tarkistetaan localStoragen tila
     if (productList.length == 0) {
         document.getElementById("valiOtsikko").innerHTML = '<div style="margin-top: 100px"></div>';
+        document.getElementById("sivuNumerointi").style.display = "none";
+        document.getElementById("pagination").style.display = "none";
         productListElement.innerHTML = '<h1 style="text-align: center;">Kirppiksellä ei ole ilmoituksia.</h1>';
     }
 
@@ -33,6 +36,7 @@ function paginateProducts(products) {
     document.getElementById('nextPageButton').addEventListener('click', function() {
         if (currentPage < totalPages) {
             currentPage++;
+            sivuNro.innerHTML = currentPage
             displayProductsOnPage(products, currentPage);
         }
     });
@@ -40,6 +44,7 @@ function paginateProducts(products) {
     document.getElementById('prevPageButton').addEventListener('click', function() {
         if (currentPage > 1) {
             currentPage--;
+            sivuNro.innerHTML = currentPage
             displayProductsOnPage(products, currentPage);
         }
     });
