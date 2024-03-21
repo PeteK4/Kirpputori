@@ -1,3 +1,6 @@
+const edellinenSivu = document.getElementById("prevPageButton");
+const seuraavaSivu = document.getElementById("nextPageButton");
+
 document.addEventListener('DOMContentLoaded', function () {
     // Haetaan tallennetut tuotteet localStoragesta
     const productList = JSON.parse(localStorage.getItem('productList')) || [];
@@ -39,6 +42,15 @@ function paginateProducts(products) {
             sivuNro.innerHTML = currentPage
             displayProductsOnPage(products, currentPage);
         }
+
+        if (currentPage === 1) {
+            edellinenSivu.style.display = "none";
+        } else if (currentPage === totalPages) {
+            edellinenSivu.style.display = "inline-block";
+            seuraavaSivu.style.display = "none";
+        } else {
+            edellinenSivu.style.display = "inline-block";
+        }
     });
 
     document.getElementById('prevPageButton').addEventListener('click', function() {
@@ -47,6 +59,10 @@ function paginateProducts(products) {
             sivuNro.innerHTML = currentPage
             displayProductsOnPage(products, currentPage);
         }
+            seuraavaSivu.style.display = "inline-block";
+            if (currentPage === 1) {
+                edellinenSivu.style.display = "none";
+            }
     });
 
     // Näytä ensimmäinen sivu
@@ -106,6 +122,6 @@ function displayProducts(products) {
 }
 
 // Määritellään kuinka monta tuotetta näytetään per sivu
-const productsPerPage = 10;
+const productsPerPage = 2;
 let currentPage = 1;
 
