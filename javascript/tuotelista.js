@@ -61,6 +61,10 @@ function createProductElement(product) {
     const productNameElement = document.createElement('h3');
     productNameElement.textContent = product.name;
 
+    const contactLink = document.createElement('a');
+    contactLink.textContent = 'Ota yhteyttä ilmoittajaan';
+    contactLink.href = `yhteydenottoLomake.html?name=${encodeURIComponent(product.name)}&description=${encodeURIComponent(product.description)}&price=${encodeURIComponent(product.price)}&kategoria=${encodeURIComponent(product.kategoria)}&tyyppi=${encodeURIComponent(product.tyyppi)}`;
+
     const productDescriptionElement = document.createElement('p');
     productDescriptionElement.textContent = product.description;
 
@@ -74,6 +78,7 @@ function createProductElement(product) {
     tyyppiElement.textContent = 'Tyyppi: ' + product.tyyppi;
 
     productElement.appendChild(productNameElement);
+    productElement.appendChild(contactLink); // Lisää linkki tuotteen nimen jälkeen
     productElement.appendChild(productDescriptionElement);
     productElement.appendChild(productPriceElement);
     productElement.appendChild(kategoriaElement);
