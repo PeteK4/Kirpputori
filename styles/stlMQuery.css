@@ -1,6 +1,6 @@
 /* MEDIA QUERYT ----------------------------------------*/
 
-@media (max-width: 1000px) {
+@media (max-width: 1080px) {
 
   body::before {
     display: block;
@@ -49,6 +49,10 @@
   #etusivuKuva {
     margin: 20px auto;
     border-radius: 0px !important;
+  }
+
+  #etuLasi {
+    display: none;
   }
   
   #kentta1 label,

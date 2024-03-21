@@ -1,3 +1,7 @@
+:root {
+  --taustaVarjo: #1e5353;
+}
+
 html {
   cursor: url("../kuvat/nuoli.webp"), auto;
 }
@@ -22,7 +26,6 @@ body::before {
   height: 7vw;
   text-align: center;
   background-image: linear-gradient(to top, #163b35, #337c7c);
-  z-index: 999;
 }
 
 #ylaPalkkiTeksti1 {
@@ -92,12 +95,22 @@ resize: none;
 }
 
 #etusivuKuva {
+  position: relative;
   display: block;
   margin: 50px auto;
   max-width: 100%;
   height: auto;
   border-radius: 40px;
-  box-shadow: 0px 0px 20px #aad1d1;
+}
+
+#etuLasi {
+  position: relative;
+  display: block;
+  margin: 50px auto;
+  border-radius: 20px;
+  box-shadow: 15px 15px 15px var(--taustaVarjo);
+  transform: translateY(-105%);
+  z-index: 1;
 }
 
 .lomake {
@@ -109,7 +122,7 @@ resize: none;
   padding: 40px 50px 20px 20px;
   background-image: url("../kuvat/paperi2.webp");
   background-size: 100%;
-  box-shadow: 15px 15px 15px #1e5353;
+  box-shadow: 15px 15px 15px var(--taustaVarjo);
   font-weight: bold;
   color: #333;
 }
