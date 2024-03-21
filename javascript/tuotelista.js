@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const productListElement = document.getElementById('product-list');
 
     // Tarkistetaan localStoragen tila
-    if (productList.length == 0) {
+    if (productList.length ===  0) {
         document.getElementById("valiOtsikko").innerHTML = '<div style="margin-top: 100px"></div>';
         document.getElementById("sivuNumerointi").style.display = "none";
         document.getElementById("pagination").style.display = "none";

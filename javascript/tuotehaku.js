@@ -19,7 +19,7 @@ function suoritaHaku() {
     let hakusana = document.getElementById('hakukentta').value.toLowerCase();
 
     // Tarkistetaan onko hakukenttään syötetty tekstiä
-    if (hakusana == "") {
+    if (hakusana ===  "") {
         hakuKentta.placeholder = "Kirjoita hakusana";
         return
     }
@@ -28,7 +28,7 @@ function suoritaHaku() {
     let loytyneetTuotteet = etsiTuotteet(hakusana);
 
     // Tarkistetaan löytyikö tuote
-    if (loytyneetTuotteet.length == 0) {
+    if (loytyneetTuotteet.length ===  0) {
         hakuKentta.value = "";
         hakuKentta.placeholder = "Tuotteita ei löydy";
         return;

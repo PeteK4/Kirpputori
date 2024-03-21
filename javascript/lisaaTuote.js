@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const valiOtsikko2 = document.getElementById("valiOtsikko2");
     const viesti = document.getElementById("viesti");
 
-    if (productList.length == 0) {
+    if (productList.length === 0) {
         viesti.style.display = "block";
         valiOtsikko2.style.display = "none";
     } else {

@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Tarkista kentät 
     kaikkiKentat.forEach((syottoKentta) => {
-      if (syottoKentta.value == "") {
-        if (syottoKentta.placeholder == " * Täytä tämä kenttä" || syottoKentta.value == "") {
+      if (syottoKentta.value === "") {
+        if (syottoKentta.placeholder === " * Täytä tämä kenttä" || syottoKentta.value === "") {
           syottoKentta.style.transition = "transform 0.1s";
           syottoKentta.style.transform = "scaleX(1.06)";
           setTimeout(() => {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Tarkista tunnukset
-    if (kaikkiOk == 2) {
+    if (kaikkiOk === 2) {
       const tallennettuKayttaja = localStorage.getItem(id.value);
 
       if (!tallennettuKayttaja) {
