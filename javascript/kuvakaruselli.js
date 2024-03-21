@@ -28,7 +28,7 @@ function kuvaKaruselli() {
   uusiKuva.src = kuvaPolku;
   uusiKuva.style.position = "absolute";
   uusiKuva.style.top = etusivuKuva.offsetTop + "px";
-  uusiKuva.style.left = etusivuKuva.offsetLeft + .5 + "px";
+  uusiKuva.style.left = etusivuKuva.offsetLeft + "px";
   uusiKuva.style.opacity = "0";
   uusiKuva.style.borderRadius = "40px";
   uusiKuva.style.maxWidth = "100%"
