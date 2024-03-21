@@ -1,4 +1,4 @@
-// Seuraa tekstikentän toimintoja
+// Seuraa tekstikentän toimintojasetSelectionRange
 const tekstiKentta = document.getElementById("tekstiKentta");
 const merkkienMaara = document.getElementById("laskuri");
 const merkitMax = 200;

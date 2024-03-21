@@ -1,3 +1,8 @@
+if (navigator.userAgent.indexOf("Firefox") !== -1) {
+  alert("Käyttämääsi selainta ei tueta. Pahoittelut");
+  window.close(); 
+}
+
 // Kirjautumissivun vaihtuvat kuvat (kuvakaruselli)
 const etusivuKuva = document.getElementById("etusivuKuva");
 const kuvat = [];
