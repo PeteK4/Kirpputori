@@ -80,7 +80,7 @@ function createProductElement(product) {
     contactLink.href = `yhteydenottoLomake.html?name=${encodeURIComponent(product.name)}&description=${encodeURIComponent(product.description)}&price=${encodeURIComponent(product.price)}&kategoria=${encodeURIComponent(product.kategoria)}&tyyppi=${encodeURIComponent(product.tyyppi)}`;
 
     const productDescriptionElement = document.createElement('p');
-    productDescriptionElement.textContent = product.description;
+    productDescriptionElement.textContent = 'Kuvaus: ' + product.description;
 
     const productPriceElement = document.createElement('p');
     productPriceElement.textContent = 'Hinta: ' + product.price + ' €';

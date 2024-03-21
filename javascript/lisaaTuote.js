@@ -70,7 +70,7 @@ function addProductToPreview(product) {
     productNameElement.id = 'tuotteenNimi'
 
     const productDescriptionElement = document.createElement('p');
-    productDescriptionElement.textContent = product.description;
+    productDescriptionElement.textContent = 'Kuvaus: ' + product.description;
 
     const productPriceElement = document.createElement('p');
     productPriceElement.textContent = 'Hinta: ' + product.price + ' €';
