@@ -109,7 +109,7 @@ resize: none;
   margin: 50px auto;
   border-radius: 20px;
   box-shadow: 15px 15px 15px var(--taustaVarjo);
-  transform: translateY(-105%);
+  transform: translateY(-104.5%);
   z-index: 1;
 }
 
