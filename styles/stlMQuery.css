@@ -16,19 +16,19 @@
   }
 
   .ylaPalkki {
-    height: 180px !important;
+    height: 8.5em;
   }
 
   #ylaPalkkiTeksti1,
   #ylaPalkkiTeksti2 {
     white-space: nowrap;
     margin-top: 15px;
-    font-size: 5.5vw !important;
+    font-size: 6.5vw;
   }
 
   #otsikko {
-    margin-top: -70px;
-    font-size: 10vw;
+    margin-top: -60px;
+    font-size: 9vw;
   }
 
   #otsikkoKirppis {

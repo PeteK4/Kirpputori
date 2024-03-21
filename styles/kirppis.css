@@ -121,6 +121,7 @@ p {
   font-weight: bolder;
   font-size: small;
   border-radius: 8px;
+  cursor: url("../kuvat/handy.webp"), auto;
 }
 
 #prevPageButton:hover,

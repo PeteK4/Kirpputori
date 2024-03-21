@@ -43,9 +43,7 @@ function paginateProducts(products) {
             displayProductsOnPage(products, currentPage);
         }
 
-        if (currentPage === 1) {
-            edellinenSivu.style.display = "none";
-        } else if (currentPage === totalPages) {
+        if (currentPage === totalPages) {
             edellinenSivu.style.display = "inline-block";
             seuraavaSivu.style.display = "none";
         } else {
