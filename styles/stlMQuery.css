@@ -160,15 +160,24 @@
   }
 }
 
-@media (min-width: 1921px) {
+@media (min-width: 1920px) {
 
   body::before {
     display: block;
     content: "";
-    height: 180px;
+    height: 220px;
   }
 
   #otsikko {
     margin-top: 0px;
+  }
+}
+
+@media (min-width: 2800px) {
+
+  body::before {
+    display: block;
+    content: "";
+    height: 280px;
   }
 }
