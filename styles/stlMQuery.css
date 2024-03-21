@@ -59,7 +59,7 @@
   }
 
   #etuLasi {
-    display: none;
+    display: none !important;
   }
   
   #kentta1 label,
