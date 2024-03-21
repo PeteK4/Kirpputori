@@ -96,11 +96,11 @@ function naytaHakutulokset(tuotteet) {
 
         // Lisätään p-elementit tuote-elementtiin
         tuoteElementti.appendChild(nimiElementti);
-        tuoteElementti.appendChild(contactLink); // Lisää linkki tuotteen nimen jälkeen
         tuoteElementti.appendChild(kuvausElementti);
         tuoteElementti.appendChild(hintaElementti);
         tuoteElementti.appendChild(kategoriaElementti);
         tuoteElementti.appendChild(tyyppiElementti);
+        tuoteElementti.appendChild(contactLink); // Lisää linkki tuotteen nimen jälkeen
 
         // Lisätään tuote-elementti hakutuloksiin
         hakutulosteElementti.appendChild(tuoteElementti);

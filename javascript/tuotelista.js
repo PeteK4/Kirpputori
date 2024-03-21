@@ -92,11 +92,11 @@ function createProductElement(product) {
     tyyppiElement.textContent = 'Tyyppi: ' + product.tyyppi;
 
     productElement.appendChild(productNameElement);
-    productElement.appendChild(contactLink); // Lisää linkki tuotteen nimen jälkeen
     productElement.appendChild(productDescriptionElement);
     productElement.appendChild(productPriceElement);
     productElement.appendChild(kategoriaElement);
     productElement.appendChild(tyyppiElement);
+    productElement.appendChild(contactLink); // Lisää linkki tuotteen nimen jälkeen
 
     return productElement;
 }
