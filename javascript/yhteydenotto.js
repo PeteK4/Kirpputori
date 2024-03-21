@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // jne. jatkaisit muiden elementtien lisäämistä
 });
 
-document.addEventListener("DOMContentLoaded", function() {
     // Etsi lomake
     const lomake = document.getElementById("yhteydenotto");
 
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Lue lomakkeen tiedot
         const omaNimi = document.getElementById("omanimi").value;
         const omaSahkoposti = document.getElementById("omasposti").value;
-        const viesti = document.getElementById("viesti").value;
+        const viesti = document.getElementById("tekstiKentta").value;
 
         // Tarkista, että lomake on täytetty
         if (omaNimi && omaSahkoposti && viesti) {
@@ -45,11 +44,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Tyhjennä lomake
             lomake.reset();
+
+            // Näytä viesti lähetyksen onnistumisesta
+            const viestiElement = document.createElement("p");
+            viestiElement.textContent = "Lomake lähetetty onnistuneesti!";
+            lomake.appendChild(viestiElement);
+
         } else {
             // Ilmoita käyttäjälle, että kaikki tiedot on täytettävä
             alert("Täytä kaikki lomakkeen kentät.");
         }
     });
 
-    // Voit jättää tuotetietojen koodin samanlaiseksi kuin aiemmin, jotta tuotetiedot näytetään oikein
-});
+
