@@ -16,14 +16,14 @@
   }
 
   .ylaPalkki {
-    height: 8.5em;
+    height: 11em;
   }
 
   #ylaPalkkiTeksti1,
   #ylaPalkkiTeksti2 {
     white-space: nowrap;
-    margin-top: 15px;
-    font-size: 6.5vw;
+    margin: 10px;
+    font-size: 5vw;
   }
 
   #otsikko {
@@ -39,7 +39,7 @@
   #valiOtsikko {
     font-size: 6vw;
     margin-top: -20px;
-    margin: 0px 0px 20px 0px;
+
   }
 
   #valiOtsikko2 {
@@ -108,6 +108,12 @@
     margin: 0px 90px;
     }
 
+  #prevPageButton,
+  #nextPageButton {
+  margin: 20px 20px 0px 0px !important;
+
+}
+
   #etusivuKuva {
     border-radius: 5px;
   }
@@ -153,7 +159,7 @@
   }
 
   #viesti {
-    color: black;
+    color: var(--tekstiMusta);
     text-align: center;
     font-size: 6vw;
     margin: 20px 0px;

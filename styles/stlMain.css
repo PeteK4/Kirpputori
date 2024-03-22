@@ -1,20 +1,16 @@
-:root {
-  --taustaVarjo: #1e5353;
-}
-
 html {
   cursor: url("../kuvat/nuoli.webp"), auto;
 }
 
 body {
-  background-color: #286d6d;
+  background-color: var(--body);
   user-select: none;
 }
 
 body::before {
   display: block;
   content: "";
-  height: 80px;
+  height: 150px;
 }
 
 .ylaPalkki {
@@ -42,13 +38,13 @@ body::before {
 #ylaPalkkiTeksti1, 
 #ylaPalkkiTeksti2 {
   display: block;
-  color: white;
+  color: var(--tekstiValkoinen);
   margin-top: 10px;
   text-align: center;
 }
 
 #otsikko {
-  color: white;
+  color: var(--tekstiValkoinen);
   font-size: 3.2vw;
   text-align: center;
   margin-top: 5vw;
@@ -56,28 +52,28 @@ body::before {
 
 #otsikkoKirppis,
 #kategoriaTuotteetOtsikko {
-  color: white;
+  color: var(--tekstiValkoinen);
   font-size: 3.2vw;
   text-align: center;
   margin-top: 3vw;
 }
 
 #valiOtsikko {
-  color: white;
+  color: var(--tekstiValkoinen);
   text-align:center;
   font-size: 2.5em;
-  margin: 40px 0px;
+  margin: 0px 0px 30px 0px
 }
 
 #valiOtsikko2 {
-  color: white;
+  color: var(--tekstiValkoinen);
   text-align:center;
   font-size: 2.5em;
   margin: 50px 0px;
 }
 
 #viesti {
-  color: black;
+  color: var(--tekstiMusta);
   text-align: center;
   font-size: 2vw;
   margin: 30px 0px;
@@ -85,10 +81,10 @@ body::before {
 }
 
 #sivuNumerointi {
-  color: white;
+  color: var(--tekstiValkoinen);
   text-align:center;
   font-size: 1.5vw;
-  margin: 10px 0px;
+  margin: 10px 0px 15px 0px;
 }
 
 #tekstiKentta {
@@ -176,7 +172,7 @@ laskuri2 {
   margin: -35px auto 15px;
   width: 96%;
   text-align: right;
-  color: black;
+  color: var(--tekstiMusta);
   font-weight: bold;
 }
 
@@ -198,7 +194,7 @@ laskuri2 {
 .kategoria,
 .tyyppi {
   display: inline-block;
-  color: black;
+  color: var(--tekstiMusta);
   margin-right: 10px;
   padding: 5px 5px;
   border-radius: 5px;
@@ -229,7 +225,7 @@ laskuri2 {
 #nappiTietotekniikka,
 #nappiMuut {
   display: inline-block;
-  color: black;
+  color: var(--tekstiMusta);
   margin: auto;
   padding: 5px 10px;
   border-radius: 5px;
@@ -266,11 +262,11 @@ laskuri2 {
   display: inline-block;
   margin-top: .5vw;
   padding: 4px 15px;
-  color: black;
+  color: var(--tekstiMusta);
   border: solid 1px;
   border-color: #30503a;
   border-radius: 15px;
-  background-color: #4fce75;
+  background-color: var(--ylaNapit);
   transition: .05s;
   width: 200px;
   cursor: url("../kuvat/handy.webp"), auto;
@@ -286,7 +282,8 @@ laskuri2 {
 #nappiPeruutaKirjautuminen,
 #nappiLaheta {
   display: block;
-  color: black;
+  color: var(--tekstiMusta);
+  background-color: var(--lomakeNapit);
   margin: 20px 30px 20px 130px;
   padding: 5px 15px;
   border-radius: 15px;
@@ -306,7 +303,7 @@ margin: 0px 170px ;
 #nappiKirjauduKirppis:hover,
 #nappiPeruutaKirjautuminen:hover,
 #nappiVaatteet:hover,
-#nappiKeittio:hover,
+#nappiKeittiö:hover,
 #nappiKirjat:hover,
 #nappiHuonekalut:hover,
 #nappiTietotekniikka:hover,
@@ -316,8 +313,8 @@ margin: 0px 170px ;
   color: rgb(126, 126, 126);
   border: solid 1px;
   border-color:#a1a1a1;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 15px #ffffff
+  background-color: var(--lomakeNapitHover);
+  box-shadow: 0px 0px 15px var(--lomakeNapitHover);
 }
 
 #nappiKirjaudu:hover,
@@ -331,7 +328,7 @@ margin: 0px 170px ;
   color:#cdffdb !important;
   border: solid 1px;
   border-color:#5f9770;
-  background-color: #6eda8e;
+  background-color: var(--ylaNapitHover);
   box-shadow: 0px 0px 15px #75dac9;
 }
 

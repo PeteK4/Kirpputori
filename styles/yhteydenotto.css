@@ -29,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    background-color: rgb(120, 173, 175);
+    background-color: var(--ilmoitaLomake);
     align-items: center;
     border-radius: 8px;
     border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
