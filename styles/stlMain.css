@@ -308,7 +308,9 @@ margin: 0px 170px ;
 #nappiHuonekalut:hover,
 #nappiTietotekniikka:hover,
 #nappiMuut:hover,
-#nappiLaheta:hover {
+#nappiLaheta:hover,
+.deleteButton:hover,
+.lataa:hover {
   transform: scale(1.05);
   color: rgb(126, 126, 126);
   border: solid 1px;
