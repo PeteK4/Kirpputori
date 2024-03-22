@@ -219,8 +219,9 @@ display: flex;
   flex: 0 0 auto; /* Määritetään logo kiinteäksi leveydeksi */
 }
 
-input:hover {
-  cursor: url("../kuvat/handy.webp"), auto;
+input:hover,
+textarea:hover {
+  cursor: text
 }
 
 /* NÄYTTÖ > 1920 ----------------------------------------*/
