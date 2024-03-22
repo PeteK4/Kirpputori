@@ -51,6 +51,8 @@ document.getElementById('product-form').addEventListener('submit', function(even
 
     // Tyhjennä lomake seuraavaa syöttöä varten
     document.getElementById('product-form').reset();
+
+    alert('Ilmoitus lisätty kirppikselle!')
 });
 
 // Lisää yksittäinen tuote esikatseluun
