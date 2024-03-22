@@ -37,6 +37,10 @@
     color: #050505;
 }
 
+.tuote-elementti {
+    background-color: rgb(155, 155, 155);
+  } /*taustavärin kokeilu 22.3.*/
+
 h3,
 .tuote{
     margin: 0;

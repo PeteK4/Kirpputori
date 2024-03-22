@@ -18,12 +18,14 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  background-color: rgb(120, 173, 175);
+  /*background-color: rgb(120, 173, 175);*/ /*alkuperäinen väri*/
+  background-color: rgb(153, 203, 245); /*taustavärin kokeilu 22.3.*/
   align-items: center;
   border-radius: 8px;
   border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
 }
+
 
 #product-previews,
 #product-list,
@@ -39,6 +41,10 @@
   align-items: center;
   border-radius: 8px;
   border: 2px solid #ccc; /* Kehyksen tyyli, leveys ja väri */
+}
+
+.product{
+  background-color: rgb(250, 152, 152); /*taustavärin kokeilu 22.3.*/
 }
 
 #admin-list {
