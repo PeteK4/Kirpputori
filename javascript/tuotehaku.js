@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const hakuTulokset = document.getElementById("hakutulokset");
     const hakuKentta = document.getElementById("hakukentta");
+    const valiOtsikko = document.getElementById("valiOtsikko2")
 
     document.getElementById('hakunappi').addEventListener('click', suoritaHaku);
 
@@ -21,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (loytyneetTuotteet.length === 0) {
             hakuKentta.value = "";
             hakuKentta.placeholder = "Tuotteita ei löydy";
+            hakuTulokset.style.display = "none";
+            valiOtsikko.style.display = "none";
             return;
         }
 
@@ -45,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     tuote.tyyppi.toLowerCase().includes(hakusana)) {
                     loydetytTuotteet.push(tuote);
                     hakuTulokset.style.display = "block";
+                    valiOtsikko.style.display = "block";
                 }
             }
         });

@@ -5,9 +5,8 @@
   margin-top: 5vw;
 }
 /* lisätty 11.3.*/
-.hakutulokset {
-  padding: 10px;
-  max-width: 1200px;
+#hakutulokset {
+  max-width: 800px;
   margin: auto;
 }
 
@@ -215,7 +214,8 @@ display: flex;
 
 /* lisätty 11.3. */
 #product-list,
-#kategoriaTuotteet-item {
+#kategoriaTuotteet-item,
+#hakutulokset {
   width: 50%; /* Määrittele hakutulosten divin leveys */
   margin: 0 auto; /* Aseta marginaali automaattisesti vaakasuunnassa keskittämistä varten */
   text-align: left; /* Aseta tekstin vasen reunus hakutuloksissa */
