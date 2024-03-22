@@ -34,7 +34,7 @@ function paginateProducts(products) {
 
     // Lasketaan sivujen määrä
     const totalPages = Math.ceil(products.length / productsPerPage);
-        if (totalPages > productsPerPage) {
+        if (totalPages >= productsPerPage - 1) {
             seuraavaSivu.style.display = "inline-block";
         }
 
@@ -124,6 +124,6 @@ function displayProducts(products) {
 }
 
 // Määritellään kuinka monta tuotetta näytetään per sivu
-const productsPerPage = 10;
+const productsPerPage = 2;
 let currentPage = 1;
 
