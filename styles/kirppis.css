@@ -275,6 +275,11 @@ textarea:hover {
   padding: 0px 0px 20px 8px;
   }
 
+  #haku {
+    border-radius: 2px;
+    width: 100%; 
+  }
+
   .deleteButton2 {
     transform: translateY(-140%);
     margin-left: 65%;
