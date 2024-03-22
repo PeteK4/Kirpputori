@@ -7,31 +7,28 @@ document.addEventListener("DOMContentLoaded", function() {
   const nappiKirjaudu = document.getElementById("nappiKirjaudu")
   const nappiLuoTunnus = document.getElementById("nappiLuoTunnus")
   const otsikko = document.getElementById("otsikko")
+  const lomakeOtsikko = document.getElementById("lomakeOtsikko")
 
   const kentta3 = document.getElementById("kentta3")
   const kentta4 = document.getElementById("kentta4")
   const kentta5 = document.getElementById("kentta5")
   const kentta6 = document.getElementById("kentta6")
 
-  document.getElementById("kentta4").style.display ="flex";
-  document.getElementById("kentta5").style.display ="flex";
-  document.getElementById("kentta6").style.display ="none";
+  const vihjeTekstit = [
+    "Anna vähintään 5 merkkiä", 
+    "Anna vähintään 5 merkkiä (1 iso kirjain, 1 numero, 1 erikoismerkki)",
+    "Etunimi Sukunimi", 
+    "nimi@email.fi"
+  ];
   
   document.getElementById("nappiLuoTunnus").addEventListener("click", function() {
-    const vihjeTekstit = [
-      "Anna vähintään 5 merkkiä", 
-      "Anna vähintään 5 merkkiä (1 iso kirjain, 1 numero, 1 erikoismerkki)",
-      "Etunimi Sukunimi", 
-      "nimi@email.fi"
-    ];
-    
     for (let i = 1; i <= 4; i++) {
       const kentat = document.getElementById(`kentta${i}`).querySelector("input");
       kentat.setAttribute("placeholder", vihjeTekstit[i - 1]);
     }
     
     ylaPalkkiTeksti2.innerText = "Tervetuloa MoniTorin asiakkaaksi!"
-    document.getElementById("lomakeOtsikko").innerText = "Luo uusi käyttäjätunnus"
+    lomakeOtsikko.innerText = "Luo uusi käyttäjätunnus"
     kentta3.style.display ="flex";
     kentta4.style.display ="flex";
     kentta5.style.display ="flex";
@@ -46,14 +43,17 @@ document.addEventListener("DOMContentLoaded", function() {
     etuLasi.style.transition = "opacity .4s";
     otsikko.style.opacity = "1";
     otsikko.style.transition = "opacity .4s";
+
     setTimeout(() => {
       ylaPalkkiTeksti1.style.opacity = "0";
       etusivuKuva.style.opacity = "0";
       etuLasi.style.opacity = "0";
       otsikko.style.opacity = "0";
     }, 100);
+
     ylaPalkkiTeksti2.style.opacity = "0";
     ylaPalkkiTeksti2.style.display = "block";
+
     setTimeout(() => {
       ylaPalkkiTeksti2.style.transition = "opacity .8s";
       ylaPalkkiTeksti2.style.opacity = "1";
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
       etuLasi.style.display = "none";
     }, 200);
 
-    // Näytön leveyden tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
+    // Näytön koon tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
     let loppupiste;
     if (window.innerWidth > 1920) {
       loppupiste = 480;
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("nappiKirjaudu").addEventListener("click", function() {
  
     ylaPalkkiTeksti2.innerText = "Tervetuloa MoniToriin!"
-    document.getElementById("lomakeOtsikko").innerText = "Kirjaudu kirppikselle"
+    lomakeOtsikko.innerText = "Kirjaudu kirppikselle"
     kentta3.style.display ="none";
     kentta4.style.display ="none";
     kentta5.style.display ="none";
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
       etuLasi.style.display = "none";
     }, 100);
 
-    // Näytön leveyden tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
+    // Näytön koon tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
     let loppupiste;
     if (window.innerWidth > 1920) {
       loppupiste = 470;
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
     ylhaaltaAlas(lomake, loppupiste);
   });
 
-  // Elementti ylös
+  // Kirjaudu/Luo tunnus -lomakkeen Peruuta -napin toiminnot
   document.getElementById("nappiPeruutaLuoTunnus").addEventListener("click", peruuta);
   document.getElementById("nappiPeruutaKirjautuminen").addEventListener("click", peruuta);
 
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function() {
     alhaaltaYlos(lomake);
   }
 
-  // Siirrä elementti ylhäältä alas
+// Siirrä elementti ylhäältä alas
   function ylhaaltaAlas(lomake, loppupiste) {
     const alkupiste = -lomake.offsetHeight;
     lomake.style.top = `${alkupiste}px`;
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 100);
   }
 
-  // Siirrä elementti alhaalta ylös
+// Siirrä elementti alhaalta ylös
   function alhaaltaYlos(lomake) {
     const loppupiste = -lomake.offsetHeight;
     const alkupiste = window.innerHeight / 1.5;
