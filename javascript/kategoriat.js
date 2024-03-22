@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const categories = ['vaatteet', 'keittiö', 'kirjat', 'huonekalut', 'tietotekniikka', 'muut'];
 
@@ -13,13 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
 function naytaTuotteet(kategoria) {
     const tuoteAlue = document.getElementById('kategoriaTuotteet');
     tuoteAlue.innerHTML = ''; // Tyhjennä tuotealue
+    tuoteAlue.style.display = "none";
 
     const productList = JSON.parse(localStorage.getItem('productList')) || [];
-
     document.getElementById("kategoriaTuotteetOtsikko").innerText = kategoria.charAt(0).toUpperCase() + kategoria.slice(1);
 
     productList.forEach(tuote => {
         if (tuote.kategoria === kategoria) {
+            tuoteAlue.style.display = "block";
             const tuoteElementti = document.createElement('div');
             tuoteElementti.classList.add('tuote-elementti'); // Lisää CSS-luokka
 
@@ -34,10 +34,9 @@ function naytaTuotteet(kategoria) {
             contactLink.textContent = 'Ota yhteyttä ilmoittajaan';
             contactLink.href = `yhteydenottoLomake.html?name=${encodeURIComponent(tuote.name)}&description=${encodeURIComponent(tuote.description)}&price=${encodeURIComponent(tuote.price)}&kategoria=${encodeURIComponent(tuote.kategoria)}&tyyppi=${encodeURIComponent(tuote.tyyppi)}`;
             tuoteElementti.appendChild(contactLink);
-
             tuoteAlue.appendChild(tuoteElementti);
         }
-    });
+    });   
 }
 
 
