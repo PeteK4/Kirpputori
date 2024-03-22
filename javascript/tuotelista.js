@@ -34,6 +34,9 @@ function paginateProducts(products) {
 
     // Lasketaan sivujen määrä
     const totalPages = Math.ceil(products.length / productsPerPage);
+        if (totalPages > productsPerPage) {
+            seuraavaSivu.style.display = "inline-block";
+        }
 
     // Kuuntele sivunvaihtimien klikkauksia ja päivitä näytettävät tuotteet
     document.getElementById('nextPageButton').addEventListener('click', function() {
@@ -57,6 +60,7 @@ function paginateProducts(products) {
             sivuNro.innerHTML = currentPage
             displayProductsOnPage(products, currentPage);
         }
+
             seuraavaSivu.style.display = "inline-block";
             if (currentPage === 1) {
                 edellinenSivu.style.display = "none";
