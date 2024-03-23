@@ -76,9 +76,14 @@
     width: 200%;
   }
 
+  #kategoriaTuotteetOtsikko {
+    margin-top: 30px;
+    font-size: 9vw;
+  }
+
   #kategoriaTuotteet {
     margin: 40px auto;
-    max-width: 100%;
+    max-width: 97% !important;
   }
   
   #nappiKirjaudu,
