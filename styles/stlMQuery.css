@@ -10,20 +10,20 @@
 
   .lomake {
     top: 0%;
-    width: 80%;
+    width: 75%;
     left: 50%;
     transform: translateX(-50%);
   }
 
   .ylaPalkki {
-    height: 7em;
+    height: 12em;
   }
 
   #ylaPalkkiTeksti1,
   #ylaPalkkiTeksti2 {
     white-space: nowrap;
     margin: 10px;
-    font-size: 5vw;
+    font-size: 6vw;
   }
 
   #otsikko {
@@ -38,7 +38,7 @@
 
   #valiOtsikko {
     font-size: 6vw;
-    margin-top: -20px;
+    margin-bottom: 0px;
 
   }
 
@@ -61,15 +61,23 @@
   #etuLasi {
     display: none !important;
   }
+
+  #kentta1,
+  #kentta2,
+  #kentta3,
+  #kentta4,
+  #kentta5,
+  #kentta6 {
+    width: 100%;
+  }
   
   #kentta1 label,
   #kentta2 label,
   #kentta3 label,
   #kentta4 label {
-    width: 100%;
+    width: 65%;
     text-align: left;
     margin-top: 5px;
-    margin-right: 0px;
   }
   
   .kenttaLayout {
@@ -88,8 +96,8 @@
   
   #nappiKirjaudu,
   #nappiLuoTunnus {
-    width: 180px;
-    margin-top: 10px;;
+    width: 222px;
+    margin-top: 10px;
     padding-top: 2px;
     padding-bottom: 2px;
     border-radius: 15px;
@@ -97,6 +105,16 @@
     cursor: pointer;
     transition: .05s;
   }
+
+  #nappiLuoUusiTunnus,
+  #nappiKirjauduKirppis,
+  #nappiPeruutaLuoTunnus,
+  #nappiPeruutaKirjautuminen {
+    margin: 20px 0px 0px 70px !important;
+    padding: 5px 5px;
+    width: 100px;
+  }
+
 
   #nappiEtusivu,
   #nappiKategoriat,

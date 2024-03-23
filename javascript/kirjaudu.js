@@ -78,16 +78,4 @@ function lomakeYlos() {
 document.addEventListener("DOMContentLoaded", function() {
   // Tarkista käyttäjän rooli sisäänkirjautumisen yhteydessä ja tallenna se
   const kayttajanRooli = localStorage.getItem("kayttajanRooli");
-
-  /*// Lisää tapahtumankäsittelijä poistopainikkeelle
-  deleteButton.addEventListener('click', function() {
-      if (kayttajanRooli === 'lisääjä') {
-          // Vain lisääjät voivat poistaa tuotteita
-          productPreview.remove();
-          // Poista tuote myös localStoragesta
-          removeProductFromLocalStorage(product);
-      } else {
-          alert('Sinulla ei ole oikeuksia poistaa tuotteita.');
-      }
-  });*/
 });

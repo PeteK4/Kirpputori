@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const kentta6 = document.getElementById("kentta6")
 
   const vihjeTekstit = [
-    "Anna vähintään 5 merkkiä", 
-    "Anna vähintään 5 merkkiä (1 iso kirjain, 1 numero, 1 erikoismerkki)",
+    "Väh. 5 merkkiä", 
+    "Väh. 5 merkkiä. Malli: Salasana7#",
     "Etunimi Sukunimi", 
     "nimi@email.fi"
   ];
