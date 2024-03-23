@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         venyta(syottoKentta);
         kaikkiOk -= 1;
       } else if (syottoKentta === salasana && !tarkistaSalasana(syottoKentta.value)) {
-        naytaHuomautus(syottoKentta, "Väh. 5 merkkiä. Malli: Salasana7#");
+        naytaHuomautus(syottoKentta, "Väh. 5 merkkiä: Salasana7#");
         venyta(syottoKentta);
         kaikkiOk -= 1;
       } else if (syottoKentta === sahkoposti && !tarkistaSposti(syottoKentta.value)) {
