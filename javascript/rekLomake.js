@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (window.innerWidth > 1000) {
       loppupiste = 340;
     } else {
-      loppupiste = 140;
+      loppupiste = 130;
     }
 
     lomake.style.display = "block";
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (window.innerWidth > 1000) {
       loppupiste = 340;
     } else {
-      loppupiste = 150;
+      loppupiste = 140;
     }
 
     lomake.style.display = "block";

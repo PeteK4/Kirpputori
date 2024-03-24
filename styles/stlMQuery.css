@@ -9,15 +9,15 @@
   }
 
   .lomake {
-    top: 0%;
     width: 75%;
     left: 50%;
     transform: translateX(-50%);
   }
 
   #lomakeOtsikko {
-    margin-bottom: 10px;
-    font-size: 1.5em;
+    margin-top: 5%;
+    margin-bottom: 5px;
+    font-size: 1.2em;
   }
 
   .ylaPalkki {
