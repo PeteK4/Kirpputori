@@ -11,7 +11,6 @@ function lataaNapit(id) {
 }
 
 function seuraaNappeja() {
-
     document.getElementById("nappiEtusivu").addEventListener("click", function() {
         window.location.href = "etusivu.html";
     });

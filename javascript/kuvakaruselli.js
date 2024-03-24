@@ -69,7 +69,7 @@ function animOn() {
 
 // Admin toiminnot. Nämä eivät tule sisältymään palvelinympäristössä toimivaan sovellukseen.
 document.addEventListener("mousedown", function(event) {
-  if (event.clientX <= 100 && event.clientY >= window.innerHeight - 100) {
+  if (event.clientX <= 10 && event.clientY >= window.innerHeight - 10) {
       window.open('./admin/admin.html', '_blank');
   }
 });
