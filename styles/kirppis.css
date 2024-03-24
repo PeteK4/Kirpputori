@@ -118,6 +118,7 @@ a {
   line-height: 40px;
   font-weight: bold;
   color: #cef;
+  cursor: url("../kuvat/handy.webp"), auto;
 }
 
 a:hover {

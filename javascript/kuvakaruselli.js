@@ -1,3 +1,4 @@
+// Tulikettu temppuilee
 if (navigator.userAgent.indexOf("Firefox") !== -1) {
   alert("Käyttämääsi selainta ei tueta. Pahoittelut");
   window.close(); 

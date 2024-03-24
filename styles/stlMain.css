@@ -200,7 +200,7 @@ laskuri2 {
   font-size: 1em;
   font-weight: bold;
   transition: .04s;
-  cursor: pointer;
+  cursor: url("../kuvat/handy.webp"), auto;
 }
 
 .product-name {
