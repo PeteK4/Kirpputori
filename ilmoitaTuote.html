@@ -15,14 +15,7 @@
         <div class="ylaPalkki">            
             <img class="logo" src="./kuvat/logo.png" alt="Logo">
             <div id="ylaPalkkiTeksti1">Nettikirppis MoniTori</div>
-
-            <div id="linkit">
-                <button id="nappiEtusivu">Etusivu</button>
-                <button id="nappiIlmoita">Ilmoita</button>
-                <button id="nappiKategoriat">Tuoteluokat</button>
-                <button id="nappiTuotehaku">Etsi</button>
-                <button id="nappiKirjauduUlos">Kirjaudu ulos</button>
-            </div>
+            <div id="linkkiNapit"></div>
         </div>
 
         <div id="valiOtsikko">Omat ilmoituksesi kirppiksellä:</div>
@@ -72,7 +65,8 @@
         <script src="./javascript/lisaaTuote.js"></script>
         <script src="./javascript/napit.js"></script> 
         <script src="./javascript/sivunAlkuun.js"></script>  
-        <script src="./javascript/laskuri.js"></script> 
+        <script src="./javascript/laskuri.js"></script>
+        <script>lataaNapit("linkkiNapit");</script>
     </body>
 </html>
 
