@@ -125,6 +125,6 @@ function displayProducts(products) {
 }
 
 // Määritellään kuinka monta tuotetta näytetään per sivu
-const productsPerPage = 3;
+const productsPerPage = 8;
 let currentPage = 1;
 
