@@ -58,7 +58,6 @@ document.getElementById('product-form').addEventListener('submit', function(even
 // Lisää yksittäinen tuote esikatseluun
 function addProductToPreview(product) {
     viesti.style.display = "none";
-    console.log("LISTA")
     const productPreviews = document.getElementById('product-previews');
 
     const productPreview = document.createElement('div');
