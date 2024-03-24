@@ -1,16 +1,18 @@
+/*
 function lataaNapit(id) {
-    const xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById(id).innerHTML = this.responseText;
+    fetch("linkkiNapit.html")
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById(id).innerHTML = data;
             seuraaNappeja();
-        }
-    };
-    xhttp.open("GET", "linkkiNapit.html", true);
-    xhttp.send();
+        })
+        .catch(error => console.error('Virhe latauksessa:', error));
 }
 
 function seuraaNappeja() {
+*/
     document.getElementById("nappiEtusivu").addEventListener("click", function() {
         window.location.href = "etusivu.html";
     });
@@ -33,6 +35,14 @@ function seuraaNappeja() {
             window.location.href = "index.html";
         }
     });
+
+/*
+
 }
 
-lataaNapit("linkkiNapit");
+// Käynnistä lataus heti kun sivu latautuu
+document.addEventListener("DOMContentLoaded", function() {
+    lataaNapit("linkkiNapit");
+});
+
+*/
