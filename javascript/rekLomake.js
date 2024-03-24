@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Näytön koon tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
     let loppupiste;
     if (window.innerWidth > 1920) {
-      loppupiste = 480;
+      loppupiste = 380;
     } else if (window.innerWidth > 1000) {
       loppupiste = 340;
     } else {
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Näytön koon tarkistus, jonka mukaan määritetään elementin loppusijainti näytöllä
     let loppupiste;
     if (window.innerWidth > 1920) {
-      loppupiste = 470;
+      loppupiste = 370;
     } else if (window.innerWidth > 1000) {
       loppupiste = 340;
     } else {
