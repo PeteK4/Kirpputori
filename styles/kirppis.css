@@ -112,7 +112,17 @@ p {
 }
 
 a {
-  font-size: 1.1em; /* Aseta linkkien tekstikoko 1.1em:ksi */
+  display: inline-block;
+  font-size: 1.23em; /* Aseta linkkien tekstikoko 1.1em:ksi */
+  margin: 10px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #cef;
+}
+
+a:hover {
+  transform: scale(1.03);
+  color: #fff !important;
 }
 
 .deleteButton,

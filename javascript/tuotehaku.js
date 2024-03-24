@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 nimiElementti.textContent = tuote.name;
 
                 let contactLink = document.createElement('a');
+                contactLink.style.cssText = "margin-left: 10px; line-height: 40px; font-size: 20px; font-weight: bold; color: #def;";
                 contactLink.textContent = 'Ota yhteyttä ilmoittajaan';
                 contactLink.href = `yhteydenottoLomake.html?name=${encodeURIComponent(tuote.name)}&description=${encodeURIComponent(tuote.description)}&price=${encodeURIComponent(tuote.price)}&kategoria=${encodeURIComponent(tuote.kategoria)}&tyyppi=${encodeURIComponent(tuote.tyyppi)}`;
 

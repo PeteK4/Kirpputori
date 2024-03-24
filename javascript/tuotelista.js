@@ -80,6 +80,7 @@ function createProductElement(product) {
     productNameElement.textContent = product.name;
 
     const contactLink = document.createElement('a');
+    contactLink.style.cssText = "margin-left: 10px; line-height: 40px; font-size: 20px; font-weight: bold; color: #def;";
     contactLink.textContent = 'Ota yhteyttä ilmoittajaan';
     contactLink.href = `yhteydenottoLomake.html?name=${encodeURIComponent(product.name)}&description=${encodeURIComponent(product.description)}&price=${encodeURIComponent(product.price)}&kategoria=${encodeURIComponent(product.kategoria)}&tyyppi=${encodeURIComponent(product.tyyppi)}`;
 
