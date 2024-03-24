@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const vihjeTekstit = [
     "Väh. 5 merkkiä", 
-    "Väh. 5 merkkiä: Salasana7#",
+    "Malli: Salasana7#",
     "Etunimi Sukunimi", 
     "nimi@email.fi"
   ];

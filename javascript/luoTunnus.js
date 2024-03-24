@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
         venyta(syottoKentta);
         kaikkiOk -= 1;
       } else if (syottoKentta === salasana && !tarkistaSalasana(syottoKentta.value)) {
-        naytaHuomautus(syottoKentta, "Väh. 5 merkkiä: Salasana7#");
+        naytaHuomautus(syottoKentta, "Malli: Salasana7#");
         venyta(syottoKentta);
         kaikkiOk -= 1;
       } else if (syottoKentta === sahkoposti && !tarkistaSposti(syottoKentta.value)) {
-        naytaHuomautus(syottoKentta, "Esim. nimi@email.fi");
+         naytaHuomautus(syottoKentta, "Esim. nimi@email.fi");
         venyta(syottoKentta);
         kaikkiOk -= 1;
       }
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Funktio, joka tarkistaa salasanan vaatimukset
     function tarkistaSalasana(salasana) {
-    const salasanaRegex = /^(?=.*[A-Z]).{5,}$/;
+    const salasanaRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[\W_]).{5,}$/;
     return salasanaRegex.test(salasana);
     }
 
