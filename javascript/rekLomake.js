@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
       kentat.setAttribute("placeholder", vihjeTekstit[i - 1]);
     }
     
-    ylaPalkkiTeksti2.innerText = "Tervetuloa MoniTorin asiakkaaksi!"
+    ylaPalkkiTeksti2.innerText = "Tervetuloa asiakkaaksi!"
     lomakeOtsikko.innerText = "Luo uusi käyttäjätunnus"
     kentta3.style.display ="flex";
     kentta4.style.display ="flex";
