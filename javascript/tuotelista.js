@@ -1,5 +1,6 @@
 const edellinenSivu = document.getElementById("prevPageButton");
 const seuraavaSivu = document.getElementById("nextPageButton");
+const sivuNro = document.getElementById("sivuNumerointi");
 
 document.addEventListener('DOMContentLoaded', function () {
     // Haetaan tallennetut tuotteet localStoragesta
@@ -9,17 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const productListElement = document.getElementById('product-list');
 
     // Tarkistetaan localStoragen tila
-    if (productList.length ===  0) {
+    if (productList.length === 0) {
         document.getElementById("valiOtsikko").innerHTML = '<div style="margin-top: 100px"></div>';
         document.getElementById("sivuNumerointi").style.display = "none";
         document.getElementById("pagination").style.display = "none";
         productListElement.innerHTML = '<h1 style="text-align: center;">Kirppiksellä ei ole ilmoituksia.</h1>';
     }
-
-    productList.forEach(function(product) {
-        const productElement = createProductElement(product);
-        productListElement.appendChild(productElement);
-    });
 
     // Kutsutaan paginateProducts-funktiota productList-parametrilla
     paginateProducts(productList);
@@ -34,15 +30,15 @@ function paginateProducts(products) {
 
     // Lasketaan sivujen määrä
     const totalPages = Math.ceil(products.length / productsPerPage);
-        if (totalPages >= productsPerPage - 1) {
-            seuraavaSivu.style.display = "inline-block";
-        }
+    if (totalPages > 1) {
+        seuraavaSivu.style.display = "inline-block";
+    }
 
     // Kuuntele sivunvaihtimien klikkauksia ja päivitä näytettävät tuotteet
-    document.getElementById('nextPageButton').addEventListener('click', function() {
+    document.getElementById('nextPageButton').addEventListener('click', function () {
         if (currentPage < totalPages) {
             currentPage++;
-            sivuNro.innerHTML = currentPage
+            sivuNro.innerHTML = `Tuotesivu: ${currentPage}`;
             displayProductsOnPage(products, currentPage);
         }
 
@@ -54,17 +50,17 @@ function paginateProducts(products) {
         }
     });
 
-    document.getElementById('prevPageButton').addEventListener('click', function() {
+    document.getElementById('prevPageButton').addEventListener('click', function () {
         if (currentPage > 1) {
             currentPage--;
-            sivuNro.innerHTML = currentPage
+            sivuNro.innerHTML = `Tuotesivu: ${currentPage}`;
             displayProductsOnPage(products, currentPage);
         }
 
-            seuraavaSivu.style.display = "inline-block";
-            if (currentPage === 1) {
-                edellinenSivu.style.display = "none";
-            }
+        seuraavaSivu.style.display = "inline-block";
+        if (currentPage === 1) {
+            edellinenSivu.style.display = "none";
+        }
     });
 
     // Näytä ensimmäinen sivu
@@ -117,7 +113,7 @@ function displayProductsOnPage(products, pageNumber) {
 function displayProducts(products) {
     const productListElement = document.getElementById('product-list');
     productListElement.innerHTML = ''; // Tyhjennetään lista ennen kuin lisätään uudet tuotteet
-    products.forEach(function(product) {
+    products.forEach(function (product) {
         const productElement = createProductElement(product);
         productListElement.appendChild(productElement);
     });
@@ -126,4 +122,3 @@ function displayProducts(products) {
 // Määritellään kuinka monta tuotetta näytetään per sivu
 const productsPerPage = 8;
 let currentPage = 1;
-
